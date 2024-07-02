@@ -1,0 +1,209 @@
+
+
+================================================================
+== Vitis HLS Report for 'lab7_z3'
+================================================================
+* Date:           Wed Dec  6 16:12:44 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        lab7_z3
+* Solution:       sol1_4 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a100t-csg324-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +------+----------+----------+------------+
+    | Clock|  Target  | Estimated| Uncertainty|
+    +------+----------+----------+------------+
+    |clk   |  10.00 ns|  8.567 ns|     1.00 ns|
+    +------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      136|      136|  1.360 us|  1.360 us|  137|  137|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Mult    |      134|      134|         8|          1|          1|   128|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 8, States = { 1 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.04>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 11 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1"   --->   Operation 12 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %a, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %a"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %b, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %b"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %c"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.32ns)   --->   "%store_ln8 = store i8 0, i8 %i" [./source/lab7_z3.cpp:8]   --->   Operation 19 'store' 'store_ln8' <Predicate = true> <Delay = 1.32>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln8 = br void" [./source/lab7_z3.cpp:8]   --->   Operation 20 'br' 'br_ln8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%i_1 = load i8 %i" [./source/lab7_z3.cpp:8]   --->   Operation 21 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 22 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.24ns)   --->   "%icmp_ln8 = icmp_eq  i8 %i_1, i8 128" [./source/lab7_z3.cpp:8]   --->   Operation 23 'icmp' 'icmp_ln8' <Predicate = true> <Delay = 1.24> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 128, i64 128, i64 128"   --->   Operation 24 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.71ns)   --->   "%add_ln8 = add i8 %i_1, i8 1" [./source/lab7_z3.cpp:8]   --->   Operation 25 'add' 'add_ln8' <Predicate = true> <Delay = 1.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln8 = br i1 %icmp_ln8, void %.split, void" [./source/lab7_z3.cpp:8]   --->   Operation 26 'br' 'br_ln8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%i_cast = zext i8 %i_1" [./source/lab7_z3.cpp:8]   --->   Operation 27 'zext' 'i_cast' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%b_addr = getelementptr i64 %b, i64 0, i64 %i_cast" [./source/lab7_z3.cpp:10]   --->   Operation 28 'getelementptr' 'b_addr' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_1 : Operation 29 [2/2] (2.77ns)   --->   "%b_load = load i7 %b_addr" [./source/lab7_z3.cpp:10]   --->   Operation 29 'load' 'b_load' <Predicate = (!icmp_ln8)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 128> <RAM>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%c_addr = getelementptr i64 %c, i64 0, i64 %i_cast" [./source/lab7_z3.cpp:10]   --->   Operation 30 'getelementptr' 'c_addr' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_1 : Operation 31 [2/2] (2.77ns)   --->   "%c_load = load i7 %c_addr" [./source/lab7_z3.cpp:10]   --->   Operation 31 'load' 'c_load' <Predicate = (!icmp_ln8)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 128> <RAM>
+ST_1 : Operation 32 [1/1] (1.32ns)   --->   "%store_ln8 = store i8 %add_ln8, i8 %i" [./source/lab7_z3.cpp:8]   --->   Operation 32 'store' 'store_ln8' <Predicate = (!icmp_ln8)> <Delay = 1.32>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 33 [1/2] (2.77ns)   --->   "%b_load = load i7 %b_addr" [./source/lab7_z3.cpp:10]   --->   Operation 33 'load' 'b_load' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 128> <RAM>
+ST_2 : Operation 34 [1/2] (2.77ns)   --->   "%c_load = load i7 %c_addr" [./source/lab7_z3.cpp:10]   --->   Operation 34 'load' 'c_load' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 128> <RAM>
+
+State 3 <SV = 2> <Delay = 8.56>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%bitcast_ln10 = bitcast i64 %b_load" [./source/lab7_z3.cpp:10]   --->   Operation 35 'bitcast' 'bitcast_ln10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%bitcast_ln10_1 = bitcast i64 %c_load" [./source/lab7_z3.cpp:10]   --->   Operation 36 'bitcast' 'bitcast_ln10_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [5/5] (8.56ns)   --->   "%temp_mult = dmul i64 %bitcast_ln10, i64 %bitcast_ln10_1" [./source/lab7_z3.cpp:10]   --->   Operation 37 'dmul' 'temp_mult' <Predicate = true> <Delay = 8.56> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 8.56> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 8.56>
+ST_4 : Operation 38 [4/5] (8.56ns)   --->   "%temp_mult = dmul i64 %bitcast_ln10, i64 %bitcast_ln10_1" [./source/lab7_z3.cpp:10]   --->   Operation 38 'dmul' 'temp_mult' <Predicate = true> <Delay = 8.56> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 8.56> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 8.56>
+ST_5 : Operation 39 [3/5] (8.56ns)   --->   "%temp_mult = dmul i64 %bitcast_ln10, i64 %bitcast_ln10_1" [./source/lab7_z3.cpp:10]   --->   Operation 39 'dmul' 'temp_mult' <Predicate = true> <Delay = 8.56> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 8.56> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 8.56>
+ST_6 : Operation 40 [2/5] (8.56ns)   --->   "%temp_mult = dmul i64 %bitcast_ln10, i64 %bitcast_ln10_1" [./source/lab7_z3.cpp:10]   --->   Operation 40 'dmul' 'temp_mult' <Predicate = true> <Delay = 8.56> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 8.56> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 8.56>
+ST_7 : Operation 41 [1/5] (8.56ns)   --->   "%temp_mult = dmul i64 %bitcast_ln10, i64 %bitcast_ln10_1" [./source/lab7_z3.cpp:10]   --->   Operation 41 'dmul' 'temp_mult' <Predicate = true> <Delay = 8.56> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 4> <II = 1> <Delay = 8.56> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%ret_ln13 = ret" [./source/lab7_z3.cpp:13]   --->   Operation 47 'ret' 'ret_ln13' <Predicate = (icmp_ln8)> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 2.77>
+ST_8 : Operation 42 [1/1] (0.00ns)   --->   "%specloopname_ln8 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [./source/lab7_z3.cpp:8]   --->   Operation 42 'specloopname' 'specloopname_ln8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 43 [1/1] (0.00ns)   --->   "%bitcast_ln11 = bitcast i64 %temp_mult" [./source/lab7_z3.cpp:11]   --->   Operation 43 'bitcast' 'bitcast_ln11' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 44 [1/1] (0.00ns)   --->   "%a_addr = getelementptr i64 %a, i64 0, i64 %i_cast" [./source/lab7_z3.cpp:11]   --->   Operation 44 'getelementptr' 'a_addr' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 45 [1/1] (2.77ns)   --->   "%store_ln11 = store i64 %bitcast_ln11, i7 %a_addr" [./source/lab7_z3.cpp:11]   --->   Operation 45 'store' 'store_ln11' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 128> <RAM>
+ST_8 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 46 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1ns.
+
+ <State 1>: 3.04ns
+The critical path consists of the following:
+	'alloca' operation ('i') [4]  (0 ns)
+	'load' operation ('i', ./source/lab7_z3.cpp:8) on local variable 'i' [15]  (0 ns)
+	'add' operation ('add_ln8', ./source/lab7_z3.cpp:8) [19]  (1.72 ns)
+	'store' operation ('store_ln8', ./source/lab7_z3.cpp:8) of variable 'add_ln8', ./source/lab7_z3.cpp:8 on local variable 'i' [34]  (1.32 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('b_load', ./source/lab7_z3.cpp:10) on array 'b' [25]  (2.77 ns)
+
+ <State 3>: 8.57ns
+The critical path consists of the following:
+	'dmul' operation ('temp_mult', ./source/lab7_z3.cpp:10) [30]  (8.57 ns)
+
+ <State 4>: 8.57ns
+The critical path consists of the following:
+	'dmul' operation ('temp_mult', ./source/lab7_z3.cpp:10) [30]  (8.57 ns)
+
+ <State 5>: 8.57ns
+The critical path consists of the following:
+	'dmul' operation ('temp_mult', ./source/lab7_z3.cpp:10) [30]  (8.57 ns)
+
+ <State 6>: 8.57ns
+The critical path consists of the following:
+	'dmul' operation ('temp_mult', ./source/lab7_z3.cpp:10) [30]  (8.57 ns)
+
+ <State 7>: 8.57ns
+The critical path consists of the following:
+	'dmul' operation ('temp_mult', ./source/lab7_z3.cpp:10) [30]  (8.57 ns)
+
+ <State 8>: 2.77ns
+The critical path consists of the following:
+	'store' operation ('store_ln11', ./source/lab7_z3.cpp:11) of variable 'bitcast_ln11', ./source/lab7_z3.cpp:11 on array 'a' [33]  (2.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

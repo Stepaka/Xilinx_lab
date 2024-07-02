@@ -1,0 +1,1965 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>artix7</ProductFamily>
+        <Part>xc7a200t-sbv484-2</Part>
+        <TopModelName>kp_502_7</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>1.00</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>8.567</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>80</Best-caseLatency>
+            <Average-caseLatency>80</Average-caseLatency>
+            <Worst-caseLatency>80</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.800 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.800 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.800 us</Worst-caseRealTimeLatency>
+            <Interval-min>81</Interval-min>
+            <Interval-max>81</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <DSP>224</DSP>
+            <FF>15569</FF>
+            <LUT>17262</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>730</BRAM_18K>
+            <DSP>740</DSP>
+            <FF>269200</FF>
+            <LUT>134600</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_local_block</name>
+            <Object>kp_502_7</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_local_deadlock</name>
+            <Object>kp_502_7</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>kp_502_7</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>kp_502_7</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>kp_502_7</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>kp_502_7</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>kp_502_7</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>kp_502_7</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>A_0</name>
+            <Object>A_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>A_1</name>
+            <Object>A_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>A_2</name>
+            <Object>A_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>A_3</name>
+            <Object>A_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>A_4</name>
+            <Object>A_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>A_5</name>
+            <Object>A_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>A_6</name>
+            <Object>A_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>A_7</name>
+            <Object>A_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>B_0</name>
+            <Object>B_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>B_1</name>
+            <Object>B_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>B_2</name>
+            <Object>B_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>B_3</name>
+            <Object>B_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>B_4</name>
+            <Object>B_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>B_5</name>
+            <Object>B_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>B_6</name>
+            <Object>B_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>B_7</name>
+            <Object>B_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>C_0</name>
+            <Object>C_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>C_1</name>
+            <Object>C_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>C_2</name>
+            <Object>C_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>C_3</name>
+            <Object>C_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>C_4</name>
+            <Object>C_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>C_5</name>
+            <Object>C_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>C_6</name>
+            <Object>C_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>C_7</name>
+            <Object>C_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_0</name>
+            <Object>X1_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_0_ap_vld</name>
+            <Object>X1_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_1</name>
+            <Object>X1_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_1_ap_vld</name>
+            <Object>X1_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_2</name>
+            <Object>X1_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_2_ap_vld</name>
+            <Object>X1_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_3</name>
+            <Object>X1_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_3_ap_vld</name>
+            <Object>X1_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_4</name>
+            <Object>X1_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_4_ap_vld</name>
+            <Object>X1_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_5</name>
+            <Object>X1_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_5_ap_vld</name>
+            <Object>X1_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_6</name>
+            <Object>X1_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_6_ap_vld</name>
+            <Object>X1_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_7</name>
+            <Object>X1_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X1_7_ap_vld</name>
+            <Object>X1_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_0</name>
+            <Object>X2_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_0_ap_vld</name>
+            <Object>X2_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_1</name>
+            <Object>X2_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_1_ap_vld</name>
+            <Object>X2_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_2</name>
+            <Object>X2_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_2_ap_vld</name>
+            <Object>X2_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_3</name>
+            <Object>X2_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_3_ap_vld</name>
+            <Object>X2_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_4</name>
+            <Object>X2_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_4_ap_vld</name>
+            <Object>X2_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_5</name>
+            <Object>X2_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_5_ap_vld</name>
+            <Object>X2_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_6</name>
+            <Object>X2_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_6_ap_vld</name>
+            <Object>X2_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_7</name>
+            <Object>X2_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>X2_7_ap_vld</name>
+            <Object>X2_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_0</name>
+            <Object>D_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_0_ap_vld</name>
+            <Object>D_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_1</name>
+            <Object>D_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_1_ap_vld</name>
+            <Object>D_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_2</name>
+            <Object>D_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_2_ap_vld</name>
+            <Object>D_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_3</name>
+            <Object>D_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_3_ap_vld</name>
+            <Object>D_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_4</name>
+            <Object>D_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_4_ap_vld</name>
+            <Object>D_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_5</name>
+            <Object>D_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_5_ap_vld</name>
+            <Object>D_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_6</name>
+            <Object>D_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_6_ap_vld</name>
+            <Object>D_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_7</name>
+            <Object>D_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>D_7_ap_vld</name>
+            <Object>D_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>kp_502_7</ModuleName>
+            <BindInstances>dmul_64ns_64ns_64_5_max_dsp_1_U17 dmul_64ns_64ns_64_5_max_dsp_1_U17 dmul_64ns_64ns_64_5_max_dsp_1_U18 dsub_64ns_64ns_64_5_full_dsp_1_U1 dsqrt_64ns_64ns_64_30_no_dsp_1_U49 dsub_64ns_64ns_64_5_full_dsp_1_U1 dmul_64ns_64ns_64_5_max_dsp_1_U17 ddiv_64ns_64ns_64_31_no_dsp_1_U33 dsub_64ns_64ns_64_5_full_dsp_1_U2 ddiv_64ns_64ns_64_31_no_dsp_1_U34 dmul_64ns_64ns_64_5_max_dsp_1_U19 dmul_64ns_64ns_64_5_max_dsp_1_U18 dmul_64ns_64ns_64_5_max_dsp_1_U20 dsub_64ns_64ns_64_5_full_dsp_1_U2 dsqrt_64ns_64ns_64_30_no_dsp_1_U50 dsub_64ns_64ns_64_5_full_dsp_1_U3 dmul_64ns_64ns_64_5_max_dsp_1_U18 ddiv_64ns_64ns_64_31_no_dsp_1_U35 dsub_64ns_64ns_64_5_full_dsp_1_U4 ddiv_64ns_64ns_64_31_no_dsp_1_U36 dmul_64ns_64ns_64_5_max_dsp_1_U21 dmul_64ns_64ns_64_5_max_dsp_1_U19 dmul_64ns_64ns_64_5_max_dsp_1_U22 dsub_64ns_64ns_64_5_full_dsp_1_U3 dsqrt_64ns_64ns_64_30_no_dsp_1_U51 dsub_64ns_64ns_64_5_full_dsp_1_U5 dmul_64ns_64ns_64_5_max_dsp_1_U19 ddiv_64ns_64ns_64_31_no_dsp_1_U37 dsub_64ns_64ns_64_5_full_dsp_1_U6 ddiv_64ns_64ns_64_31_no_dsp_1_U38 dmul_64ns_64ns_64_5_max_dsp_1_U23 dmul_64ns_64ns_64_5_max_dsp_1_U20 dmul_64ns_64ns_64_5_max_dsp_1_U24 dsub_64ns_64ns_64_5_full_dsp_1_U4 dsqrt_64ns_64ns_64_30_no_dsp_1_U52 dsub_64ns_64ns_64_5_full_dsp_1_U7 dmul_64ns_64ns_64_5_max_dsp_1_U20 ddiv_64ns_64ns_64_31_no_dsp_1_U39 dsub_64ns_64ns_64_5_full_dsp_1_U8 ddiv_64ns_64ns_64_31_no_dsp_1_U40 dmul_64ns_64ns_64_5_max_dsp_1_U25 dmul_64ns_64ns_64_5_max_dsp_1_U21 dmul_64ns_64ns_64_5_max_dsp_1_U26 dsub_64ns_64ns_64_5_full_dsp_1_U5 dsqrt_64ns_64ns_64_30_no_dsp_1_U53 dsub_64ns_64ns_64_5_full_dsp_1_U9 dmul_64ns_64ns_64_5_max_dsp_1_U21 ddiv_64ns_64ns_64_31_no_dsp_1_U41 dsub_64ns_64ns_64_5_full_dsp_1_U10 ddiv_64ns_64ns_64_31_no_dsp_1_U42 dmul_64ns_64ns_64_5_max_dsp_1_U27 dmul_64ns_64ns_64_5_max_dsp_1_U22 dmul_64ns_64ns_64_5_max_dsp_1_U28 dsub_64ns_64ns_64_5_full_dsp_1_U6 dsqrt_64ns_64ns_64_30_no_dsp_1_U54 dsub_64ns_64ns_64_5_full_dsp_1_U11 dmul_64ns_64ns_64_5_max_dsp_1_U22 ddiv_64ns_64ns_64_31_no_dsp_1_U43 dsub_64ns_64ns_64_5_full_dsp_1_U12 ddiv_64ns_64ns_64_31_no_dsp_1_U44 dmul_64ns_64ns_64_5_max_dsp_1_U29 dmul_64ns_64ns_64_5_max_dsp_1_U23 dmul_64ns_64ns_64_5_max_dsp_1_U30 dsub_64ns_64ns_64_5_full_dsp_1_U7 dsqrt_64ns_64ns_64_30_no_dsp_1_U55 dsub_64ns_64ns_64_5_full_dsp_1_U13 dmul_64ns_64ns_64_5_max_dsp_1_U23 ddiv_64ns_64ns_64_31_no_dsp_1_U45 dsub_64ns_64ns_64_5_full_dsp_1_U14 ddiv_64ns_64ns_64_31_no_dsp_1_U46 dmul_64ns_64ns_64_5_max_dsp_1_U31 dmul_64ns_64ns_64_5_max_dsp_1_U24 dmul_64ns_64ns_64_5_max_dsp_1_U32 dsub_64ns_64ns_64_5_full_dsp_1_U8 dsqrt_64ns_64ns_64_30_no_dsp_1_U56 dsub_64ns_64ns_64_5_full_dsp_1_U15 dmul_64ns_64ns_64_5_max_dsp_1_U24 ddiv_64ns_64ns_64_31_no_dsp_1_U47 dsub_64ns_64ns_64_5_full_dsp_1_U16 ddiv_64ns_64ns_64_31_no_dsp_1_U48</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>kp_502_7</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>1.00</ClockUncertainty>
+                    <EstimatedClockPeriod>8.567</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>80</Best-caseLatency>
+                    <Average-caseLatency>80</Average-caseLatency>
+                    <Worst-caseLatency>80</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.800 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.800 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.800 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>81</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>224</DSP>
+                    <AVAIL_DSP>740</AVAIL_DSP>
+                    <UTIL_DSP>30</UTIL_DSP>
+                    <FF>15569</FF>
+                    <AVAIL_FF>269200</AVAIL_FF>
+                    <UTIL_FF>5</UTIL_FF>
+                    <LUT>17262</LUT>
+                    <AVAIL_LUT>134600</AVAIL_LUT>
+                    <UTIL_LUT>12</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>730</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U17" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U17" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U18" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U1" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="x_assign"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="29" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_30_no_dsp_1_U49" SOURCE="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8" URAM="0" VARIABLE="temp_D"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U1" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="sub1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U17" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="mul1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U33" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="div"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U2" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="add"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U34" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="div1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U19" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U18" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul3_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U20" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul6_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U2" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="x_assign_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="29" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_30_no_dsp_1_U50" SOURCE="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8" URAM="0" VARIABLE="temp_D_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U3" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="sub12_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U18" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="mul13_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U35" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="div_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U4" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="add_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U36" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="div18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U21" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U19" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul3_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U22" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul6_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U3" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="x_assign_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="29" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_30_no_dsp_1_U51" SOURCE="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8" URAM="0" VARIABLE="temp_D_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U5" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="sub12_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U19" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="mul13_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U37" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="div_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U6" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="add_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U38" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="div18_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U23" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U20" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul3_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U24" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul6_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U4" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="x_assign_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="29" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_30_no_dsp_1_U52" SOURCE="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8" URAM="0" VARIABLE="temp_D_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U7" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="sub12_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U20" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="mul13_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U39" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="div_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U8" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="add_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U40" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="div18_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U25" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U21" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul3_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U26" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul6_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U5" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="x_assign_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="29" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_30_no_dsp_1_U53" SOURCE="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8" URAM="0" VARIABLE="temp_D_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U9" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="sub12_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U21" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="mul13_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U41" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="div_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U10" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="add_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U42" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="div18_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U27" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U22" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul3_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U28" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul6_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U6" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="x_assign_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="29" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_30_no_dsp_1_U54" SOURCE="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8" URAM="0" VARIABLE="temp_D_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U11" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="sub12_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U22" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="mul13_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U43" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="div_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U12" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="add_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U44" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="div18_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U29" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U23" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul3_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U30" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul6_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U7" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="x_assign_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="29" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_30_no_dsp_1_U55" SOURCE="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8" URAM="0" VARIABLE="temp_D_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U13" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="sub12_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U23" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="mul13_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U45" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="div_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U14" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="add_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U46" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="div18_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U31" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U24" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul3_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U32" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="mul6_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U8" SOURCE="./source/kp_502_7.cpp:10" URAM="0" VARIABLE="x_assign_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="29" LOOP="" OPTYPE="dsqrt" PRAGMA="" RTLNAME="dsqrt_64ns_64ns_64_30_no_dsp_1_U56" SOURCE="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8" URAM="0" VARIABLE="temp_D_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U15" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="sub12_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="4" LOOP="" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_5_max_dsp_1_U24" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="mul13_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U47" SOURCE="./source/kp_502_7.cpp:16" URAM="0" VARIABLE="div_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_5_full_dsp_1_U16" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="add_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ddiv" DSP="0" ID="" IMPL="fabric" LATENCY="30" LOOP="" OPTYPE="ddiv" PRAGMA="" RTLNAME="ddiv_64ns_64ns_64_31_no_dsp_1_U48" SOURCE="./source/kp_502_7.cpp:17" URAM="0" VARIABLE="div18_7"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="A" index="0" direction="in" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="A_0" name="A_0" usage="data" direction="in"/>
+                <hwRef type="port" interface="A_1" name="A_1" usage="data" direction="in"/>
+                <hwRef type="port" interface="A_2" name="A_2" usage="data" direction="in"/>
+                <hwRef type="port" interface="A_3" name="A_3" usage="data" direction="in"/>
+                <hwRef type="port" interface="A_4" name="A_4" usage="data" direction="in"/>
+                <hwRef type="port" interface="A_5" name="A_5" usage="data" direction="in"/>
+                <hwRef type="port" interface="A_6" name="A_6" usage="data" direction="in"/>
+                <hwRef type="port" interface="A_7" name="A_7" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="B" index="1" direction="in" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="B_0" name="B_0" usage="data" direction="in"/>
+                <hwRef type="port" interface="B_1" name="B_1" usage="data" direction="in"/>
+                <hwRef type="port" interface="B_2" name="B_2" usage="data" direction="in"/>
+                <hwRef type="port" interface="B_3" name="B_3" usage="data" direction="in"/>
+                <hwRef type="port" interface="B_4" name="B_4" usage="data" direction="in"/>
+                <hwRef type="port" interface="B_5" name="B_5" usage="data" direction="in"/>
+                <hwRef type="port" interface="B_6" name="B_6" usage="data" direction="in"/>
+                <hwRef type="port" interface="B_7" name="B_7" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="C" index="2" direction="in" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="C_0" name="C_0" usage="data" direction="in"/>
+                <hwRef type="port" interface="C_1" name="C_1" usage="data" direction="in"/>
+                <hwRef type="port" interface="C_2" name="C_2" usage="data" direction="in"/>
+                <hwRef type="port" interface="C_3" name="C_3" usage="data" direction="in"/>
+                <hwRef type="port" interface="C_4" name="C_4" usage="data" direction="in"/>
+                <hwRef type="port" interface="C_5" name="C_5" usage="data" direction="in"/>
+                <hwRef type="port" interface="C_6" name="C_6" usage="data" direction="in"/>
+                <hwRef type="port" interface="C_7" name="C_7" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="X1" index="3" direction="out" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="X1_0" name="X1_0" usage="data" direction="out"/>
+                <hwRef type="port" interface="X1_0_ap_vld" name="X1_0_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X1_1" name="X1_1" usage="data" direction="out"/>
+                <hwRef type="port" interface="X1_1_ap_vld" name="X1_1_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X1_2" name="X1_2" usage="data" direction="out"/>
+                <hwRef type="port" interface="X1_2_ap_vld" name="X1_2_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X1_3" name="X1_3" usage="data" direction="out"/>
+                <hwRef type="port" interface="X1_3_ap_vld" name="X1_3_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X1_4" name="X1_4" usage="data" direction="out"/>
+                <hwRef type="port" interface="X1_4_ap_vld" name="X1_4_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X1_5" name="X1_5" usage="data" direction="out"/>
+                <hwRef type="port" interface="X1_5_ap_vld" name="X1_5_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X1_6" name="X1_6" usage="data" direction="out"/>
+                <hwRef type="port" interface="X1_6_ap_vld" name="X1_6_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X1_7" name="X1_7" usage="data" direction="out"/>
+                <hwRef type="port" interface="X1_7_ap_vld" name="X1_7_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="X2" index="4" direction="out" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="X2_0" name="X2_0" usage="data" direction="out"/>
+                <hwRef type="port" interface="X2_0_ap_vld" name="X2_0_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X2_1" name="X2_1" usage="data" direction="out"/>
+                <hwRef type="port" interface="X2_1_ap_vld" name="X2_1_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X2_2" name="X2_2" usage="data" direction="out"/>
+                <hwRef type="port" interface="X2_2_ap_vld" name="X2_2_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X2_3" name="X2_3" usage="data" direction="out"/>
+                <hwRef type="port" interface="X2_3_ap_vld" name="X2_3_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X2_4" name="X2_4" usage="data" direction="out"/>
+                <hwRef type="port" interface="X2_4_ap_vld" name="X2_4_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X2_5" name="X2_5" usage="data" direction="out"/>
+                <hwRef type="port" interface="X2_5_ap_vld" name="X2_5_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X2_6" name="X2_6" usage="data" direction="out"/>
+                <hwRef type="port" interface="X2_6_ap_vld" name="X2_6_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="X2_7" name="X2_7" usage="data" direction="out"/>
+                <hwRef type="port" interface="X2_7_ap_vld" name="X2_7_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="D" index="5" direction="out" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="D_0" name="D_0" usage="data" direction="out"/>
+                <hwRef type="port" interface="D_0_ap_vld" name="D_0_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="D_1" name="D_1" usage="data" direction="out"/>
+                <hwRef type="port" interface="D_1_ap_vld" name="D_1_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="D_2" name="D_2" usage="data" direction="out"/>
+                <hwRef type="port" interface="D_2_ap_vld" name="D_2_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="D_3" name="D_3" usage="data" direction="out"/>
+                <hwRef type="port" interface="D_3_ap_vld" name="D_3_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="D_4" name="D_4" usage="data" direction="out"/>
+                <hwRef type="port" interface="D_4_ap_vld" name="D_4_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="D_5" name="D_5" usage="data" direction="out"/>
+                <hwRef type="port" interface="D_5_ap_vld" name="D_5_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="D_6" name="D_6" usage="data" direction="out"/>
+                <hwRef type="port" interface="D_6_ap_vld" name="D_6_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="D_7" name="D_7" usage="data" direction="out"/>
+                <hwRef type="port" interface="D_7_ap_vld" name="D_7_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="A_0" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="A_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>A_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="A_1" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="A_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>A_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="A_2" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="A_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>A_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="A_3" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="A_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>A_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="A_4" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="A_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>A_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="A_5" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="A_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>A_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="A_6" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="A_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>A_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="A_7" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="A_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>A_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="B_0" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="B_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>B_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="B_1" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="B_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>B_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="B_2" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="B_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>B_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="B_3" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="B_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>B_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="B_4" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="B_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>B_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="B_5" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="B_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>B_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="B_6" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="B_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>B_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="B_7" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="B_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>B_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="C_0" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="C_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>C_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="C_1" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="C_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>C_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="C_2" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="C_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>C_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="C_3" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="C_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>C_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="C_4" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="C_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>C_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="C_5" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="C_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>C_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="C_6" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="C_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>C_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="C_7" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="C_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>C_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X1_0" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X1_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X1_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X1_1" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X1_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X1_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X1_2" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X1_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X1_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X1_3" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X1_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X1_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X1_4" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X1_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X1_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X1_5" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X1_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X1_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X1_6" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X1_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X1_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X1_7" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X1_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X1_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X2_0" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X2_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X2_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X2_1" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X2_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X2_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X2_2" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X2_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X2_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X2_3" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X2_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X2_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X2_4" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X2_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X2_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X2_5" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X2_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X2_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X2_6" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X2_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X2_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="X2_7" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="X2_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>X2_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="X2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="D_0" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="D_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>D_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="D"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="D_1" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="D_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>D_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="D"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="D_2" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="D_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>D_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="D"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="D_3" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="D_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>D_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="D"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="D_4" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="D_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>D_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="D"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="D_5" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="D_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>D_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="D"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="D_6" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="D_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>D_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="D"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="D_7" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="D_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>D_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="D"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="A_0">ap_none, 64</column>
+                    <column name="A_1">ap_none, 64</column>
+                    <column name="A_2">ap_none, 64</column>
+                    <column name="A_3">ap_none, 64</column>
+                    <column name="A_4">ap_none, 64</column>
+                    <column name="A_5">ap_none, 64</column>
+                    <column name="A_6">ap_none, 64</column>
+                    <column name="A_7">ap_none, 64</column>
+                    <column name="B_0">ap_none, 64</column>
+                    <column name="B_1">ap_none, 64</column>
+                    <column name="B_2">ap_none, 64</column>
+                    <column name="B_3">ap_none, 64</column>
+                    <column name="B_4">ap_none, 64</column>
+                    <column name="B_5">ap_none, 64</column>
+                    <column name="B_6">ap_none, 64</column>
+                    <column name="B_7">ap_none, 64</column>
+                    <column name="C_0">ap_none, 64</column>
+                    <column name="C_1">ap_none, 64</column>
+                    <column name="C_2">ap_none, 64</column>
+                    <column name="C_3">ap_none, 64</column>
+                    <column name="C_4">ap_none, 64</column>
+                    <column name="C_5">ap_none, 64</column>
+                    <column name="C_6">ap_none, 64</column>
+                    <column name="C_7">ap_none, 64</column>
+                    <column name="D_0">ap_none, 64</column>
+                    <column name="D_1">ap_none, 64</column>
+                    <column name="D_2">ap_none, 64</column>
+                    <column name="D_3">ap_none, 64</column>
+                    <column name="D_4">ap_none, 64</column>
+                    <column name="D_5">ap_none, 64</column>
+                    <column name="D_6">ap_none, 64</column>
+                    <column name="D_7">ap_none, 64</column>
+                    <column name="X1_0">ap_none, 64</column>
+                    <column name="X1_1">ap_none, 64</column>
+                    <column name="X1_2">ap_none, 64</column>
+                    <column name="X1_3">ap_none, 64</column>
+                    <column name="X1_4">ap_none, 64</column>
+                    <column name="X1_5">ap_none, 64</column>
+                    <column name="X1_6">ap_none, 64</column>
+                    <column name="X1_7">ap_none, 64</column>
+                    <column name="X2_0">ap_none, 64</column>
+                    <column name="X2_1">ap_none, 64</column>
+                    <column name="X2_2">ap_none, 64</column>
+                    <column name="X2_3">ap_none, 64</column>
+                    <column name="X2_4">ap_none, 64</column>
+                    <column name="X2_5">ap_none, 64</column>
+                    <column name="X2_6">ap_none, 64</column>
+                    <column name="X2_7">ap_none, 64</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="A">in, double*</column>
+                    <column name="B">in, double*</column>
+                    <column name="C">in, double*</column>
+                    <column name="X1">out, double*</column>
+                    <column name="X2">out, double*</column>
+                    <column name="D">out, double*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="A">A_0, port</column>
+                    <column name="A">A_1, port</column>
+                    <column name="A">A_2, port</column>
+                    <column name="A">A_3, port</column>
+                    <column name="A">A_4, port</column>
+                    <column name="A">A_5, port</column>
+                    <column name="A">A_6, port</column>
+                    <column name="A">A_7, port</column>
+                    <column name="B">B_0, port</column>
+                    <column name="B">B_1, port</column>
+                    <column name="B">B_2, port</column>
+                    <column name="B">B_3, port</column>
+                    <column name="B">B_4, port</column>
+                    <column name="B">B_5, port</column>
+                    <column name="B">B_6, port</column>
+                    <column name="B">B_7, port</column>
+                    <column name="C">C_0, port</column>
+                    <column name="C">C_1, port</column>
+                    <column name="C">C_2, port</column>
+                    <column name="C">C_3, port</column>
+                    <column name="C">C_4, port</column>
+                    <column name="C">C_5, port</column>
+                    <column name="C">C_6, port</column>
+                    <column name="C">C_7, port</column>
+                    <column name="X1">X1_0, port</column>
+                    <column name="X1">X1_0_ap_vld, port</column>
+                    <column name="X1">X1_1, port</column>
+                    <column name="X1">X1_1_ap_vld, port</column>
+                    <column name="X1">X1_2, port</column>
+                    <column name="X1">X1_2_ap_vld, port</column>
+                    <column name="X1">X1_3, port</column>
+                    <column name="X1">X1_3_ap_vld, port</column>
+                    <column name="X1">X1_4, port</column>
+                    <column name="X1">X1_4_ap_vld, port</column>
+                    <column name="X1">X1_5, port</column>
+                    <column name="X1">X1_5_ap_vld, port</column>
+                    <column name="X1">X1_6, port</column>
+                    <column name="X1">X1_6_ap_vld, port</column>
+                    <column name="X1">X1_7, port</column>
+                    <column name="X1">X1_7_ap_vld, port</column>
+                    <column name="X2">X2_0, port</column>
+                    <column name="X2">X2_0_ap_vld, port</column>
+                    <column name="X2">X2_1, port</column>
+                    <column name="X2">X2_1_ap_vld, port</column>
+                    <column name="X2">X2_2, port</column>
+                    <column name="X2">X2_2_ap_vld, port</column>
+                    <column name="X2">X2_3, port</column>
+                    <column name="X2">X2_3_ap_vld, port</column>
+                    <column name="X2">X2_4, port</column>
+                    <column name="X2">X2_4_ap_vld, port</column>
+                    <column name="X2">X2_5, port</column>
+                    <column name="X2">X2_5_ap_vld, port</column>
+                    <column name="X2">X2_6, port</column>
+                    <column name="X2">X2_6_ap_vld, port</column>
+                    <column name="X2">X2_7, port</column>
+                    <column name="X2">X2_7_ap_vld, port</column>
+                    <column name="D">D_0, port</column>
+                    <column name="D">D_0_ap_vld, port</column>
+                    <column name="D">D_1, port</column>
+                    <column name="D">D_1_ap_vld, port</column>
+                    <column name="D">D_2, port</column>
+                    <column name="D">D_2_ap_vld, port</column>
+                    <column name="D">D_3, port</column>
+                    <column name="D">D_3_ap_vld, port</column>
+                    <column name="D">D_4, port</column>
+                    <column name="D">D_4_ap_vld, port</column>
+                    <column name="D">D_5, port</column>
+                    <column name="D">D_5_ap_vld, port</column>
+                    <column name="D">D_6, port</column>
+                    <column name="D">D_6_ap_vld, port</column>
+                    <column name="D">D_7, port</column>
+                    <column name="D">D_7_ap_vld, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="array_partition" location="./source/kp_502_7.cpp:5" status="valid" parentFunction="kp_502_7" variable="A" isDirective="1" options="variable=A cyclic factor=8 dim=1"/>
+        <Pragma type="array_partition" location="./source/kp_502_7.cpp:5" status="valid" parentFunction="kp_502_7" variable="B" isDirective="1" options="variable=B cyclic factor=8 dim=1"/>
+        <Pragma type="array_partition" location="./source/kp_502_7.cpp:5" status="valid" parentFunction="kp_502_7" variable="C" isDirective="1" options="variable=C cyclic factor=8 dim=1"/>
+        <Pragma type="array_partition" location="./source/kp_502_7.cpp:5" status="valid" parentFunction="kp_502_7" variable="D" isDirective="1" options="variable=D cyclic factor=8 dim=1"/>
+        <Pragma type="array_partition" location="./source/kp_502_7.cpp:5" status="valid" parentFunction="kp_502_7" variable="X1" isDirective="1" options="variable=X1 cyclic factor=8 dim=1"/>
+        <Pragma type="array_partition" location="./source/kp_502_7.cpp:5" status="valid" parentFunction="kp_502_7" variable="X2" isDirective="1" options="variable=X2 cyclic factor=8 dim=1"/>
+        <Pragma type="pipeline" location="./source/kp_502_7.cpp:6" status="valid" parentFunction="kp_502_7" variable="" isDirective="1" options=""/>
+        <Pragma type="unroll" location="./source/kp_502_7.cpp:6" status="valid" parentFunction="kp_502_7" variable="" isDirective="1" options="factor=8"/>
+    </PragmaReport>
+</profile>
+

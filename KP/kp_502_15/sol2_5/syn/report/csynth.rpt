@@ -1,0 +1,217 @@
+
+
+================================================================
+== Synthesis Summary Report of 'kp_502_15'
+================================================================
++ General Information: 
+    * Date:           Sat Dec  9 20:38:45 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        kp_502_15
+    * Solution:       sol2_5 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a200t-sbv484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |   Modules   | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |         |           |           |     |
+    |   & Loops   | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +-------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ kp_502_15  |     -|  1.76|        1|  14.000|         -|        2|     -|        no|     -|  48 (6%)|  258 (~0%)|  973 (~0%)|    -|
+    +-------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| a_0       | ap_none | 32       |
+| a_1       | ap_none | 32       |
+| a_2       | ap_none | 32       |
+| a_3       | ap_none | 32       |
+| a_4       | ap_none | 32       |
+| a_5       | ap_none | 32       |
+| a_6       | ap_none | 32       |
+| a_7       | ap_none | 32       |
+| b_0       | ap_none | 32       |
+| b_1       | ap_none | 32       |
+| b_2       | ap_none | 32       |
+| b_3       | ap_none | 32       |
+| b_4       | ap_none | 32       |
+| b_5       | ap_none | 32       |
+| b_6       | ap_none | 32       |
+| b_7       | ap_none | 32       |
+| c_0       | ap_none | 32       |
+| c_1       | ap_none | 32       |
+| c_2       | ap_none | 32       |
+| c_3       | ap_none | 32       |
+| c_4       | ap_none | 32       |
+| c_5       | ap_none | 32       |
+| c_6       | ap_none | 32       |
+| c_7       | ap_none | 32       |
+| r_0       | ap_none | 32       |
+| r_1       | ap_none | 32       |
+| r_2       | ap_none | 32       |
+| r_3       | ap_none | 32       |
+| r_4       | ap_none | 32       |
+| r_5       | ap_none | 32       |
+| r_6       | ap_none | 32       |
+| r_7       | ap_none | 32       |
+| x_0       | ap_none | 32       |
+| x_1       | ap_none | 32       |
+| x_2       | ap_none | 32       |
+| x_3       | ap_none | 32       |
+| x_4       | ap_none | 32       |
+| x_5       | ap_none | 32       |
+| x_6       | ap_none | 32       |
+| x_7       | ap_none | 32       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| r        | out       | int*     |
+| a        | in        | int*     |
+| b        | in        | int*     |
+| c        | in        | int*     |
+| x        | in        | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| r        | r_0          | port    |
+| r        | r_0_ap_vld   | port    |
+| r        | r_1          | port    |
+| r        | r_1_ap_vld   | port    |
+| r        | r_2          | port    |
+| r        | r_2_ap_vld   | port    |
+| r        | r_3          | port    |
+| r        | r_3_ap_vld   | port    |
+| r        | r_4          | port    |
+| r        | r_4_ap_vld   | port    |
+| r        | r_5          | port    |
+| r        | r_5_ap_vld   | port    |
+| r        | r_6          | port    |
+| r        | r_6_ap_vld   | port    |
+| r        | r_7          | port    |
+| r        | r_7_ap_vld   | port    |
+| a        | a_0          | port    |
+| a        | a_1          | port    |
+| a        | a_2          | port    |
+| a        | a_3          | port    |
+| a        | a_4          | port    |
+| a        | a_5          | port    |
+| a        | a_6          | port    |
+| a        | a_7          | port    |
+| b        | b_0          | port    |
+| b        | b_1          | port    |
+| b        | b_2          | port    |
+| b        | b_3          | port    |
+| b        | b_4          | port    |
+| b        | b_5          | port    |
+| b        | b_6          | port    |
+| b        | b_7          | port    |
+| c        | c_0          | port    |
+| c        | c_1          | port    |
+| c        | c_2          | port    |
+| c        | c_3          | port    |
+| c        | c_4          | port    |
+| c        | c_5          | port    |
+| c        | c_6          | port    |
+| c        | c_7          | port    |
+| x        | x_0          | port    |
+| x        | x_1          | port    |
+| x        | x_2          | port    |
+| x        | x_3          | port    |
+| x        | x_4          | port    |
+| x        | x_5          | port    |
+| x        | x_6          | port    |
+| x        | x_7          | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                     | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++--------------------------+-----+--------+-------------+-----+--------+---------+
+| + kp_502_15              | 48  |        |             |     |        |         |
+|   mul_32s_32s_32_1_1_U1  | 3   |        | mul_ln11    | mul | auto   | 0       |
+|   mul_ln11_1_fu_399_p1   | -   |        | add_ln11    | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U9  | 3   |        | mul_ln11_1  | mul | auto   | 0       |
+|   r_0                    | -   |        | add_ln11_1  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U2  | 3   |        | mul_ln11_2  | mul | auto   | 0       |
+|   mul_ln11_3_fu_416_p1   | -   |        | add_ln11_2  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U10 | 3   |        | mul_ln11_3  | mul | auto   | 0       |
+|   r_1                    | -   |        | add_ln11_3  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U3  | 3   |        | mul_ln11_4  | mul | auto   | 0       |
+|   mul_ln11_5_fu_433_p1   | -   |        | add_ln11_4  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U11 | 3   |        | mul_ln11_5  | mul | auto   | 0       |
+|   r_2                    | -   |        | add_ln11_5  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U4  | 3   |        | mul_ln11_6  | mul | auto   | 0       |
+|   mul_ln11_7_fu_450_p1   | -   |        | add_ln11_6  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U12 | 3   |        | mul_ln11_7  | mul | auto   | 0       |
+|   r_3                    | -   |        | add_ln11_7  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U5  | 3   |        | mul_ln11_8  | mul | auto   | 0       |
+|   mul_ln11_9_fu_467_p1   | -   |        | add_ln11_8  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U13 | 3   |        | mul_ln11_9  | mul | auto   | 0       |
+|   r_4                    | -   |        | add_ln11_9  | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U6  | 3   |        | mul_ln11_10 | mul | auto   | 0       |
+|   mul_ln11_11_fu_484_p1  | -   |        | add_ln11_10 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U14 | 3   |        | mul_ln11_11 | mul | auto   | 0       |
+|   r_5                    | -   |        | add_ln11_11 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U7  | 3   |        | mul_ln11_12 | mul | auto   | 0       |
+|   mul_ln11_13_fu_501_p1  | -   |        | add_ln11_12 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U15 | 3   |        | mul_ln11_13 | mul | auto   | 0       |
+|   r_6                    | -   |        | add_ln11_13 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U8  | 3   |        | mul_ln11_14 | mul | auto   | 0       |
+|   mul_ln11_15_fu_518_p1  | -   |        | add_ln11_14 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U16 | 3   |        | mul_ln11_15 | mul | auto   | 0       |
+|   r_7                    | -   |        | add_ln11_15 | add | fabric | 0       |
++--------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+---------------------------+
+| Type            | Options                          | Location                  |
++-----------------+----------------------------------+---------------------------+
+| array_partition | variable=a cyclic factor=8 dim=1 | DIRECTIVE in kp_502_15, a |
+| array_partition | variable=b cyclic factor=8 dim=1 | DIRECTIVE in kp_502_15, b |
+| array_partition | variable=c cyclic factor=8 dim=1 | DIRECTIVE in kp_502_15, c |
+| array_partition | variable=r cyclic factor=8 dim=1 | DIRECTIVE in kp_502_15, r |
+| array_partition | variable=x cyclic factor=8 dim=1 | DIRECTIVE in kp_502_15, x |
+| pipeline        | off                              | DIRECTIVE in kp_502_15    |
+| unroll          | factor=8                         | DIRECTIVE in kp_502_15    |
++-----------------+----------------------------------+---------------------------+
+
+

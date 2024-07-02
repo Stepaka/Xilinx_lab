@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1701274813363">
+  <ports id="1" name="a" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="256" direction="DirOut" iftype="IfTypeRegister" arraysize="2">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="b" type="PortType" coreName="RAM" coreId="27" bitwidth="256" iftype="IfTypeRegister" arraysize="2">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="c" type="PortType" coreName="RAM" coreId="0" bitwidth="256" iftype="IfTypeRegister" arraysize="2">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="89" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="90" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="91" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="98" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="99" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="105" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="110" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="111" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="113" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="115" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="156" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="162" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="165" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="174" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="177" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="178" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="180" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="190" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="192" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="198" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="201" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="204" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="213" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="214" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="216" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="222" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="225" source_obj="//@regions.0/@basic_blocks.1/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="228" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="234" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="237" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="238" source_obj="//@regions.0/@basic_blocks.1/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="240" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="246" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.40"/>
+  <edges id="249" source_obj="//@regions.0/@basic_blocks.1/@node_objs.40" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="250" source_obj="//@regions.0/@basic_blocks.1/@node_objs.39" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="252" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.42"/>
+  <edges id="258" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.43"/>
+  <edges id="261" source_obj="//@regions.0/@basic_blocks.1/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.44"/>
+  <edges id="262" source_obj="//@regions.0/@basic_blocks.1/@node_objs.42" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.44"/>
+  <edges id="264" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.45"/>
+  <edges id="270" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.46"/>
+  <edges id="273" source_obj="//@regions.0/@basic_blocks.1/@node_objs.46" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.47"/>
+  <edges id="274" source_obj="//@regions.0/@basic_blocks.1/@node_objs.45" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.47"/>
+  <edges id="276" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.48"/>
+  <edges id="282" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.49"/>
+  <edges id="285" source_obj="//@regions.0/@basic_blocks.1/@node_objs.49" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.50"/>
+  <edges id="286" source_obj="//@regions.0/@basic_blocks.1/@node_objs.48" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.50"/>
+  <edges id="288" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.51"/>
+  <edges id="294" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.52"/>
+  <edges id="297" source_obj="//@regions.0/@basic_blocks.1/@node_objs.52" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.53"/>
+  <edges id="298" source_obj="//@regions.0/@basic_blocks.1/@node_objs.51" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.53"/>
+  <edges id="301" source_obj="//@regions.0/@basic_blocks.1/@node_objs.53" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="302" source_obj="//@regions.0/@basic_blocks.1/@node_objs.50" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="303" source_obj="//@regions.0/@basic_blocks.1/@node_objs.47" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="304" source_obj="//@regions.0/@basic_blocks.1/@node_objs.44" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="305" source_obj="//@regions.0/@basic_blocks.1/@node_objs.41" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="306" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="307" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="308" source_obj="//@regions.0/@basic_blocks.1/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="309" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="310" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="311" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="312" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="313" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="314" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="315" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="316" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="317" source_obj="//@regions.0/@basic_blocks.1/@node_objs.55" sink_obj="//@ports.0"/>
+  <edges id="319" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.55"/>
+  <edges id="320" source_obj="//@regions.0/@basic_blocks.1/@node_objs.54" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.56"/>
+  <edges id="321" source_obj="//@regions.0/@basic_blocks.1/@node_objs.55" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.56"/>
+  <edges id="322" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.57"/>
+  <edges id="325" source_obj="//@regions.0/@basic_blocks.1/@node_objs.57" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.58"/>
+  <edges id="326" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.58"/>
+  <edges id="327" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.59"/>
+  <edges id="412" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="413" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="414" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="415" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="416" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="417" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.58"/>
+  <edges id="418" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.58"/>
+  <blocks id="14" name="block_14" type="BlockType">
+    <controlOutputObjs>block_19</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="0" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_write_ln4" lineNumber="4" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="0" contextFuncName="lab6_z1" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="4" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln4" lineNumber="4" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="0" contextFuncName="lab6_z1" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="4" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+      <controlInputObjs>block_19</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab6_z1.cpp">
+      <validLinenumbers>4</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="84" name="block_84" type="BlockType">
+    <controlInputObjs>block_19</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="_ln7" lineNumber="7" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="0" contextFuncName="lab6_z1" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="7" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab6_z1.cpp">
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="431" pipe_depth="5" RegionName="Mult">
+    <basic_blocks id="19" name="block_19" type="BlockType">
+      <controlInputObjs>block_14</controlInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_84</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="i_1" lineNumber="5" originalName="i" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="193" contextFuncName="lab6_z1" bitwidth="6" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="tmp" lineNumber="4" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="tmp_fu_161_p3" coreId="0" contextFuncName="lab6_z1" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="4" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln4" lineNumber="4" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="193" contextFuncName="lab6_z1" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="4" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_84</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab6_z1.cpp">
+        <validLinenumbers>5</validLinenumbers>
+        <validLinenumbers>4</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="82" name=".split" type="BlockType">
+      <controlInputObjs>block_19</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_19</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_1" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="tmp_1_fu_169_p3" coreId="3484736472" contextFuncName="lab6_z1" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="zext_ln5" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="zext_ln5_fu_177_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="b_addr" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="0" contextFuncName="lab6_z1" bitwidth="1" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>b</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="b_load" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="lab6_z1" bitwidth="256" opcode="load" nodeLatency="1" m_display="0" m_delay="2.26" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="trunc_ln5" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_523_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="c_addr" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="0" contextFuncName="lab6_z1" bitwidth="1" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>c</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="c_load" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="lab6_z1" bitwidth="256" opcode="load" nodeLatency="1" m_display="0" m_delay="2.26" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="trunc_ln5_1" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_523_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="mul_ln5" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U1" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="tmp_2" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_530_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="tmp_3" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_530_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="mul_ln5_1" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U2" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="tmp_4" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_537_p1" coreId="1965053264" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp_5" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_537_p0" coreId="1702043696" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="mul_ln5_2" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U3" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="tmp_6" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_544_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="tmp_7" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_544_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="mul_ln5_3" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U4" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp_8" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_551_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="tmp_9" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_551_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="mul_ln5_4" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U5" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="tmp_s" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_558_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="tmp_10" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_558_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="mul_ln5_5" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U6" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="tmp_11" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_565_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_12" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_565_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="mul_ln5_6" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U7" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_13" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_572_p1" coreId="540423474" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_14" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_572_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="mul_ln5_7" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U8" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tmp_15" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_579_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp_16" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_579_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="mul_ln5_8" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U9" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="tmp_17" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_586_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="tmp_18" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_586_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="mul_ln5_9" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U10" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="tmp_19" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_593_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_20" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_593_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="mul_ln5_10" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U11" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="tmp_21" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_600_p1" coreId="1330007625" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="tmp_22" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_600_p0" coreId="773859184" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="mul_ln5_11" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U12" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tmp_23" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_607_p1" coreId="544825714" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="tmp_24" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_607_p0" coreId="1396973671" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="mul_ln5_12" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U13" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="tmp_25" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_614_p1" coreId="828330828" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="tmp_26" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_614_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="mul_ln5_13" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U14" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="tmp_27" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_621_p1" coreId="758395186" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="tmp_28" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_621_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="mul_ln5_14" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U15" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="tmp_29" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_628_p1" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="tmp_30" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="grp_fu_628_p0" coreId="0" contextFuncName="lab6_z1" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="mul_ln5_15" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U16" coreName="DSP48" implIndex="dsp" control="no" opType="mul" coreId="119" contextFuncName="lab6_z1" bitwidth="16" opcode="mul" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="2.15" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="or_ln5_s" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="a_d0" coreId="0" contextFuncName="lab6_z1" bitwidth="256" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="a_addr" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="1852795252" contextFuncName="lab6_z1" bitwidth="1" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>a</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="a_addr_write_ln5" lineNumber="5" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="lab6_z1" opcode="store" nodeLabel="4.0" m_display="0" m_delay="2.26" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="5" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="add_ln4" lineNumber="4" fileName="./source/lab6_z1.cpp" fileDirectory=".." rtlName="add_ln4_fu_183_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab6_z1" bitwidth="6" opcode="add" m_display="0" m_delay="1.94" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="4" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="i_write_ln4" lineNumber="4" fileName="./source/lab6_z1.cpp" fileDirectory=".." coreId="1126185587" contextFuncName="lab6_z1" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab6_z1.cpp" linenumber="4" fileDirectory="G:\Xilinx_lab\lab6_z1" functionName="lab6_z1"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="br_ln0" coreId="1634476112" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_19</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab6_z1.cpp">
+        <validLinenumbers>5</validLinenumbers>
+        <validLinenumbers>4</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <regnodes realName="c_addr_reg_656">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_2_reg_671">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_22_reg_776">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_12_reg_726">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_reg_651">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_3_reg_676">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_27_reg_801">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_8_reg_701">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_635">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_23_reg_781">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_18_reg_756">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_24_reg_786">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_5_reg_686">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_21_reg_771">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_11_reg_721">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_17_reg_751">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_14_reg_736">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_20_reg_766">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_13_reg_731">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_30_reg_816">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_29_reg_811">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln5_1_reg_666">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_19_reg_761">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_4_reg_681">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_s_reg_711">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_9_reg_706">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln5_reg_661">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_10_reg_716">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_7_reg_696">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_28_reg_806">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_6_reg_691">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_15_reg_741">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_16_reg_746">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_26_reg_796">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_25_reg_791">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln5_reg_646">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_642">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <expressionNodes realName="i_fu_110">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_11_fu_302">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_18_fu_372">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_212">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_5_fu_232">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_8_fu_262">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_30_fu_492">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_6_fu_242">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_14_fu_332">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_16_fu_352">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_20_fu_392">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_s_fu_282">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_22_fu_412">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_12_fu_312">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_28_fu_472">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_26_fu_452">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_24_fu_432">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_169">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_202">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_gep_fu_114">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln5_s_fu_502">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_29_fu_482">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_19_fu_382">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_fu_222">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_9_fu_272">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="a_addr_gep_fu_140">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_10_fu_292">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_161">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_addr_gep_fu_127">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_7_fu_252">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_15_fu_342">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln4_fu_183">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln5_fu_177">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_17_fu_362">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln5_1_fu_198">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_27_fu_462">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_13_fu_322">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_23_fu_422">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_21_fu_402">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_25_fu_442">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln5_fu_194">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_628">
+    <nodeIds>75</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_607">
+    <nodeIds>66</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_523">
+    <nodeIds>30</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_600">
+    <nodeIds>63</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_579">
+    <nodeIds>54</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_558">
+    <nodeIds>45</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_537">
+    <nodeIds>36</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_614">
+    <nodeIds>69</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_530">
+    <nodeIds>33</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_586">
+    <nodeIds>57</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_565">
+    <nodeIds>48</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_544">
+    <nodeIds>39</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_621">
+    <nodeIds>72</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_593">
+    <nodeIds>60</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_572">
+    <nodeIds>51</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_551">
+    <nodeIds>42</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="i_1_load_fu_158">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln4_store_fu_153">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln4_store_fu_189">
+    <nodeIds>80</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="a">
+    <nodeIds>78</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="b">
+    <nodeIds>25</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="c">
+    <nodeIds>28</nodeIds>
+  </memoryPorts>
+  <ioPorts name="a(p0)">
+    <contents name="store">
+      <nodeIds>78</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b(p0)">
+    <contents name="load">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c(p0)">
+    <contents name="load">
+      <nodeIds>28</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="2" latency="2"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="2" latency="2"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="25" stage="1" latency="2"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="2"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="4" latency="4"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="4" latency="4"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="4" latency="4"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="4" latency="4"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="4" latency="4"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="4" latency="4"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="4" latency="4"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="4" latency="4"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="4" latency="4"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="4" latency="4"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="4" latency="4"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="4" latency="4"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="4" latency="4"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="4" latency="4"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="4" latency="4"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="4" latency="4"/>
+    </states>
+    <states id="3">
+      <operations id="30" stage="3" latency="4"/>
+      <operations id="33" stage="3" latency="4"/>
+      <operations id="36" stage="3" latency="4"/>
+      <operations id="39" stage="3" latency="4"/>
+      <operations id="42" stage="3" latency="4"/>
+      <operations id="45" stage="3" latency="4"/>
+      <operations id="48" stage="3" latency="4"/>
+      <operations id="51" stage="3" latency="4"/>
+      <operations id="54" stage="3" latency="4"/>
+      <operations id="57" stage="3" latency="4"/>
+      <operations id="60" stage="3" latency="4"/>
+      <operations id="63" stage="3" latency="4"/>
+      <operations id="66" stage="3" latency="4"/>
+      <operations id="69" stage="3" latency="4"/>
+      <operations id="72" stage="3" latency="4"/>
+      <operations id="75" stage="3" latency="4"/>
+    </states>
+    <states id="4">
+      <operations id="30" stage="2" latency="4"/>
+      <operations id="33" stage="2" latency="4"/>
+      <operations id="36" stage="2" latency="4"/>
+      <operations id="39" stage="2" latency="4"/>
+      <operations id="42" stage="2" latency="4"/>
+      <operations id="45" stage="2" latency="4"/>
+      <operations id="48" stage="2" latency="4"/>
+      <operations id="51" stage="2" latency="4"/>
+      <operations id="54" stage="2" latency="4"/>
+      <operations id="57" stage="2" latency="4"/>
+      <operations id="60" stage="2" latency="4"/>
+      <operations id="63" stage="2" latency="4"/>
+      <operations id="66" stage="2" latency="4"/>
+      <operations id="69" stage="2" latency="4"/>
+      <operations id="72" stage="2" latency="4"/>
+      <operations id="75" stage="2" latency="4"/>
+      <operations id="83" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="4"/>
+      <operations id="33" stage="1" latency="4"/>
+      <operations id="36" stage="1" latency="4"/>
+      <operations id="39" stage="1" latency="4"/>
+      <operations id="42" stage="1" latency="4"/>
+      <operations id="45" stage="1" latency="4"/>
+      <operations id="48" stage="1" latency="4"/>
+      <operations id="51" stage="1" latency="4"/>
+      <operations id="54" stage="1" latency="4"/>
+      <operations id="57" stage="1" latency="4"/>
+      <operations id="60" stage="1" latency="4"/>
+      <operations id="63" stage="1" latency="4"/>
+      <operations id="66" stage="1" latency="4"/>
+      <operations id="69" stage="1" latency="4"/>
+      <operations id="72" stage="1" latency="4"/>
+      <operations id="75" stage="1" latency="4"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="lab6_z1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="7" mMaxLatency="7">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>14</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Mult" mII="1" mDepth="5" mMinTripCount="2" mMaxTripCount="2" mMinLatency="5" mMaxLatency="5" mType="1">
+      <basicBlocks>19</basicBlocks>
+      <basicBlocks>82</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>84</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

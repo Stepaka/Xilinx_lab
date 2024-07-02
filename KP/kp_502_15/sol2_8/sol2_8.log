@@ -1,0 +1,1161 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 32 kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_15 kp_502_15 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 c 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 r 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 x 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 a 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 864.969 MB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_15.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.861 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-186] Unrolling loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' completely with a factor of 32 (./source/kp_502_15.cpp:5:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' has been removed because the loop is unrolled completely (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'r': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'x': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.209 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_15' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.445 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_16' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_17' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_18' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_19' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_20' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_21' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_22' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_23' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_24' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_25' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_26' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_27' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_28' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_29' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_30' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_31' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_16' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_17' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_18' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_19' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_20' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_21' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_22' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_23' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_24' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_25' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_26' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_27' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_28' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_29' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_30' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_31' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_16' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_17' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_18' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_19' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_20' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_21' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_22' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_23' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_24' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_25' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_26' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_27' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_28' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_29' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_30' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_31' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_16' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_17' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_18' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_19' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_20' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_21' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_22' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_23' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_24' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_25' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_26' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_27' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_28' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_29' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_30' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_31' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_15' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.581 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.1 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.491 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_15.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_15.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 8.514 seconds; current allocated memory: 250.008 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.421 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 32 kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_15 kp_502_15 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 c 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 r 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 x 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 a 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 879.930 MB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_15.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.939 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' partially with a factor of 32 (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'r': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'x': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.377 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.408 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.177 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_15' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.272 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_15' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_15' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_15' is 10434 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.705 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.629 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.576 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_15.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_15.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 12.776 seconds; current allocated memory: 234.977 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 13.825 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 32 kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_15 kp_502_15 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 c 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 r 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 x 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 a 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 869.078 MB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_15.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.886 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' partially with a factor of 32 (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'r': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'x': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.549 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.102 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.419 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.183 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_15' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.499 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.276 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_15' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_15' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_15' is 10434 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.864 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.655 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.655 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_15.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_15.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 13.188 seconds; current allocated memory: 245.602 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 0 seconds. Total elapsed time: 14.213 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 32 kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_15 kp_502_15 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 c 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 r 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 x 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 a 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 868.223 MB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_15.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.845 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' partially with a factor of 32 (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'r': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'x': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.56 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.396 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_15' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.543 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.275 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_15' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_15' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_15' is 10434 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.773 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.687 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.14 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_15.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_15.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 13.608 seconds; current allocated memory: 246.262 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 1 seconds. Total elapsed time: 14.638 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 32 kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_15 kp_502_15 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 c 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 r 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 x 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 32 -type cyclic kp_502_15 a 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 874.762 MB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_15.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.766 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' partially with a factor of 32 (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'r': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'x': Cyclic partitioning with factor 32 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.554 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.412 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.178 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_15' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.494 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.294 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_15' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_15' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_15' is 10434 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.755 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.818 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.652 seconds; current allocated memory: 1.076 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_15.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_15.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 13.13 seconds; current allocated memory: 239.199 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 0 seconds. Total elapsed time: 14.276 seconds; peak allocated memory: 1.076 GB.

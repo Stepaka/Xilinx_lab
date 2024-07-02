@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1699350828283">
+  <ports id="1" name="d_in_0" type="PortType" coreName="RAM_2P" coreId="80656376" bitwidth="16" iftype="IfTypeRegister" arraysize="128">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="d_in_1" type="PortType" coreName="RAM_2P" coreId="80670568" bitwidth="16" iftype="IfTypeRegister" arraysize="128">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="d_in_2" type="PortType" coreName="RAM_2P" coreId="1031040613" bitwidth="16" iftype="IfTypeRegister" arraysize="128">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="4" name="d_in_3" type="PortType" coreName="RAM_2P" coreId="1684890463" bitwidth="16" iftype="IfTypeRegister" arraysize="128">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="5" name="d_out" type="PortType" coreName="RAM" coreId="1031040613" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="128">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="81" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="83" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="84" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="85" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="88" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="91" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="92" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="93" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="94" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="97" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="98" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="99" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="100" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="101" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="103" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="104" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="105" source_obj="//@ports.2" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="107" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="108" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="109" source_obj="//@ports.3" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="111" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="112" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="113" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="114" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="115" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="116" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="117" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="118" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="119" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@ports.4"/>
+  <edges id="121" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="122" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="123" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="124" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="127" source_obj="//@blocks.2/@node_objs.15" sink_obj="//@blocks.2/@node_objs.16"/>
+  <edges id="128" source_obj="//@ports.0" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="130" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.17"/>
+  <edges id="131" source_obj="//@blocks.2/@node_objs.17" sink_obj="//@blocks.2/@node_objs.18"/>
+  <edges id="132" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.2/@node_objs.19"/>
+  <edges id="137" source_obj="//@blocks.2/@node_objs.19" sink_obj="//@blocks.2/@node_objs.20"/>
+  <edges id="141" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.21"/>
+  <edges id="143" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.21"/>
+  <edges id="144" source_obj="//@blocks.2/@node_objs.21" sink_obj="//@blocks.2/@node_objs.22"/>
+  <edges id="149" source_obj="//@blocks.2/@node_objs.22" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="150" source_obj="//@blocks.2/@node_objs.20" sink_obj="//@blocks.2/@node_objs.23"/>
+  <edges id="151" source_obj="//@ports.2" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="153" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.24"/>
+  <edges id="154" source_obj="//@blocks.2/@node_objs.24" sink_obj="//@blocks.2/@node_objs.25"/>
+  <edges id="155" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.2/@node_objs.26"/>
+  <edges id="160" source_obj="//@blocks.2/@node_objs.26" sink_obj="//@blocks.2/@node_objs.27"/>
+  <edges id="164" source_obj="//@ports.3" sink_obj="//@blocks.2/@node_objs.28"/>
+  <edges id="166" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.28"/>
+  <edges id="167" source_obj="//@blocks.2/@node_objs.28" sink_obj="//@blocks.2/@node_objs.29"/>
+  <edges id="173" source_obj="//@blocks.2/@node_objs.29" sink_obj="//@blocks.2/@node_objs.30"/>
+  <edges id="174" source_obj="//@blocks.2/@node_objs.27" sink_obj="//@blocks.2/@node_objs.30"/>
+  <edges id="175" source_obj="//@blocks.2/@node_objs.18" sink_obj="//@blocks.2/@node_objs.31"/>
+  <edges id="176" source_obj="//@blocks.2/@node_objs.23" sink_obj="//@blocks.2/@node_objs.31"/>
+  <edges id="177" source_obj="//@blocks.2/@node_objs.25" sink_obj="//@blocks.2/@node_objs.32"/>
+  <edges id="178" source_obj="//@blocks.2/@node_objs.30" sink_obj="//@blocks.2/@node_objs.32"/>
+  <edges id="179" source_obj="//@blocks.2/@node_objs.32" sink_obj="//@blocks.2/@node_objs.33"/>
+  <edges id="180" source_obj="//@blocks.2/@node_objs.31" sink_obj="//@blocks.2/@node_objs.33"/>
+  <edges id="181" source_obj="//@blocks.2/@node_objs.34" sink_obj="//@ports.4"/>
+  <edges id="183" source_obj="//@blocks.2/@node_objs.16" sink_obj="//@blocks.2/@node_objs.34"/>
+  <edges id="184" source_obj="//@blocks.2/@node_objs.33" sink_obj="//@blocks.2/@node_objs.35"/>
+  <edges id="185" source_obj="//@blocks.2/@node_objs.34" sink_obj="//@blocks.2/@node_objs.35"/>
+  <edges id="186" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.36"/>
+  <edges id="189" source_obj="//@blocks.2/@node_objs.36" sink_obj="//@blocks.2/@node_objs.37"/>
+  <edges id="190" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.2/@node_objs.37"/>
+  <edges id="191" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.38"/>
+  <edges id="331" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="332" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="333" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="334" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="335" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="336" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.37"/>
+  <edges id="337" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.37"/>
+  <blocks id="24" name="block_24" type="BlockType">
+    <controlOutputObjs>block_32</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i" originalName="i" coreId="2944968440" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i_write_ln6" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="1630416695" contextFuncName="lab5_z1" opcode="store" m_display="0" m_delay="1.61" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="br_ln6" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="2944968440" contextFuncName="lab5_z1" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <controlInputObjs>block_32</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab5_z1.cpp">
+      <validLinenumbers>6</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="32" name="block_32" type="BlockType">
+    <controlInputObjs>block_24</controlInputObjs>
+    <controlInputObjs>.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_75</controlOutputObjs>
+    <controlOutputObjs>.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i_1" lineNumber="9" originalName="i" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="57067552" contextFuncName="lab5_z1" bitwidth="8" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="9" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="zext_ln6" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="zext_ln6_fu_211_p1" coreId="159" contextFuncName="lab5_z1" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="zext_ln6_1" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="zext_ln6_1_fu_216_p1" coreId="1630416695" contextFuncName="lab5_z1" bitwidth="10" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln6_2" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="zext_ln6_2_fu_220_p1" coreId="2944968440" contextFuncName="lab5_z1" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="tmp_fu_224_p3" coreId="88759000" contextFuncName="lab5_z1" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln6" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="23996640" contextFuncName="lab5_z1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlInputObjs>block_75</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab5_z1.cpp">
+      <validLinenumbers>9</validLinenumbers>
+      <validLinenumbers>6</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="73" name=".split" type="BlockType">
+    <controlInputObjs>block_32</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_32</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="d_in_0_addr" lineNumber="7" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="76245888" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="7" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>d_in_0</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="d_in_0_load" lineNumber="7" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM_2P" implIndex="auto" control="no" opType="ram_2p" coreId="89" contextFuncName="lab5_z1" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="7" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="trunc_ln6" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="trunc_ln6_fu_232_p1" coreId="1630416695" contextFuncName="lab5_z1" bitwidth="7" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="zext_ln8" lineNumber="8" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="zext_ln8_fu_236_p1" coreId="65244424" contextFuncName="lab5_z1" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="8" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="d_in_1_addr" lineNumber="8" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="4294967292" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="8" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>d_in_1</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="d_in_1_load" lineNumber="8" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM_2P" implIndex="auto" control="no" opType="ram_2p" coreId="89" contextFuncName="lab5_z1" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="8" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="d_in_2_addr" lineNumber="9" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="88149440" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="9" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>d_in_2</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="d_in_2_load" lineNumber="9" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM_2P" implIndex="auto" control="no" opType="ram_2p" coreId="89" contextFuncName="lab5_z1" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="9" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="d_in_3_addr" lineNumber="10" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="4294967292" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>d_in_3</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="d_in_3_load" lineNumber="10" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM_2P" implIndex="auto" control="no" opType="ram_2p" coreId="89" contextFuncName="lab5_z1" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="add_ln11" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="add_ln11_fu_284_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab5_z1" bitwidth="16" opcode="add" nodeLabel="2.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="add_ln11_1" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="add_ln11_1_fu_290_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab5_z1" bitwidth="16" opcode="add" nodeLabel="2.0" m_display="0" m_delay="2.14" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="add_ln11_2" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="d_out_d1" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab5_z1" bitwidth="16" opcode="add" nodeLabel="2.0" m_display="0" m_delay="4.03" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="d_out_addr" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="1852142702" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>d_out</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="d_out_addr_write_ln11" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="lab5_z1" opcode="store" nodeLabel="2.0" m_display="0" m_delay="3.25" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="or_ln6" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="or_ln6_fu_243_p2" coreId="574106982" contextFuncName="lab5_z1" bitwidth="7" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="zext_ln7" lineNumber="7" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="zext_ln7_fu_249_p1" coreId="2950853217" contextFuncName="lab5_z1" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="7" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="d_in_0_addr_1" lineNumber="7" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="2950853676" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="7" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>d_in_0</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="d_in_0_load_1" lineNumber="7" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM_2P" implIndex="auto" control="no" opType="ram_2p" coreId="89" contextFuncName="lab5_z1" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="7" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="add_ln8" lineNumber="8" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="add_ln8_fu_257_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab5_z1" bitwidth="9" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.11" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="8" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="lshr_ln8" lineNumber="8" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="lshr_ln8_reg_410" coreId="4294967292" contextFuncName="lab5_z1" bitwidth="2" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="8" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="d_in_1_addr_1" lineNumber="8" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="4294967292" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="8" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>d_in_1</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="d_in_1_load_1" lineNumber="8" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM_2P" implIndex="auto" control="no" opType="ram_2p" coreId="89" contextFuncName="lab5_z1" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="8" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="tmp_5" lineNumber="8" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="mux_22_16_1_1_U1" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="lab5_z1" bitwidth="16" opcode="mux" nodeLabel="2.0" m_display="0" m_delay="1.61" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="8" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="d_in_2_addr_1" lineNumber="9" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="1159736947" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="9" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>d_in_2</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="d_in_2_load_1" lineNumber="9" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM_2P" implIndex="auto" control="no" opType="ram_2p" coreId="89" contextFuncName="lab5_z1" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="9" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="add_ln10" lineNumber="10" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="add_ln10_fu_312_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab5_z1" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="2.12" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="lshr_ln" lineNumber="10" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="tmp_7_fu_327_p5" coreId="86650800" contextFuncName="lab5_z1" bitwidth="3" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="d_in_3_addr_1" lineNumber="10" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>d_in_3</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="d_in_3_load_1" lineNumber="10" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM_2P" implIndex="auto" control="no" opType="ram_2p" coreId="89" contextFuncName="lab5_z1" bitwidth="16" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>mux</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tmp_7" lineNumber="10" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="mux_43_16_1_1_U2" coreName="Multiplexer" implIndex="auto" control="no" opType="mux" coreId="76" contextFuncName="lab5_z1" bitwidth="16" opcode="mux" nodeLabel="2.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="add_ln11_3" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="add_ln11_3_fu_341_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab5_z1" bitwidth="16" opcode="add" nodeLabel="2.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="add_ln11_4" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="add_ln11_4_fu_347_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab5_z1" bitwidth="16" opcode="add" nodeLabel="2.0" m_display="0" m_delay="2.14" m_topoIndex="45" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>mux</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="add_ln11_5" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="d_out_d0" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab5_z1" bitwidth="16" opcode="add" nodeLabel="2.0" m_display="0" m_delay="4.03" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="d_out_addr_1" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="lab5_z1" bitwidth="7" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>d_out</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="d_out_addr_1_write_ln11" lineNumber="11" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="lab5_z1" opcode="store" nodeLabel="2.0" m_display="0" m_delay="3.25" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="11" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="add_ln6" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." rtlName="add_ln6_fu_273_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab5_z1" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.11" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="i_write_ln6" lineNumber="6" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="82600736" contextFuncName="lab5_z1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.61" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln0" coreId="61528160" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_32</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab5_z1.cpp">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>6</validLinenumbers>
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>9</validLinenumbers>
+      <validLinenumbers>10</validLinenumbers>
+      <validLinenumbers>11</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="75" name="block_75" type="BlockType">
+    <controlInputObjs>block_32</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="_ln13" lineNumber="13" fileName="./source/lab5_z1.cpp" fileDirectory=".." coreId="91276976" contextFuncName="lab5_z1" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab5_z1.cpp" linenumber="13" fileDirectory="C:\Xilinx_trn\HLS2023\lab5_z1" functionName="lab5_z1"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab5_z1.cpp">
+      <validLinenumbers>13</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="d_in_2_addr_reg_390">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="d_in_3_addr_1_reg_425">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="d_in_0_addr_reg_380">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="d_in_0_addr_1_reg_405">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="d_in_1_addr_1_reg_415">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln6_1_reg_372">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln6_reg_367">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="lshr_ln8_reg_410">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_360">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="d_in_3_addr_reg_395">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="d_in_1_addr_reg_385">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln7_reg_400">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="d_in_2_addr_1_reg_420">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <expressionNodes realName="d_in_1_addr_1_gep_fu_154">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_in_0_addr_1_gep_fu_146">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_3_fu_341">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln6_fu_243">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln8_fu_257">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln7_fu_249">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln6_2_fu_220">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_4_fu_347">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_7_fu_327">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln6_fu_273">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_5_fu_353">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_in_1_addr_gep_fu_95">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_out_addr_1_gep_fu_195">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_1_fu_290">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_fu_284">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_224">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_5_fu_303">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_in_0_addr_gep_fu_78">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_74">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_in_3_addr_1_gep_fu_170">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln11_2_fu_296">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_in_2_addr_gep_fu_112">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln8_fu_263">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln6_fu_211">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_fu_312">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_in_2_addr_1_gep_fu_162">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_in_3_addr_gep_fu_129">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lshr_ln_fu_317">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln6_fu_232">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_out_addr_gep_fu_178">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln6_1_fu_216">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln8_fu_236">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="i_1_load_fu_208">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln6_store_fu_203">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln6_store_fu_279">
+    <nodeIds>71</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="d_in_0">
+    <nodeIds>52</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_in_0" portID="1">
+    <nodeIds>35</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_in_1">
+    <nodeIds>56</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_in_1" portID="1">
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_in_2">
+    <nodeIds>59</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_in_2" portID="1">
+    <nodeIds>41</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_in_3">
+    <nodeIds>63</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_in_3" portID="1">
+    <nodeIds>43</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_out">
+    <nodeIds>69</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="d_out" portID="1">
+    <nodeIds>48</nodeIds>
+  </memoryPorts>
+  <ioPorts name="d_in_0(p0)">
+    <contents name="load">
+      <nodeIds>52</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_in_0(p1)">
+    <contents name="load">
+      <nodeIds>35</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_in_1(p0)">
+    <contents name="load">
+      <nodeIds>56</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_in_1(p1)">
+    <contents name="load">
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_in_2(p0)">
+    <contents name="load">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_in_2(p1)">
+    <contents name="load">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_in_3(p0)">
+    <contents name="load">
+      <nodeIds>63</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_in_3(p1)">
+    <contents name="load">
+      <nodeIds>43</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_out(p0)">
+    <contents name="store">
+      <nodeIds>69</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_out(p1)">
+    <contents name="store">
+      <nodeIds>48</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="2" latency="2"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="2" latency="2"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="2" latency="2"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="2" latency="2"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="2" latency="2"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="2" latency="2"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="2" latency="2"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="2" latency="2"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="2"/>
+      <operations id="39" stage="1" latency="2"/>
+      <operations id="41" stage="1" latency="2"/>
+      <operations id="43" stage="1" latency="2"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="2"/>
+      <operations id="56" stage="1" latency="2"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="2"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="2"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="lab5_z1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="129" mMaxLatency="129">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>24</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="foo_label0" mII="-1" mDepth="-1" mMinTripCount="64" mMaxTripCount="64" mMinLatency="128" mMaxLatency="128" mType="1">
+      <basicBlocks>32</basicBlocks>
+      <basicBlocks>73</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>75</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

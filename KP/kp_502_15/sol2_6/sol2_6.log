@@ -1,0 +1,95 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200tsbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 8 kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_15 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_15 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_15 c 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_15 x 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_15 r 
+INFO: [HLS 200-1510] Running: csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.982 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_15.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.094 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-186] Unrolling loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' completely with a factor of 8 (./source/kp_502_15.cpp:5:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' has been removed because the loop is unrolled completely (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'r': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'x': Complete partitioning on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.197 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_15' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 1.074 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on

@@ -1,0 +1,100 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200tsbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1510] Running: set_directive_pipeline -off kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 4 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.139 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 25.16 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::sqrt(double)' into 'kp_502_7(double*, double*, double*, double*, double*, double*)' (./source/kp_502_7.cpp:13:27)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:5:10) in function 'kp_502_7' partially with a factor of 4 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'A': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'B': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'C': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'X1': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'X2': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'D': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.695 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.479 seconds; current allocated memory: 1.253 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.796 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_31_no_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_max_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_30_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_5_full_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.719 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.425 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.817 seconds; current allocated memory: 1.253 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 112.25 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 34.231 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all -tool xsim 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 154.693 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: open_solution -reset sol2_5 
+INFO: [HLS 200-10] Creating and opening solution 'G:/Xilinx_lab/KP_502_7_v2/kp_502_7/sol2_5'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+WARNING: [HLS 200-40] No G:/Xilinx_lab/KP_502_7_v2/kp_502_7/sol2_5/sol2_5.aps file found.

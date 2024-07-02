@@ -1,0 +1,178 @@
+
+
+================================================================
+== Synthesis Summary Report of 'lab4_z2'
+================================================================
++ General Information: 
+    * Date:           Sun Oct 22 02:36:54 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        lab4_z2
+    * Solution:       sol5 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xa7a12t-csg325-1Q
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------+------+-------+---------+---------+----------+---------+------+----------+--------+---------+----------+----------+-----+
+    |       Modules      | Issue|       | Latency | Latency | Iteration|         | Trip |          |        |         |          |          |     |
+    |       & Loops      | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP   |    FF    |    LUT   | URAM|
+    +--------------------+------+-------+---------+---------+----------+---------+------+----------+--------+---------+----------+----------+-----+
+    |+ lab4_z2*          |     -|   0.23|       67|  938.000|         -|       34|     -|  dataflow|  2 (5%)|  4 (10%)|  44 (~0%)|  293 (3%)|    -|
+    | + Loop_Loop1_proc  |     -|   0.23|       33|  462.000|         -|       33|     -|        no|       -|   3 (7%)|  14 (~0%)|   81 (1%)|    -|
+    |  o Loop1           |     -|  13.00|       32|  448.000|         2|        -|    16|        no|       -|        -|         -|         -|    -|
+    | + Loop_Loop2_proc  |     -|   0.23|       33|  462.000|         -|       33|     -|        no|       -|   1 (2%)|  14 (~0%)|   81 (1%)|    -|
+    |  o Loop2           |     -|  13.00|       32|  448.000|         2|        -|    16|        no|       -|        -|         -|         -|    -|
+    | + Loop_Loop3_proc  |     -|   5.99|       33|  462.000|         -|       33|     -|        no|       -|        -|  14 (~0%)|   99 (1%)|    -|
+    |  o Loop3           |     -|  13.00|       32|  448.000|         2|        -|    16|        no|       -|        -|         -|         -|    -|
+    +--------------------+------+-------+---------+---------+----------+---------+------+----------+--------+---------+----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------------+----------+
+| Interface          | Bitwidth |
++--------------------+----------+
+| data_in_address0   | 4        |
+| data_in_address1   | 4        |
+| data_in_d0         | 32       |
+| data_in_d1         | 32       |
+| data_in_q0         | 32       |
+| data_in_q1         | 32       |
+| data_out1_address0 | 4        |
+| data_out1_address1 | 4        |
+| data_out1_d0       | 32       |
+| data_out1_d1       | 32       |
+| data_out1_q0       | 32       |
+| data_out1_q1       | 32       |
+| data_out2_address0 | 4        |
+| data_out2_address1 | 4        |
+| data_out2_d0       | 32       |
+| data_out2_d1       | 32       |
+| data_out2_q0       | 32       |
+| data_out2_q1       | 32       |
++--------------------+----------+
+
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| scale     | ap_none | 32       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+----------+
+| Argument  | Direction | Datatype |
++-----------+-----------+----------+
+| data_in   | in        | int*     |
+| scale     | in        | int      |
+| data_out1 | out       | int*     |
+| data_out2 | out       | int*     |
++-----------+-----------+----------+
+
+* SW-to-HW Mapping
++-----------+--------------------+---------+----------+
+| Argument  | HW Interface       | HW Type | HW Usage |
++-----------+--------------------+---------+----------+
+| data_in   | data_in_address0   | port    | offset   |
+| data_in   | data_in_ce0        | port    |          |
+| data_in   | data_in_d0         | port    |          |
+| data_in   | data_in_q0         | port    |          |
+| data_in   | data_in_we0        | port    |          |
+| data_in   | data_in_address1   | port    | offset   |
+| data_in   | data_in_ce1        | port    |          |
+| data_in   | data_in_d1         | port    |          |
+| data_in   | data_in_q1         | port    |          |
+| data_in   | data_in_we1        | port    |          |
+| scale     | scale              | port    |          |
+| data_out1 | data_out1_address0 | port    | offset   |
+| data_out1 | data_out1_ce0      | port    |          |
+| data_out1 | data_out1_d0       | port    |          |
+| data_out1 | data_out1_q0       | port    |          |
+| data_out1 | data_out1_we0      | port    |          |
+| data_out1 | data_out1_address1 | port    | offset   |
+| data_out1 | data_out1_ce1      | port    |          |
+| data_out1 | data_out1_d1       | port    |          |
+| data_out1 | data_out1_q1       | port    |          |
+| data_out1 | data_out1_we1      | port    |          |
+| data_out2 | data_out2_address0 | port    | offset   |
+| data_out2 | data_out2_ce0      | port    |          |
+| data_out2 | data_out2_d0       | port    |          |
+| data_out2 | data_out2_q0       | port    |          |
+| data_out2 | data_out2_we0      | port    |          |
+| data_out2 | data_out2_address1 | port    | offset   |
+| data_out2 | data_out2_ce1      | port    |          |
+| data_out2 | data_out2_d1       | port    |          |
+| data_out2 | data_out2_q1       | port    |          |
+| data_out2 | data_out2_we1      | port    |          |
++-----------+--------------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------+-----+--------+----------+-----+--------+---------+
+| Name                     | DSP | Pragma | Variable | Op  | Impl   | Latency |
++--------------------------+-----+--------+----------+-----+--------+---------+
+| + lab4_z2                | 4   |        |          |     |        |         |
+|  + Loop_Loop1_proc       | 3   |        |          |     |        |         |
+|    add_ln5_fu_106_p2     | -   |        | add_ln5  | add | fabric | 0       |
+|    mul_32s_32s_32_1_1_U1 | 3   |        | res      | mul | auto   | 0       |
+|  + Loop_Loop2_proc       | 1   |        |          |     |        |         |
+|    add_ln11_fu_83_p2     | -   |        | add_ln11 | add | fabric | 0       |
+|    mul_32s_6ns_32_1_1_U7 | 1   |        | mul_ln13 | mul | auto   | 0       |
+|  + Loop_Loop3_proc       | 0   |        |          |     |        |         |
+|    add_ln15_fu_83_p2     | -   |        | add_ln15 | add | fabric | 0       |
+|    data_out2_d0          | -   |        | add_ln17 | add | fabric | 0       |
++--------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------+------+------+--------+----------+---------+------+---------+
+| Name       | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++------------+------+------+--------+----------+---------+------+---------+
+| + lab4_z2  | 2    | 0    |        |          |         |      |         |
+|   tempA1_U | 1    | -    |        | tempA1   | ram_1p  | auto | 1       |
+|   tempA2_U | 1    | -    |        | tempA2   | ram_1p  | auto | 1       |
++------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+---------+------------------------------------+
+| Type     | Options | Location                           |
++----------+---------+------------------------------------+
+| pipeline | off     | ./source/lab4_z2.cpp:6 in lab4_z2  |
+| pipeline | off     | ./source/lab4_z2.cpp:12 in lab4_z2 |
+| pipeline | off     | ./source/lab4_z2.cpp:16 in lab4_z2 |
+| dataflow |         | DIRECTIVE in lab4_z2               |
++----------+---------+------------------------------------+
+
+

@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab6_z1.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab6_z1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=a cyclic factor=32 dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab6_z1.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab6_z1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=b cyclic factor=32 dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab6_z1.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab6_z1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c cyclic factor=32 dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab6_z1.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab6_z1" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=lab6_z1" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab6_z1.cpp:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab6_z1" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab6_z1.cpp:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab6_z1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=32" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./source/lab6_z1.cpp:3:0" msg_body="Unrolling loop 'Mult' (./source/lab6_z1.cpp:4:7) in function 'lab6_z1' completely with a factor of 32">
+        <args Factor="32" LoopLoc="./source/lab6_z1.cpp:4:7" LoopName="Mult"/>
+    </msg>
+    <msg msg_groups="PRAGMA_PIPELINE" msg_id="214-189" msg_severity="WARNING" msg_loc="./source/lab6_z1.cpp:3:0" msg_body="Pipeline directive for loop 'Mult' (./source/lab6_z1.cpp:4:7) in function 'lab6_z1' has been removed because the loop is unrolled completely">
+        <args LoopLoc="./source/lab6_z1.cpp:4:7" LoopName="Mult"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./source/lab6_z1.cpp:3:0" msg_body="Applying array_reshape to 'a': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./source/lab6_z1.cpp:3:0" msg_body="Applying array_reshape to 'b': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="b"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./source/lab6_z1.cpp:3:0" msg_body="Applying array_reshape to 'c': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="c"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

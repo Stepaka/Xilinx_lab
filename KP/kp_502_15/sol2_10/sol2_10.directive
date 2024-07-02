@@ -1,0 +1,63 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="kp_502_15" label="Loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="kp_502_15" label="Loop" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="16"/>
+            </pragma>
+        </directive>
+        <directive functionName="kp_502_15" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="kp_502_15"/>
+            </pragma>
+        </directive>
+        <directive functionName="kp_502_15" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="a"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="kp_502_15" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="r"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="kp_502_15" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="b"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="kp_502_15" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="c"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="kp_502_15" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="x"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="kp_502_15" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="kp_502_15"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

@@ -1,0 +1,537 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 6ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 6 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -off kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 4 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -dim 1 -factor 4 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.019 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 33.213 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<512>::ap_int<512, true>(ap_int_base<512, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<288>::ap_int<288, true>(ap_int_base<288, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:216)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:254)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<544, true>::ap_int_base<288, true>(ap_int_base<288, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<544>::ap_int<544, true>(ap_int_base<544, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<544, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<545, true>::ap_int_base<512, true>(ap_int_base<512, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<545>::ap_int<545, true>(ap_int_base<545, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<545, true>::ap_int_base<544, true>(ap_int_base<544, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<256, true>(ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:456:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<256, true>(ap_int_base<256, true> const&)' into 'ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<256, true>(ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:113:91)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:550:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:183:59)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_int_base<256, true>::ap_int_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:399:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::ap_int_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<256>::ap_int<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h:114:9)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<256> sqrt_fixed<256>(ap_int<256>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_sqrt_apfixed.h:381:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<257>::ap_int<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<256, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:37)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<258>::ap_int<258, true>(ap_int_base<258, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int<259>::ap_int<259, true>(ap_int_base<259, true> const&)' into 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<258>::ap_int<258, true>(ap_int_base<258, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:23)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<259>(ap_int<259> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::operator-() const' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<259>(ap_int<259> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::operator-() const' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:36)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<545>(ap_int<545> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:45)
+INFO: [HLS 214-186] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' completely with a factor of 4 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<256> sqrt_fixed<256>(ap_int<256>)' into 'ap_int<256> hls::sqrt<256>(ap_int<256>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\hls_math.h:1287:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<256> hls::sqrt<256>(ap_int<256>)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'A' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'B' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'C' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'X1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'X2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'D' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'A': Complete reshaping on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'B': Complete reshaping on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'C': Complete reshaping on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'X1': Complete reshaping on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'X2': Complete reshaping on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'D': Complete reshaping on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.59 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.164 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.506 seconds; current allocated memory: 1.256 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.382 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 5624 from HDL expression: (1'b1 == ap_CS_fsm_state1)
+INFO: [RTGEN 206-100] Generating core module 'mul_254s_254s_254_3_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_256s_256s_256_3_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_257s_257ns_256_261_seq_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sub_256ns_256ns_256_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.805 seconds; current allocated memory: 1.256 GB.
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'kp_502_7_sub_256ns_256ns_256_2_1_Adder_0'
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.315 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.631 seconds; current allocated memory: 1.256 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-789] **** Estimated Fmax: 237.93 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 43.058 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 2 seconds. Total elapsed time: 45.366 seconds; peak allocated memory: 1.256 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 6ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 6 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -off kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 8 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 8 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 32.746 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<512>::ap_int<512, true>(ap_int_base<512, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<288>::ap_int<288, true>(ap_int_base<288, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:216)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:254)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<544, true>::ap_int_base<288, true>(ap_int_base<288, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<544>::ap_int<544, true>(ap_int_base<544, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<544, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<545, true>::ap_int_base<512, true>(ap_int_base<512, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<545>::ap_int<545, true>(ap_int_base<545, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<545, true>::ap_int_base<544, true>(ap_int_base<544, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<256, true>(ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:456:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<256, true>(ap_int_base<256, true> const&)' into 'ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<256, true>(ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:113:91)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:550:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:183:59)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_int_base<256, true>::ap_int_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:399:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::ap_int_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<256>::ap_int<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h:114:9)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<256> sqrt_fixed<256>(ap_int<256>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_sqrt_apfixed.h:381:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<257>::ap_int<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<256, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:37)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<258>::ap_int<258, true>(ap_int_base<258, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int<259>::ap_int<259, true>(ap_int_base<259, true> const&)' into 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<258>::ap_int<258, true>(ap_int_base<258, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:23)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<259>(ap_int<259> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::operator-() const' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<259>(ap_int<259> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::operator-() const' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:36)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<545>(ap_int<545> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:45)
+INFO: [HLS 214-186] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' completely with a factor of 8 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<256> sqrt_fixed<256>(ap_int<256>)' into 'ap_int<256> hls::sqrt<256>(ap_int<256>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\hls_math.h:1287:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X1': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X2': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_7' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_6' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_5' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_4' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_7' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_6' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_5' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_4' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_7' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_6' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_5' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_4' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_7' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_6' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_5' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_4' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_7' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_6' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_5' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_4' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_7' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_6' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_5' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_4' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.706 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt<256>' into 'kp_502_7' (./source/kp_502_7.cpp:16) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.275 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.612 seconds; current allocated memory: 1.256 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.91 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 10224 from HDL expression: (1'b1 == ap_CS_fsm_state1)
+INFO: [RTGEN 206-100] Generating core module 'mul_254s_254s_254_3_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_256s_256s_256_3_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_257s_257ns_256_261_seq_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sub_256ns_256ns_256_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.493 seconds; current allocated memory: 1.256 GB.
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'kp_502_7_sub_256ns_256ns_256_2_1_Adder_0'
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.002 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.145 seconds; current allocated memory: 1.256 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-789] **** Estimated Fmax: 237.93 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9 seconds. CPU system time: 1 seconds. Elapsed time: 45.39 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 12 seconds. Total CPU system time: 2 seconds. Total elapsed time: 47.771 seconds; peak allocated memory: 1.256 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 6ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 6 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -off kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 4 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.021 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 34.092 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<512>::ap_int<512, true>(ap_int_base<512, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<288>::ap_int<288, true>(ap_int_base<288, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:216)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<256, true>::mult operator*<32, true, 256, true>(ap_int_base<32, true> const&, ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:254)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<544, true>::ap_int_base<288, true>(ap_int_base<288, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<544>::ap_int<544, true>(ap_int_base<544, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<544, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<545, true>::ap_int_base<512, true>(ap_int_base<512, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<545>::ap_int<545, true>(ap_int_base<545, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<545, true>::ap_int_base<544, true>(ap_int_base<544, true> const&)' into 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<256, true>(ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:456:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<256, true>(ap_int_base<256, true> const&)' into 'ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<256, true>(ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:113:91)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:550:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:183:59)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_int_base<256, true>::ap_int_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:399:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::ap_int_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<256, 256, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<256>::ap_int<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h:114:9)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<256, 256, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<256> sqrt_fixed<256>(ap_int<256>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_sqrt_apfixed.h:381:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<257>::ap_int<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<256, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<256, true>::minus operator-<1, false, 256, true>(ap_int_base<1, false> const&, ap_int_base<256, true> const&)' into 'ap_int_base<256, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:37)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<258>::ap_int<258, true>(ap_int_base<258, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int<259>::ap_int<259, true>(ap_int_base<259, true> const&)' into 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<257, true>(ap_int_base<257, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<258>::ap_int<258, true>(ap_int_base<258, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::ap_int_base<256, true>(ap_int_base<256, true> const&)' into 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<256, true>::mult operator*<256, true, 256, true>(ap_int_base<256, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:23)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<259>(ap_int<259> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::RType<256, true>::plus operator+<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::operator-() const' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:20:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<259>(ap_int<259> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<258, true>::RType<288, true>::div operator/<258, true, 288, true>(ap_int_base<258, true> const&, ap_int_base<288, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<257, true>::RType<256, true>::minus operator-<257, true, 256, true>(ap_int_base<257, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::operator-() const' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:19:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, true>::RType<($_0)32, true>::mult operator*<256, true>(int, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:36)
+INFO: [HLS 214-131] Inlining function 'ap_int<256>::ap_int<545>(ap_int<545> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<512, true>::RType<544, true>::minus operator-<512, true, 544, true>(ap_int_base<512, true> const&, ap_int_base<544, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<288, true>::RType<256, true>::mult operator*<288, true, 256, true>(ap_int_base<288, true> const&, ap_int_base<256, true> const&)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:13:45)
+INFO: [HLS 214-186] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' completely with a factor of 4 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<256> sqrt_fixed<256>(ap_int<256>)' into 'ap_int<256> hls::sqrt<256>(ap_int<256>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\hls_math.h:1287:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<256> hls::sqrt<256>(ap_int<256>)' into 'kp_502_7(ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*, ap_int<256>*)' (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X1': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X2': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Complete partitioning on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'D_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X2_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'X1_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'C_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'B_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_3' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_2' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_1' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'A_0' with compact=bit mode in 256-bits (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 4.603 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.516 seconds; current allocated memory: 1.255 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.398 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 5112 from HDL expression: (1'b1 == ap_CS_fsm_state1)
+INFO: [RTGEN 206-100] Generating core module 'mul_254s_254s_254_3_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_256s_256s_256_3_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_257s_257ns_256_261_seq_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sub_256ns_256ns_256_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.843 seconds; current allocated memory: 1.255 GB.
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'kp_502_7_sub_256ns_256ns_256_2_1_Adder_0'
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.202 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.771 seconds; current allocated memory: 1.255 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-789] **** Estimated Fmax: 237.93 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 7 seconds. CPU system time: 1 seconds. Elapsed time: 44.053 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 2 seconds. Total elapsed time: 46.761 seconds; peak allocated memory: 1.255 GB.

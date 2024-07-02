@@ -1,0 +1,219 @@
+
+
+================================================================
+== Synthesis Summary Report of 'kp_502_15'
+================================================================
++ General Information: 
+    * Date:           Sat Dec  9 20:37:56 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        kp_502_15
+    * Solution:       sol2_3 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a200t-sbv484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------+------+-------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |   Modules   | Issue|       | Latency | Latency| Iteration|         | Trip |          |      |         |           |           |     |
+    |   & Loops   | Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +-------------+------+-------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ kp_502_15  |     -|   2.18|        7|  98.000|         -|        8|     -|        no|     -|  24 (3%)|  265 (~0%)|  523 (~0%)|    -|
+    | o Loop      |     -|  13.00|        6|  84.000|         3|        -|     2|        no|     -|        -|          -|          -|    -|
+    +-------------+------+-------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------+----------+
+| Interface    | Bitwidth |
++--------------+----------+
+| a_0_address0 | 1        |
+| a_0_q0       | 32       |
+| a_1_address0 | 1        |
+| a_1_q0       | 32       |
+| a_2_address0 | 1        |
+| a_2_q0       | 32       |
+| a_3_address0 | 1        |
+| a_3_q0       | 32       |
+| b_0_address0 | 1        |
+| b_0_q0       | 32       |
+| b_1_address0 | 1        |
+| b_1_q0       | 32       |
+| b_2_address0 | 1        |
+| b_2_q0       | 32       |
+| b_3_address0 | 1        |
+| b_3_q0       | 32       |
+| c_0_address0 | 1        |
+| c_0_q0       | 32       |
+| c_1_address0 | 1        |
+| c_1_q0       | 32       |
+| c_2_address0 | 1        |
+| c_2_q0       | 32       |
+| c_3_address0 | 1        |
+| c_3_q0       | 32       |
+| r_0_address0 | 1        |
+| r_0_d0       | 32       |
+| r_1_address0 | 1        |
+| r_1_d0       | 32       |
+| r_2_address0 | 1        |
+| r_2_d0       | 32       |
+| r_3_address0 | 1        |
+| r_3_d0       | 32       |
+| x_0_address0 | 1        |
+| x_0_q0       | 32       |
+| x_1_address0 | 1        |
+| x_1_q0       | 32       |
+| x_2_address0 | 1        |
+| x_2_q0       | 32       |
+| x_3_address0 | 1        |
+| x_3_q0       | 32       |
++--------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| r        | out       | int*     |
+| a        | in        | int*     |
+| b        | in        | int*     |
+| c        | in        | int*     |
+| x        | in        | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| r        | r_0_address0 | port    | offset   |
+| r        | r_0_ce0      | port    |          |
+| r        | r_0_we0      | port    |          |
+| r        | r_0_d0       | port    |          |
+| r        | r_1_address0 | port    | offset   |
+| r        | r_1_ce0      | port    |          |
+| r        | r_1_we0      | port    |          |
+| r        | r_1_d0       | port    |          |
+| r        | r_2_address0 | port    | offset   |
+| r        | r_2_ce0      | port    |          |
+| r        | r_2_we0      | port    |          |
+| r        | r_2_d0       | port    |          |
+| r        | r_3_address0 | port    | offset   |
+| r        | r_3_ce0      | port    |          |
+| r        | r_3_we0      | port    |          |
+| r        | r_3_d0       | port    |          |
+| a        | a_0_address0 | port    | offset   |
+| a        | a_0_ce0      | port    |          |
+| a        | a_0_q0       | port    |          |
+| a        | a_1_address0 | port    | offset   |
+| a        | a_1_ce0      | port    |          |
+| a        | a_1_q0       | port    |          |
+| a        | a_2_address0 | port    | offset   |
+| a        | a_2_ce0      | port    |          |
+| a        | a_2_q0       | port    |          |
+| a        | a_3_address0 | port    | offset   |
+| a        | a_3_ce0      | port    |          |
+| a        | a_3_q0       | port    |          |
+| b        | b_0_address0 | port    | offset   |
+| b        | b_0_ce0      | port    |          |
+| b        | b_0_q0       | port    |          |
+| b        | b_1_address0 | port    | offset   |
+| b        | b_1_ce0      | port    |          |
+| b        | b_1_q0       | port    |          |
+| b        | b_2_address0 | port    | offset   |
+| b        | b_2_ce0      | port    |          |
+| b        | b_2_q0       | port    |          |
+| b        | b_3_address0 | port    | offset   |
+| b        | b_3_ce0      | port    |          |
+| b        | b_3_q0       | port    |          |
+| c        | c_0_address0 | port    | offset   |
+| c        | c_0_ce0      | port    |          |
+| c        | c_0_q0       | port    |          |
+| c        | c_1_address0 | port    | offset   |
+| c        | c_1_ce0      | port    |          |
+| c        | c_1_q0       | port    |          |
+| c        | c_2_address0 | port    | offset   |
+| c        | c_2_ce0      | port    |          |
+| c        | c_2_q0       | port    |          |
+| c        | c_3_address0 | port    | offset   |
+| c        | c_3_ce0      | port    |          |
+| c        | c_3_q0       | port    |          |
+| x        | x_0_address0 | port    | offset   |
+| x        | x_0_ce0      | port    |          |
+| x        | x_0_q0       | port    |          |
+| x        | x_1_address0 | port    | offset   |
+| x        | x_1_ce0      | port    |          |
+| x        | x_1_q0       | port    |          |
+| x        | x_2_address0 | port    | offset   |
+| x        | x_2_ce0      | port    |          |
+| x        | x_2_q0       | port    |          |
+| x        | x_3_address0 | port    | offset   |
+| x        | x_3_ce0      | port    |          |
+| x        | x_3_q0       | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------+-----+--------+------------+-----+--------+---------+
+| Name                    | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++-------------------------+-----+--------+------------+-----+--------+---------+
+| + kp_502_15             | 24  |        |            |     |        |         |
+|   mul_32s_32s_32_1_1_U1 | 3   |        | mul_ln11   | mul | auto   | 0       |
+|   add_ln11_fu_399_p2    | -   |        | add_ln11   | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U5 | 3   |        | mul_ln11_1 | mul | auto   | 0       |
+|   r_0_d0                | -   |        | add_ln11_1 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U2 | 3   |        | mul_ln11_2 | mul | auto   | 0       |
+|   add_ln11_2_fu_411_p2  | -   |        | add_ln11_2 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U6 | 3   |        | mul_ln11_3 | mul | auto   | 0       |
+|   r_1_d0                | -   |        | add_ln11_3 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U3 | 3   |        | mul_ln11_4 | mul | auto   | 0       |
+|   add_ln11_4_fu_423_p2  | -   |        | add_ln11_4 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U7 | 3   |        | mul_ln11_5 | mul | auto   | 0       |
+|   r_2_d0                | -   |        | add_ln11_5 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U4 | 3   |        | mul_ln11_6 | mul | auto   | 0       |
+|   add_ln11_6_fu_435_p2  | -   |        | add_ln11_6 | add | fabric | 0       |
+|   mul_32s_32s_32_1_1_U8 | 3   |        | mul_ln11_7 | mul | auto   | 0       |
+|   r_3_d0                | -   |        | add_ln11_7 | add | fabric | 0       |
+|   add_ln8_fu_382_p2     | -   |        | add_ln8    | add | fabric | 0       |
++-------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+---------------------------+
+| Type            | Options                          | Location                  |
++-----------------+----------------------------------+---------------------------+
+| array_partition | variable=a cyclic factor=4 dim=1 | DIRECTIVE in kp_502_15, a |
+| array_partition | variable=b cyclic factor=4 dim=1 | DIRECTIVE in kp_502_15, b |
+| array_partition | variable=c cyclic factor=4 dim=1 | DIRECTIVE in kp_502_15, c |
+| array_partition | variable=r cyclic factor=4 dim=1 | DIRECTIVE in kp_502_15, r |
+| array_partition | variable=x cyclic factor=4 dim=1 | DIRECTIVE in kp_502_15, x |
+| pipeline        | off                              | DIRECTIVE in kp_502_15    |
+| unroll          | factor=4                         | DIRECTIVE in kp_502_15    |
++-----------------+----------------------------------+---------------------------+
+
+

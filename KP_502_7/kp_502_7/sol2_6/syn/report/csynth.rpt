@@ -1,0 +1,290 @@
+
+
+================================================================
+== Synthesis Summary Report of 'kp_502_7'
+================================================================
++ General Information: 
+    * Date:           Tue Feb 20 05:43:12 2024
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        kp_502_7
+    * Solution:       sol2_6 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a200t-sbv484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------+------+-------+---------+---------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+    |   Modules  | Issue|       | Latency | Latency | Iteration|         | Trip |          |      |           |            |             |     |
+    |   & Loops  | Type | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP    |     FF     |     LUT     | URAM|
+    +------------+------+-------+---------+---------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+    |+ kp_502_7  |     -|   0.23|       61|  854.000|         -|       62|     -|        no|     -|  212 (28%)|  16974 (6%)|  14389 (10%)|    -|
+    | o Loop     |     -|  13.00|       59|  826.000|        59|        1|     2|       yes|     -|          -|           -|            -|    -|
+    +------------+------+-------+---------+---------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++---------------+----------+
+| Interface     | Bitwidth |
++---------------+----------+
+| A_0_address0  | 1        |
+| A_0_q0        | 64       |
+| A_1_address0  | 1        |
+| A_1_q0        | 64       |
+| A_2_address0  | 1        |
+| A_2_q0        | 64       |
+| A_3_address0  | 1        |
+| A_3_q0        | 64       |
+| B_0_address0  | 1        |
+| B_0_q0        | 64       |
+| B_1_address0  | 1        |
+| B_1_q0        | 64       |
+| B_2_address0  | 1        |
+| B_2_q0        | 64       |
+| B_3_address0  | 1        |
+| B_3_q0        | 64       |
+| C_0_address0  | 1        |
+| C_0_q0        | 64       |
+| C_1_address0  | 1        |
+| C_1_q0        | 64       |
+| C_2_address0  | 1        |
+| C_2_q0        | 64       |
+| C_3_address0  | 1        |
+| C_3_q0        | 64       |
+| D_0_address0  | 1        |
+| D_0_d0        | 64       |
+| D_1_address0  | 1        |
+| D_1_d0        | 64       |
+| D_2_address0  | 1        |
+| D_2_d0        | 64       |
+| D_3_address0  | 1        |
+| D_3_d0        | 64       |
+| X1_0_address0 | 1        |
+| X1_0_d0       | 64       |
+| X1_1_address0 | 1        |
+| X1_1_d0       | 64       |
+| X1_2_address0 | 1        |
+| X1_2_d0       | 64       |
+| X1_3_address0 | 1        |
+| X1_3_d0       | 64       |
+| X2_0_address0 | 1        |
+| X2_0_d0       | 64       |
+| X2_1_address0 | 1        |
+| X2_1_d0       | 64       |
+| X2_2_address0 | 1        |
+| X2_2_d0       | 64       |
+| X2_3_address0 | 1        |
+| X2_3_d0       | 64       |
++---------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | double*  |
+| B        | in        | double*  |
+| C        | in        | double*  |
+| X1       | out       | double*  |
+| X2       | out       | double*  |
+| D        | out       | double*  |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+---------+----------+
+| Argument | HW Interface  | HW Type | HW Usage |
++----------+---------------+---------+----------+
+| A        | A_0_address0  | port    | offset   |
+| A        | A_0_ce0       | port    |          |
+| A        | A_0_q0        | port    |          |
+| A        | A_1_address0  | port    | offset   |
+| A        | A_1_ce0       | port    |          |
+| A        | A_1_q0        | port    |          |
+| A        | A_2_address0  | port    | offset   |
+| A        | A_2_ce0       | port    |          |
+| A        | A_2_q0        | port    |          |
+| A        | A_3_address0  | port    | offset   |
+| A        | A_3_ce0       | port    |          |
+| A        | A_3_q0        | port    |          |
+| B        | B_0_address0  | port    | offset   |
+| B        | B_0_ce0       | port    |          |
+| B        | B_0_q0        | port    |          |
+| B        | B_1_address0  | port    | offset   |
+| B        | B_1_ce0       | port    |          |
+| B        | B_1_q0        | port    |          |
+| B        | B_2_address0  | port    | offset   |
+| B        | B_2_ce0       | port    |          |
+| B        | B_2_q0        | port    |          |
+| B        | B_3_address0  | port    | offset   |
+| B        | B_3_ce0       | port    |          |
+| B        | B_3_q0        | port    |          |
+| C        | C_0_address0  | port    | offset   |
+| C        | C_0_ce0       | port    |          |
+| C        | C_0_q0        | port    |          |
+| C        | C_1_address0  | port    | offset   |
+| C        | C_1_ce0       | port    |          |
+| C        | C_1_q0        | port    |          |
+| C        | C_2_address0  | port    | offset   |
+| C        | C_2_ce0       | port    |          |
+| C        | C_2_q0        | port    |          |
+| C        | C_3_address0  | port    | offset   |
+| C        | C_3_ce0       | port    |          |
+| C        | C_3_q0        | port    |          |
+| X1       | X1_0_address0 | port    | offset   |
+| X1       | X1_0_ce0      | port    |          |
+| X1       | X1_0_we0      | port    |          |
+| X1       | X1_0_d0       | port    |          |
+| X1       | X1_1_address0 | port    | offset   |
+| X1       | X1_1_ce0      | port    |          |
+| X1       | X1_1_we0      | port    |          |
+| X1       | X1_1_d0       | port    |          |
+| X1       | X1_2_address0 | port    | offset   |
+| X1       | X1_2_ce0      | port    |          |
+| X1       | X1_2_we0      | port    |          |
+| X1       | X1_2_d0       | port    |          |
+| X1       | X1_3_address0 | port    | offset   |
+| X1       | X1_3_ce0      | port    |          |
+| X1       | X1_3_we0      | port    |          |
+| X1       | X1_3_d0       | port    |          |
+| X2       | X2_0_address0 | port    | offset   |
+| X2       | X2_0_ce0      | port    |          |
+| X2       | X2_0_we0      | port    |          |
+| X2       | X2_0_d0       | port    |          |
+| X2       | X2_1_address0 | port    | offset   |
+| X2       | X2_1_ce0      | port    |          |
+| X2       | X2_1_we0      | port    |          |
+| X2       | X2_1_d0       | port    |          |
+| X2       | X2_2_address0 | port    | offset   |
+| X2       | X2_2_ce0      | port    |          |
+| X2       | X2_2_we0      | port    |          |
+| X2       | X2_2_d0       | port    |          |
+| X2       | X2_3_address0 | port    | offset   |
+| X2       | X2_3_ce0      | port    |          |
+| X2       | X2_3_we0      | port    |          |
+| X2       | X2_3_d0       | port    |          |
+| D        | D_0_address0  | port    | offset   |
+| D        | D_0_ce0       | port    |          |
+| D        | D_0_we0       | port    |          |
+| D        | D_0_d0        | port    |          |
+| D        | D_1_address0  | port    | offset   |
+| D        | D_1_ce0       | port    |          |
+| D        | D_1_we0       | port    |          |
+| D        | D_1_d0        | port    |          |
+| D        | D_2_address0  | port    | offset   |
+| D        | D_2_ce0       | port    |          |
+| D        | D_2_we0       | port    |          |
+| D        | D_2_d0        | port    |          |
+| D        | D_3_address0  | port    | offset   |
+| D        | D_3_ce0       | port    |          |
+| D        | D_3_we0       | port    |          |
+| D        | D_3_d0        | port    |          |
++----------+---------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+------------+-------+---------+---------+
+| Name                                 | DSP | Pragma | Variable   | Op    | Impl    | Latency |
++--------------------------------------+-----+--------+------------+-------+---------+---------+
+| + kp_502_7                           | 212 |        |            |       |         |         |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U17  | 11  |        | mul        | dmul  | maxdsp  | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U13  | 11  |        | mul3       | dmul  | maxdsp  | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U18  | 11  |        | mul6       | dmul  | maxdsp  | 3       |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U1  | 3   |        | x_assign   | dsub  | fulldsp | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U25  | 11  |        | mul1       | dmul  | maxdsp  | 3       |
+|   dsqrt_64ns_64ns_64_17_no_dsp_1_U49 | -   |        | temp_D     | dsqrt | fabric  | 16      |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U5  | 3   |        | sub        | dsub  | fulldsp | 3       |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U33  | -   |        | div1       | ddiv  | fabric  | 20      |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U6  | 3   |        | add        | dsub  | fulldsp | 3       |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U34  | -   |        | div2       | ddiv  | fabric  | 20      |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U29  | -   |        | div        | ddiv  | fabric  | 20      |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U19  | 11  |        | mul_1      | dmul  | maxdsp  | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U14  | 11  |        | mul3_1     | dmul  | maxdsp  | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U20  | 11  |        | mul6_1     | dmul  | maxdsp  | 3       |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U2  | 3   |        | x_assign_1 | dsub  | fulldsp | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U26  | 11  |        | mul33_1    | dmul  | maxdsp  | 3       |
+|   dsqrt_64ns_64ns_64_17_no_dsp_1_U50 | -   |        | temp_D_1   | dsqrt | fabric  | 16      |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U7  | 3   |        | sub32_1    | dsub  | fulldsp | 3       |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U35  | -   |        | div34_1    | ddiv  | fabric  | 20      |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U8  | 3   |        | add_1      | dsub  | fulldsp | 3       |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U36  | -   |        | div39_1    | ddiv  | fabric  | 20      |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U30  | -   |        | div_1      | ddiv  | fabric  | 20      |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U21  | 11  |        | mul_2      | dmul  | maxdsp  | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U15  | 11  |        | mul3_2     | dmul  | maxdsp  | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U22  | 11  |        | mul6_2     | dmul  | maxdsp  | 3       |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U3  | 3   |        | x_assign_2 | dsub  | fulldsp | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U27  | 11  |        | mul33_2    | dmul  | maxdsp  | 3       |
+|   dsqrt_64ns_64ns_64_17_no_dsp_1_U51 | -   |        | temp_D_2   | dsqrt | fabric  | 16      |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U9  | 3   |        | sub32_2    | dsub  | fulldsp | 3       |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U37  | -   |        | div34_2    | ddiv  | fabric  | 20      |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U10 | 3   |        | add_2      | dsub  | fulldsp | 3       |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U38  | -   |        | div39_2    | ddiv  | fabric  | 20      |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U31  | -   |        | div_2      | ddiv  | fabric  | 20      |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U23  | 11  |        | mul_3      | dmul  | maxdsp  | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U16  | 11  |        | mul3_3     | dmul  | maxdsp  | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U24  | 11  |        | mul6_3     | dmul  | maxdsp  | 3       |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U4  | 3   |        | x_assign_3 | dsub  | fulldsp | 3       |
+|   dmul_64ns_64ns_64_4_max_dsp_1_U28  | 11  |        | mul33_3    | dmul  | maxdsp  | 3       |
+|   dsqrt_64ns_64ns_64_17_no_dsp_1_U52 | -   |        | temp_D_3   | dsqrt | fabric  | 16      |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U11 | 3   |        | sub32_3    | dsub  | fulldsp | 3       |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U39  | -   |        | div34_3    | ddiv  | fabric  | 20      |
+|   dsub_64ns_64ns_64_4_full_dsp_1_U12 | 3   |        | add_3      | dsub  | fulldsp | 3       |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U40  | -   |        | div39_3    | ddiv  | fabric  | 20      |
+|   ddiv_64ns_64ns_64_21_no_dsp_1_U32  | -   |        | div_3      | ddiv  | fabric  | 20      |
+|   add_ln8_fu_694_p2                  | -   |        | add_ln8    | add   | fabric  | 0       |
++--------------------------------------+-----+--------+------------+-------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------------+---------------------------+
+| Type            | Options                               | Location                  |
++-----------------+---------------------------------------+---------------------------+
+| array_partition | variable=A cyclic factor=4 dim=1      | DIRECTIVE in kp_502_7, A  |
+| array_partition | variable=B cyclic factor=4 dim=1      | DIRECTIVE in kp_502_7, B  |
+| array_partition | variable=C cyclic factor=4 dim=1      | DIRECTIVE in kp_502_7, C  |
+| array_partition | variable=D cyclic factor=4 dim=1      | DIRECTIVE in kp_502_7, D  |
+| array_partition | variable=X1 cyclic factor=4 dim=1     | DIRECTIVE in kp_502_7, X1 |
+| array_partition | variable=X2 cyclic factor=4 dim=1     | DIRECTIVE in kp_502_7, X2 |
+| interface       | ap_memory storage_type=ram_1p port=A  | DIRECTIVE in kp_502_7, A  |
+| interface       | ap_memory storage_type=ram_1p port=B  | DIRECTIVE in kp_502_7, B  |
+| interface       | ap_memory storage_type=ram_1p port=C  | DIRECTIVE in kp_502_7, C  |
+| interface       | ap_memory storage_type=ram_1p port=D  | DIRECTIVE in kp_502_7, D  |
+| interface       | ap_memory storage_type=ram_1p port=X1 | DIRECTIVE in kp_502_7, X1 |
+| interface       | ap_memory storage_type=ram_1p port=X2 | DIRECTIVE in kp_502_7, X2 |
+| pipeline        |                                       | DIRECTIVE in kp_502_7     |
+| unroll          | factor=4                              | DIRECTIVE in kp_502_7     |
++-----------------+---------------------------------------+---------------------------+
+
+

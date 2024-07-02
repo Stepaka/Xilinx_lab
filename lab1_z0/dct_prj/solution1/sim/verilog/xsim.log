@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Sep 20 02:53:37 2023
+# Process ID: 18596
+# Current directory: C:/Xilinx_trn/HLS2023/lab1_z0/dct_prj/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/dct/xsim_script.tcl}
+# Log file: C:/Xilinx_trn/HLS2023/lab1_z0/dct_prj/solution1/sim/verilog/xsim.log
+# Journal file: C:/Xilinx_trn/HLS2023/lab1_z0/dct_prj/solution1/sim/verilog\xsim.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 8, Host memory: 16867 MB
+#-----------------------------------------------------------
+source xsim.dir/dct/xsim_script.tcl
+# xsim {dct} -autoloadwcfg -tclbatch {dct.tcl}
+Time resolution is 1 ps
+source dct.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "4175000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 4235 ns : File "C:/Xilinx_trn/HLS2023/lab1_z0/dct_prj/solution1/sim/verilog/dct.autotb.v" Line 269
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Sep 20 02:53:39 2023...

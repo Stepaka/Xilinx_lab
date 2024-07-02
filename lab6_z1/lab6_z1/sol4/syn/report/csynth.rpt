@@ -1,0 +1,127 @@
+
+
+================================================================
+== Synthesis Summary Report of 'lab6_z1'
+================================================================
++ General Information: 
+    * Date:           Wed Nov 29 19:20:13 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        lab6_z1
+    * Solution:       sol4 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xa7a12t-csg325-1Q
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----------+----------+---------+-----+
+    |  Modules  | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |          |          |         |     |
+    |  & Loops  | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP   |    FF    |   LUT   | URAM|
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----------+----------+---------+-----+
+    |+ lab6_z1  |     -|  4.58|        7|  70.000|         -|        8|     -|        no|     -|  16 (40%)|  80 (~0%)|  86 (1%)|    -|
+    | o Mult    |     -|  9.00|        5|  50.000|         5|        1|     2|       yes|     -|         -|         -|        -|    -|
+    +-----------+------+------+---------+--------+----------+---------+------+----------+------+----------+----------+---------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------+----------+
+| Interface  | Bitwidth |
++------------+----------+
+| a_address0 | 1        |
+| a_d0       | 256      |
+| b_address0 | 1        |
+| b_q0       | 256      |
+| c_address0 | 1        |
+| c_q0       | 256      |
++------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| a        | out       | short*   |
+| b        | in        | short*   |
+| c        | in        | short*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| a        | a_address0   | port    | offset   |
+| a        | a_ce0        | port    |          |
+| a        | a_we0        | port    |          |
+| a        | a_d0         | port    |          |
+| b        | b_address0   | port    | offset   |
+| b        | b_ce0        | port    |          |
+| b        | b_q0         | port    |          |
+| c        | c_address0   | port    | offset   |
+| c        | c_ce0        | port    |          |
+| c        | c_q0         | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------+-----+--------+------------+-----+--------+---------+
+| Name                         | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++------------------------------+-----+--------+------------+-----+--------+---------+
+| + lab6_z1                    | 16  |        |            |     |        |         |
+|   mul_mul_16s_16s_16_4_1_U1  | 1   |        | mul_ln5    | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U2  | 1   |        | mul_ln5_1  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U3  | 1   |        | mul_ln5_2  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U4  | 1   |        | mul_ln5_3  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U5  | 1   |        | mul_ln5_4  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U6  | 1   |        | mul_ln5_5  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U7  | 1   |        | mul_ln5_6  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U8  | 1   |        | mul_ln5_7  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U9  | 1   |        | mul_ln5_8  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U10 | 1   |        | mul_ln5_9  | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U11 | 1   |        | mul_ln5_10 | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U12 | 1   |        | mul_ln5_11 | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U13 | 1   |        | mul_ln5_12 | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U14 | 1   |        | mul_ln5_13 | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U15 | 1   |        | mul_ln5_14 | mul | dsp    | 3       |
+|   mul_mul_16s_16s_16_4_1_U16 | 1   |        | mul_ln5_15 | mul | dsp    | 3       |
+|   add_ln4_fu_183_p2          | -   |        | add_ln4    | add | fabric | 0       |
++------------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++---------------+-----------------------------------+-------------------------+
+| Type          | Options                           | Location                |
++---------------+-----------------------------------+-------------------------+
+| array_reshape | variable=a cyclic factor=16 dim=1 | DIRECTIVE in lab6_z1, a |
+| array_reshape | variable=b cyclic factor=16 dim=1 | DIRECTIVE in lab6_z1, b |
+| array_reshape | variable=c cyclic factor=16 dim=1 | DIRECTIVE in lab6_z1, c |
+| pipeline      |                                   | DIRECTIVE in lab6_z1    |
+| unroll        | factor=16                         | DIRECTIVE in lab6_z1    |
++---------------+-----------------------------------+-------------------------+
+
+

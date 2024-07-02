@@ -1,0 +1,304 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 X1 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 X1 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 4 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 24.703 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::sqrt(double)' into 'kp_502_7(double*, double*, double*, double*, double*, double*)' (./source/kp_502_7.cpp:29:18)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' partially with a factor of 4 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'A': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'B': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'C': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'X1': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'X2': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'D': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+WARNING: [HLS 214-237] The INTERFACE pragma actions in object field. If on struct field, disaggregate pragma is required; If on array element, array_partition pragma is required. If no, this interface pragma will be viewed as invalid and ignored. In function 'kp_502_7(double*, double*, double*, double*, double*, double*)' (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.911 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.015 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.061 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+WARNING: [HLS 200-885] The II Violation in module 'kp_502_7' (loop 'Loop'): Unable to schedule 'store' operation ('X1_addr_write_ln32', ./source/kp_502_7.cpp:32) of variable 'tmp_9', ./source/kp_502_7.cpp:32 on array 'X1' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'X1'.
+WARNING: [HLS 200-885] The II Violation in module 'kp_502_7' (loop 'Loop'): Unable to schedule 'load' operation ('X1_load', ./source/kp_502_7.cpp:18) on array 'X1' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'X1'.
+WARNING: [HLS 200-885] The II Violation in module 'kp_502_7' (loop 'Loop'): Unable to schedule 'load' operation ('X1_load', ./source/kp_502_7.cpp:18) on array 'X1' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'X1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 66, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.715 seconds; current allocated memory: 1.255 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.709 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_7' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_21_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_17_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_4_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.731 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 1.869 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.804 seconds; current allocated memory: 1.255 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 78.33 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 33.632 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 2 seconds. Total elapsed time: 35.897 seconds; peak allocated memory: 1.255 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 X1 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 X1 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type cyclic -factor 4 -dim 1 kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 4 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 25.341 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::sqrt(double)' into 'kp_502_7(double*, double*, double*, double*, double*, double*)' (./source/kp_502_7.cpp:29:18)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' partially with a factor of 4 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'A': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'B': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'C': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'X1': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'X2': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_reshape to 'D': Cyclic reshaping with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+WARNING: [HLS 214-237] The INTERFACE pragma actions in object field. If on struct field, disaggregate pragma is required; If on array element, array_partition pragma is required. If no, this interface pragma will be viewed as invalid and ignored. In function 'kp_502_7(double*, double*, double*, double*, double*, double*)' (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.815 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+WARNING: [HLS 200-885] The II Violation in module 'kp_502_7' (loop 'Loop'): Unable to schedule 'store' operation ('X1_addr_write_ln32', ./source/kp_502_7.cpp:32) of variable 'tmp_9', ./source/kp_502_7.cpp:32 on array 'X1' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'X1'.
+WARNING: [HLS 200-885] The II Violation in module 'kp_502_7' (loop 'Loop'): Unable to schedule 'load' operation ('X1_load', ./source/kp_502_7.cpp:18) on array 'X1' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'X1'.
+WARNING: [HLS 200-885] The II Violation in module 'kp_502_7' (loop 'Loop'): Unable to schedule 'load' operation ('X1_load', ./source/kp_502_7.cpp:18) on array 'X1' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'X1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 66, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.746 seconds; current allocated memory: 1.256 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.713 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_7' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_21_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_17_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_4_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.735 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.821 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.826 seconds; current allocated memory: 1.256 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 78.33 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 34.223 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 2 seconds. Total elapsed time: 36.85 seconds; peak allocated memory: 1.256 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 X1 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_memory -storage_type ram_1p kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 4 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 4 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.016 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 24.643 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::sqrt(double)' into 'kp_502_7(double*, double*, double*, double*, double*, double*)' (./source/kp_502_7.cpp:29:18)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' partially with a factor of 4 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X1': Cyclic partitioning with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X2': Cyclic partitioning with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Cyclic partitioning with factor 4 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.61 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.021 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 59, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.536 seconds; current allocated memory: 1.255 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.71 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_7' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 29679 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_21_no_dsp_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_17_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_4_full_dsp_1': 12 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.905 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.21 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.344 seconds; current allocated memory: 1.255 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 78.33 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 34.162 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 2 seconds. Total elapsed time: 36.404 seconds; peak allocated memory: 1.255 GB.

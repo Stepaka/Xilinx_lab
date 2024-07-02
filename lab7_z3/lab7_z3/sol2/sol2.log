@@ -1,0 +1,831 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic lab7_z3 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic lab7_z3 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic lab7_z3 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op dmul -impl meddsp lab7_z3 temp_mult 
+INFO: [HLS 200-1510] Running: csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.78 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z3.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.753 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z3.cpp:6:7) in function 'lab7_z3' partially with a factor of 16 (./source/lab7_z3.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.211 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.248 seconds; current allocated memory: 1.074 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_4' to 'ap_memory'.
+INFO: [RTG==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op dmul -impl meddsp lab7_z3 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z3 lab7_z3 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 838.512 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z3.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.848 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z3.cpp:8:7) in function 'lab7_z3' partially with a factor of 16 (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.384 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.021 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.285 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z3' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z3' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_med_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.596 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.153 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z3.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z3.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.60 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.006 seconds; current allocated memory: 273.422 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 0 seconds. Total elapsed time: 8.041 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op dmul -impl meddsp lab7_z3 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z3 lab7_z3 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 842.469 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z3.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.916 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z3.cpp:8:7) in function 'lab7_z3' partially with a factor of 16 (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.394 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.254 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z3' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z3' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_med_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.244 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.661 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.038 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z3.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z3.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.60 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 6.872 seconds; current allocated memory: 271.035 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 7.964 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op dmul -impl meddsp lab7_z3 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z3 lab7_z3 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 840.312 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z3.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.779 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z3.cpp:8:7) in function 'lab7_z3' partially with a factor of 16 (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 3.267 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z3' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z3' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_med_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.256 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.023 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z3.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z3.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.60 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 6.475 seconds; current allocated memory: 273.637 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 7.49 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op dmul -impl meddsp lab7_z3 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z3 lab7_z3 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 853.711 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z3.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.754 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z3.cpp:8:7) in function 'lab7_z3' partially with a factor of 16 (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.198 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z3' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z3' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_med_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.255 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.569 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.049 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z3.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z3.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.60 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 6.486 seconds; current allocated memory: 260.570 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 7.497 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op dmul -impl meddsp lab7_z3 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z3 lab7_z3 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 875.082 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z3.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.456 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z3.cpp:8:7) in function 'lab7_z3' partially with a factor of 16 (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.459 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.406 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.265 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.558 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.696 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z3' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z3' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_med_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.956 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.065 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 5.084 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z3.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z3.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.60 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8 seconds. CPU system time: 1 seconds. Elapsed time: 17.183 seconds; current allocated memory: 236.277 MB.
+INFO: [HLS 200-112] Total CPU user time: 9 seconds. Total CPU system time: 1 seconds. Total elapsed time: 18.804 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op dmul -impl meddsp lab7_z3 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z3 lab7_z3 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+WARNING: [HLS 200-626] This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 117.579 seconds; current allocated memory: 245.078 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 119.302 seconds; peak allocated memory: 1.082 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 lab7_z3/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 lab7_z3 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op dmul -impl meddsp lab7_z3 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z3 lab7_z3 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z3.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.698 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z3.cpp:8:7) in function 'lab7_z3' partially with a factor of 16 (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 16 on dimension 1. (./source/lab7_z3.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.482 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z3' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.162 seconds; current allocated memory: 1.256 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.188 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z3/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z3' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z3' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_5_med_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.878 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.535 seconds; current allocated memory: 1.256 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z3.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z3.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.60 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 7.529 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 9.8 seconds; peak allocated memory: 1.256 GB.

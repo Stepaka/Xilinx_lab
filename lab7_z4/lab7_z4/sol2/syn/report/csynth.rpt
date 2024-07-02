@@ -1,0 +1,164 @@
+
+
+================================================================
+== Synthesis Summary Report of 'lab7_z4'
+================================================================
++ General Information: 
+    * Date:           Mon Dec 11 15:49:07 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        lab7_z4
+    * Solution:       sol2 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a100t-csg324-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------+------+------+---------+---------+----------+---------+------+----------+------+-----------+----------+-----------+-----+
+    |  Modules  | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |           |          |           |     |
+    |  & Loops  | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP    |    FF    |    LUT    | URAM|
+    +-----------+------+------+---------+---------+----------+---------+------+----------+------+-----------+----------+-----------+-----+
+    |+ lab7_z4  |     -|  0.77|       35|  350.000|         -|       36|     -|        no|     -|  220 (91%)|  23 (~0%)|  243 (~0%)|    -|
+    | o Mult    |     -|  9.00|       33|  330.000|         3|        1|    32|       yes|     -|          -|         -|          -|    -|
+    +-----------+------+------+---------+---------+----------+---------+------+----------+------+-----------+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------+----------+
+| Interface    | Bitwidth |
++--------------+----------+
+| a_0_address0 | 5        |
+| a_0_d0       | 256      |
+| a_1_address0 | 5        |
+| a_1_d0       | 256      |
+| a_2_address0 | 5        |
+| a_2_d0       | 256      |
+| a_3_address0 | 5        |
+| a_3_d0       | 256      |
+| b_0_address0 | 5        |
+| b_0_q0       | 256      |
+| b_1_address0 | 5        |
+| b_1_q0       | 256      |
+| b_2_address0 | 5        |
+| b_2_q0       | 256      |
+| b_3_address0 | 5        |
+| b_3_q0       | 256      |
+| c_0_address0 | 5        |
+| c_0_q0       | 256      |
+| c_1_address0 | 5        |
+| c_1_q0       | 256      |
+| c_2_address0 | 5        |
+| c_2_q0       | 256      |
+| c_3_address0 | 5        |
+| c_3_q0       | 256      |
++--------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------+
+| Argument | Direction | Datatype     |
++----------+-----------+--------------+
+| a        | out       | ap_int<256>* |
+| b        | in        | ap_int<256>* |
+| c        | in        | ap_int<256>* |
++----------+-----------+--------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| a        | a_0_address0 | port    | offset   |
+| a        | a_0_ce0      | port    |          |
+| a        | a_0_we0      | port    |          |
+| a        | a_0_d0       | port    |          |
+| a        | a_1_address0 | port    | offset   |
+| a        | a_1_ce0      | port    |          |
+| a        | a_1_we0      | port    |          |
+| a        | a_1_d0       | port    |          |
+| a        | a_2_address0 | port    | offset   |
+| a        | a_2_ce0      | port    |          |
+| a        | a_2_we0      | port    |          |
+| a        | a_2_d0       | port    |          |
+| a        | a_3_address0 | port    | offset   |
+| a        | a_3_ce0      | port    |          |
+| a        | a_3_we0      | port    |          |
+| a        | a_3_d0       | port    |          |
+| b        | b_0_address0 | port    | offset   |
+| b        | b_0_ce0      | port    |          |
+| b        | b_0_q0       | port    |          |
+| b        | b_1_address0 | port    | offset   |
+| b        | b_1_ce0      | port    |          |
+| b        | b_1_q0       | port    |          |
+| b        | b_2_address0 | port    | offset   |
+| b        | b_2_ce0      | port    |          |
+| b        | b_2_q0       | port    |          |
+| b        | b_3_address0 | port    | offset   |
+| b        | b_3_ce0      | port    |          |
+| b        | b_3_q0       | port    |          |
+| c        | c_0_address0 | port    | offset   |
+| c        | c_0_ce0      | port    |          |
+| c        | c_0_q0       | port    |          |
+| c        | c_1_address0 | port    | offset   |
+| c        | c_1_ce0      | port    |          |
+| c        | c_1_q0       | port    |          |
+| c        | c_2_address0 | port    | offset   |
+| c        | c_2_ce0      | port    |          |
+| c        | c_2_q0       | port    |          |
+| c        | c_3_address0 | port    | offset   |
+| c        | c_3_ce0      | port    |          |
+| c        | c_3_q0       | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------+-----+--------+----------+-----+--------+---------+
+| Name                       | DSP | Pragma | Variable | Op  | Impl   | Latency |
++----------------------------+-----+--------+----------+-----+--------+---------+
+| + lab7_z4                  | 220 |        |          |     |        |         |
+|   mul_256s_256s_256_2_1_U1 | 55  | yes    | ret      | mul | dsp    | 0       |
+|   mul_256s_256s_256_2_1_U2 | 55  | yes    | ret_1    | mul | dsp    | 0       |
+|   mul_256s_256s_256_2_1_U3 | 55  | yes    | ret_2    | mul | dsp    | 0       |
+|   mul_256s_256s_256_2_1_U4 | 55  | yes    | ret_3    | mul | dsp    | 0       |
+|   add_ln8_fu_286_p2        | -   |        | add_ln8  | add | fabric | 0       |
++----------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------------------+---------------------------------+
+| Type            | Options                                      | Location                        |
++-----------------+----------------------------------------------+---------------------------------+
+| array_partition | variable=a cyclic factor=4 dim=1             | DIRECTIVE in lab7_z4, a         |
+| array_partition | variable=b cyclic factor=4 dim=1             | DIRECTIVE in lab7_z4, b         |
+| array_partition | variable=c cyclic factor=4 dim=1             | DIRECTIVE in lab7_z4, c         |
+| bind_op         | variable=temp_mult op=mul impl=dsp latency=1 | DIRECTIVE in lab7_z4, temp_mult |
+| pipeline        |                                              | DIRECTIVE in lab7_z4            |
+| unroll          | factor=4                                     | DIRECTIVE in lab7_z4            |
++-----------------+----------------------------------------------+---------------------------------+
+
+

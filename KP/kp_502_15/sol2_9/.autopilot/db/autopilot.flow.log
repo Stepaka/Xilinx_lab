@@ -1,0 +1,970 @@
+INFO-FLOW: Workspace C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9 opened at Sat Dec 09 23:11:17 +0300 2023
+Execute     ap_set_clock -name clk -period 14 -default=false 
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+Execute     ap_set_clock -name clk -uncertainty 1 
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+Execute     set_part xc7a200t-sbv484-2 
+Execute       create_platform xc7a200t-sbv484-2 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/VITIS_~1/2021.2\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2021.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/DSP48/artix7_dsp48e1.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+Command       create_platform done; 0.425 sec.
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.103 sec.
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.537 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 0.558 sec.
+Execute   set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+Execute     create_platform xc7a200t-sbv484-2 -board  
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/DSP48/artix7_dsp48e1.hlp 
+Execute     source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.111 sec.
+Execute     ap_part_info -name xc7a200t-sbv484-2 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.134 sec.
+Execute   create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+Execute   set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+Execute   source ./kp_502_15/sol2_9/directives.tcl 
+Execute     set_directive_pipeline kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_15/Loop 
+Execute     set_directive_unroll -factor 64 kp_502_15/Loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 kp_502_15/Loop 
+Execute     set_directive_top -name kp_502_15 kp_502_15 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_15 kp_502_15 
+Execute     set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 a 
+Execute     set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 c 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 c 
+Execute     set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 r 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 r 
+Execute     set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 b 
+Execute     set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 x 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 64 -type cyclic kp_502_15 x 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -hw_syn 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -pre_tcl 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.019 seconds; current allocated memory: 855.852 MB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_15.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling ./source/kp_502_15.cpp as C++
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/clang ./source/kp_502_15.cpp -foptimization-record-file=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/VITIS_~1/2021.2/tps/mingw/6.2.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/VITIS_~1/2021.2/common/technology/autopilot -I C:/Xilinx/VITIS_~1/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp -hls-platform-db-name=C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=artix7_medium > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.cpp.clang.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.cpp.clang.err.log 
+Command       ap_eval done; 0.148 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute       set_directive_top kp_502_15 -name=kp_502_15 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp -hls-platform-db-name=C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=artix7_medium > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/clang.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.145 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/.systemc_flag -fix-errors C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/all.directive.json -fix-errors C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.117 sec.
+Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert -desc constantarray_remove-assert C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.clang-tidy.loop-label.err.log 
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 0.102 sec.
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/VITIS_~1/2021.2/common/technology/autopilot -I C:/Xilinx/VITIS_~1/2021.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.bc -hls-platform-db-name=C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=artix7_medium > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.clang.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.158 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.996 seconds; current allocated memory: 1.077 GB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc -args  "C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.g.bc"  
+Execute         ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.g.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.1.lower.bc -args C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.1.lower.bc > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.2.m1.bc -args C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/VITIS_~1/2021.2/win64/lib/libhlsm_39.bc C:/Xilinx/VITIS_~1/2021.2/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/VITIS_~1/2021.2/win64/lib/libhlsm_39.bc C:/Xilinx/VITIS_~1/2021.2/win64/lib/libhlsmc++_39.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.2.m1.bc > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 2.37 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.372 sec.
+Execute       run_link_or_opt -opt -out C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=kp_502_15 -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=kp_502_15 -reflow-float-conversion -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.3.fpc.bc > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 0.727 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.73 sec.
+Execute       run_link_or_opt -out C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.4.m2.bc -args C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/VITIS_~1/2021.2/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/VITIS_~1/2021.2/win64/lib/libfloatconversion_39.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.4.m2.bc > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.5.gdce.bc -args C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=kp_502_15 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=kp_502_15 -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.5.gdce.bc > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_compile -instruction_warning_threshold 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_array_partition -throughput_driven 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr C:/Xilinx/VITIS_~1/2021.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=kp_502_15 -mllvm -hls-db-dir -mllvm C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshhold=200000 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=0 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-disaggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.lto.bc -hls-platform-db-name=C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/common/platform.db -hls-platform-name=artix7_medium > C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 0.744 sec.
+Execute       source C:/Xilinx/VITIS_~1/2021.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_15.cpp:8:7) in function 'kp_502_15' partially with a factor of 64 (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'r': Cyclic partitioning with factor 64 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 64 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 64 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 64 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'x': Cyclic partitioning with factor 64 on dimension 1. (./source/kp_502_15.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.188 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.077 GB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top kp_502_15 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.0.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.543 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.547 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.1.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.198 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.2.prechk.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.205 seconds; current allocated memory: 1.077 GB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.g.1.bc to C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.o.1.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.o.1.tmp.bc -f 
+Command         transform done; 1.314 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.o.1.tmp.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.227 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.543 seconds; current allocated memory: 1.077 GB.
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation2 -deadargelim -globaldce -mem2reg -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.o.2.bc -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 0.655 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.657 seconds; current allocated memory: 1.077 GB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.955 sec.
+Command     elaborate done; 8.153 sec.
+Execute     ap_eval exec zip -j C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_15' ...
+Execute       ap_set_top_model kp_502_15 
+Execute       get_model_list kp_502_15 -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model kp_502_15 
+Execute       get_model_list kp_502_15 -filter all-wo-channel 
+INFO-FLOW: Model list for configure: kp_502_15
+INFO-FLOW: Configuring Module : kp_502_15 ...
+Execute       set_default_model kp_502_15 
+Execute       apply_spec_resource_limit kp_502_15 
+INFO-FLOW: Model list for preprocess: kp_502_15
+INFO-FLOW: Preprocessing Module: kp_502_15 ...
+Execute       set_default_model kp_502_15 
+Execute       cdfg_preprocess -model kp_502_15 
+Execute       rtl_gen_preprocess kp_502_15 
+INFO-FLOW: Model list for synthesis: kp_502_15
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model kp_502_15 
+Execute       schedule -model kp_502_15 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 14, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.694 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.818 seconds; current allocated memory: 1.077 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.652 sec.
+Execute       db_write -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.sched.adb -f 
+Command       db_write done; 0.122 sec.
+INFO-FLOW: Finish scheduling kp_502_15.
+Execute       set_default_model kp_502_15 
+Execute       bind -model kp_502_15 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.422 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.196 seconds; current allocated memory: 1.077 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 1.551 sec.
+Execute       db_write -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.bind.adb -f 
+Command       db_write done; 0.177 sec.
+INFO-FLOW: Finish binding kp_502_15.
+Execute       get_model_list kp_502_15 -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess kp_502_15 
+INFO-FLOW: Model list for RTL generation: kp_502_15
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model kp_502_15 -top_prefix  -sub_prefix kp_502_15_ -mg_file C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/r_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/a_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/b_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/c_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_15/x_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_15' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_15' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_15' is 15050 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 128 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_2_max_dsp_1': 192 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_15'.
+Command       create_rtl_model done; 1.136 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.872 seconds; current allocated memory: 1.077 GB.
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.rtl_wrap.cfg.tcl 
+Execute       gen_rtl kp_502_15 -istop -style xilinx -f -lang vhdl -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/syn/vhdl/kp_502_15 
+Command       gen_rtl done; 0.93 sec.
+Execute       gen_rtl kp_502_15 -istop -style xilinx -f -lang vlog -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/syn/verilog/kp_502_15 
+Command       gen_rtl done; 0.377 sec.
+Execute       syn_report -csynth -model kp_502_15 -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/syn/report/kp_502_15_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.403 sec.
+Execute       syn_report -rtlxml -model kp_502_15 -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/syn/report/kp_502_15_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.411 sec.
+Execute       syn_report -verbosereport -model kp_502_15 -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 2.106 sec.
+Execute       db_write -model kp_502_15 -f -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.adb 
+Command       db_write done; 0.636 sec.
+Execute       db_write -model kp_502_15 -bindview -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/design.bindinfo.xml 
+Command       db_write done; 0.453 sec.
+Execute       gen_tb_info kp_502_15 -p C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15 
+Execute       export_constraint_db -f -tool general -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.constraint.tcl 
+Execute       syn_report -designview -model kp_502_15 -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.design.xml 
+Command       syn_report done; 0.737 sec.
+Execute       syn_report -csynthDesign -model kp_502_15 -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model kp_502_15 -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model kp_502_15 -o C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks kp_502_15 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain kp_502_15 
+INFO-FLOW: Model list for RTL component generation: kp_502_15
+INFO-FLOW: Handling components in module [kp_502_15] ... 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.compgen.tcl 
+INFO-FLOW: Found component kp_502_15_fadd_32ns_32ns_32_4_full_dsp_1.
+INFO-FLOW: Append model kp_502_15_fadd_32ns_32ns_32_4_full_dsp_1
+INFO-FLOW: Found component kp_502_15_fmul_32ns_32ns_32_2_max_dsp_1.
+INFO-FLOW: Append model kp_502_15_fmul_32ns_32ns_32_2_max_dsp_1
+INFO-FLOW: Found component kp_502_15_flow_control_loop_pipe.
+INFO-FLOW: Append model kp_502_15_flow_control_loop_pipe
+INFO-FLOW: Append model kp_502_15
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: kp_502_15_fadd_32ns_32ns_32_4_full_dsp_1 kp_502_15_fmul_32ns_32ns_32_2_max_dsp_1 kp_502_15_flow_control_loop_pipe kp_502_15
+INFO-FLOW: Generating C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model kp_502_15_fadd_32ns_32ns_32_4_full_dsp_1
+INFO-FLOW: To file: write model kp_502_15_fmul_32ns_32ns_32_2_max_dsp_1
+INFO-FLOW: To file: write model kp_502_15_flow_control_loop_pipe
+INFO-FLOW: To file: write model kp_502_15
+INFO-FLOW: Generating C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl 
+Execute       ap_family_info -name artix7 -data parts 
+Execute       ap_part_info -name xc7a12ticsg325-1L -data info 
+Execute       source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/VITIS_~1/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=14.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/vhdl' dstVlogDir='C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/vlog' tclDir='C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db' modelList='kp_502_15_fadd_32ns_32ns_32_4_full_dsp_1
+kp_502_15_fmul_32ns_32ns_32_2_max_dsp_1
+kp_502_15_flow_control_loop_pipe
+kp_502_15
+' expOnly='0'
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data names -quiet 
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data info -quiet 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.compgen.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 7.005 seconds; current allocated memory: 1.077 GB.
+INFO-FLOW: DBG:PROC: ::AP::create_csynth_xml bind_adapter_nodes_var='bind_adapter_nodes' bind_report_dict_var='bind_report_dict' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute       get_config_op mul -impl 
+Execute       get_config_op mul -latency 
+Execute       get_config_op mul -precision 
+Execute       get_config_op add -impl 
+Execute       get_config_op add -latency 
+Execute       get_config_op add -precision 
+Execute       get_config_op sub -impl 
+Execute       get_config_op sub -latency 
+Execute       get_config_op sub -precision 
+Execute       get_config_op fadd -impl 
+Execute       get_config_op fadd -latency 
+Execute       get_config_op fadd -precision 
+Execute       get_config_op fsub -impl 
+Execute       get_config_op fsub -latency 
+Execute       get_config_op fsub -precision 
+Execute       get_config_op fdiv -impl 
+Execute       get_config_op fdiv -latency 
+Execute       get_config_op fdiv -precision 
+Execute       get_config_op fexp -impl 
+Execute       get_config_op fexp -latency 
+Execute       get_config_op fexp -precision 
+Execute       get_config_op flog -impl 
+Execute       get_config_op flog -latency 
+Execute       get_config_op flog -precision 
+Execute       get_config_op fmul -impl 
+Execute       get_config_op fmul -latency 
+Execute       get_config_op fmul -precision 
+Execute       get_config_op frsqrt -impl 
+Execute       get_config_op frsqrt -latency 
+Execute       get_config_op frsqrt -precision 
+Execute       get_config_op frecip -impl 
+Execute       get_config_op frecip -latency 
+Execute       get_config_op frecip -precision 
+Execute       get_config_op fsqrt -impl 
+Execute       get_config_op fsqrt -latency 
+Execute       get_config_op fsqrt -precision 
+Execute       get_config_op dadd -impl 
+Execute       get_config_op dadd -latency 
+Execute       get_config_op dadd -precision 
+Execute       get_config_op dsub -impl 
+Execute       get_config_op dsub -latency 
+Execute       get_config_op dsub -precision 
+Execute       get_config_op ddiv -impl 
+Execute       get_config_op ddiv -latency 
+Execute       get_config_op ddiv -precision 
+Execute       get_config_op dexp -impl 
+Execute       get_config_op dexp -latency 
+Execute       get_config_op dexp -precision 
+Execute       get_config_op dlog -impl 
+Execute       get_config_op dlog -latency 
+Execute       get_config_op dlog -precision 
+Execute       get_config_op dmul -impl 
+Execute       get_config_op dmul -latency 
+Execute       get_config_op dmul -precision 
+Execute       get_config_op drsqrt -impl 
+Execute       get_config_op drsqrt -latency 
+Execute       get_config_op drsqrt -precision 
+Execute       get_config_op drecip -impl 
+Execute       get_config_op drecip -latency 
+Execute       get_config_op drecip -precision 
+Execute       get_config_op dsqrt -impl 
+Execute       get_config_op dsqrt -latency 
+Execute       get_config_op dsqrt -precision 
+Execute       get_config_op hadd -impl 
+Execute       get_config_op hadd -latency 
+Execute       get_config_op hadd -precision 
+Execute       get_config_op hsub -impl 
+Execute       get_config_op hsub -latency 
+Execute       get_config_op hsub -precision 
+Execute       get_config_op hdiv -impl 
+Execute       get_config_op hdiv -latency 
+Execute       get_config_op hdiv -precision 
+Execute       get_config_op hmul -impl 
+Execute       get_config_op hmul -latency 
+Execute       get_config_op hmul -precision 
+Execute       get_config_op hsqrt -impl 
+Execute       get_config_op hsqrt -latency 
+Execute       get_config_op hsqrt -precision 
+Execute       get_config_op facc -impl 
+Execute       get_config_op facc -latency 
+Execute       get_config_op facc -precision 
+Execute       get_config_op fmacc -impl 
+Execute       get_config_op fmacc -latency 
+Execute       get_config_op fmacc -precision 
+Execute       get_config_op fmadd -impl 
+Execute       get_config_op fmadd -latency 
+Execute       get_config_op fmadd -precision 
+Execute       get_config_storage fifo -auto_srl_max_bits 
+Execute       get_config_storage fifo -auto_srl_max_depth 
+Execute       get_config_storage fifo -impl 
+Execute       get_solution -flow_target 
+Execute       get_config_array_partition -complete_threshold 
+Execute       get_config_array_partition -throughput_driven 
+Execute       get_config_compile -enable_auto_rewind 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_compile -no_signed_zeros 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -unsafe_math_optimizations 
+Execute       get_config_dataflow -default_channel 
+Execute       get_config_dataflow -disable_fifo_sizing_opt 
+Execute       get_config_dataflow -fifo_depth 
+Execute       get_config_dataflow -override_user_fifo_depth 
+Execute       get_config_dataflow -scalar_fifo_depth 
+Execute       get_config_dataflow -start_fifo_depth 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_dataflow -strict_stable_sync 
+Execute       get_config_dataflow -task_level_fifo_depth 
+Execute       get_config_debug -directory 
+Execute       get_config_debug -enable 
+Execute       get_config_export -deadlock_detection 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -format 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ipname 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -rtl 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_max_timing_paths 
+Execute       get_config_export -vivado_optimization_level 
+Execute       get_config_export -vivado_pblock 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_export -vivado_report_level 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_interface -clock_enable 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_interface -m_axi_addr64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_buffer_impl 
+Execute       get_config_interface -m_axi_conservative_mode 
+Execute       get_config_interface -m_axi_flush_mode 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -register_io 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -s_axilite_mailbox 
+Execute       get_config_interface -s_axilite_status_regs 
+Execute       get_config_interface -s_axilite_sw_reset 
+Execute       get_config_rtl -header 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -mult_keep_attribute 
+Execute       get_config_rtl -register_all_io 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -reset 
+Execute       get_config_rtl -reset_async 
+Execute       get_config_rtl -reset_level 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:       create_csynth_xml wrote csynth_xml=C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='kp_502_15_fadd_32ns_32ns_32_4_full_dsp_1
+kp_502_15_fmul_32ns_32ns_32_2_max_dsp_1
+kp_502_15_flow_control_loop_pipe
+kp_502_15
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/top-io-be.tcl 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.tbgen.tcl 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.rtl_wrap.cfg.tcl 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data names -quiet 
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data info -quiet 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.tbgen.tcl 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data names -quiet 
+Execute       ap_part_info -name xc7a200t-sbv484-2 -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/kp_502_15.constraint.tcl 
+Execute       sc_get_clocks kp_502_15 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/impl/misc/kp_502_15_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
+Execute       source C:/Xilinx_trn/HLS2023/KP_502_15/kp_502_15/sol2_9/impl/misc/kp_502_15_fmul_32ns_32ns_32_2_max_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::AP::add_csynth_report_sections bind_adapter_nodes='' bind_report_dict='TOP kp_502_15 DATA {kp_502_15 {DEPTH 1 CHILDREN {} BINDINFO {{BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U129 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U193 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U194 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U1 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U65 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U130 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_1 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U195 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_1 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U196 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_1 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U2 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_1 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U66 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_1 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U131 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_2 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U197 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_2 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U198 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_2 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U3 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_2 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U67 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_2 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U132 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_3 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U199 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_3 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U200 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_3 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U4 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_3 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U68 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_3 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U133 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_4 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U201 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_4 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U202 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_4 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U5 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_4 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U69 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_4 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U134 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_5 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U203 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_5 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U204 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_5 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U6 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_5 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U70 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_5 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U135 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_6 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U205 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_6 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U206 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_6 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U7 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_6 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U71 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_6 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U136 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_7 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U207 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_7 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U208 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_7 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U8 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_7 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U72 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_7 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U137 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_8 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U209 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_8 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U210 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_8 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U9 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_8 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U73 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_8 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U138 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_9 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U211 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_9 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U212 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_9 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U10 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_9 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U74 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_9 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U139 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_s LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U213 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_s LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U214 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_s LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U11 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_s LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U75 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_s LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U140 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_10 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U215 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_10 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U216 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_10 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U12 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_10 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U76 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_10 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U141 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_11 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U217 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_11 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U218 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_11 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U13 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_11 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U77 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_11 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U142 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_12 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U219 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_12 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U220 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_12 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U14 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_12 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U78 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_12 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U143 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_13 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U221 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_13 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U222 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_13 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U15 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_13 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U79 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_13 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U144 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_14 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U223 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_14 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U224 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_14 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U16 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_14 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U80 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_14 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U145 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_15 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U225 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_15 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U226 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_15 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U17 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_15 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U81 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_15 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U146 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_16 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U227 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_16 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U228 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_16 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U18 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_16 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U82 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_16 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U147 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_17 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U229 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_17 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U230 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_17 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U19 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_17 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U83 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_17 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U148 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_18 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U231 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_18 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U232 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_18 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U20 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_18 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U84 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_18 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U149 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_19 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U233 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_19 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U234 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_19 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U21 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_19 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U85 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_19 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U150 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_20 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U235 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_20 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U236 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_20 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U22 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_20 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U86 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_20 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U151 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_21 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U237 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_21 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U238 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_21 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U23 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_21 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U87 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_21 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U152 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_22 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U239 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_22 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U240 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_22 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U24 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_22 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U88 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_22 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U153 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_23 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U241 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_23 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U242 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_23 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U25 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_23 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U89 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_23 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U154 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_24 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U243 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_24 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U244 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_24 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U26 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_24 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U90 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_24 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U155 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_25 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U245 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_25 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U246 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_25 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U27 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_25 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U91 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_25 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U156 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_26 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U247 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_26 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U248 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_26 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U28 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_26 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U92 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_26 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U157 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_27 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U249 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_27 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U250 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_27 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U29 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_27 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U93 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_27 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U158 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_28 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U251 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_28 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U252 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_28 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U30 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_28 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U94 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_28 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U159 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_29 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U253 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_29 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U254 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_29 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U31 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_29 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U95 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_29 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U160 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_30 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U255 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_30 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U256 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_30 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U32 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_30 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U96 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_30 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U161 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_31 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U257 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_31 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U258 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_31 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U33 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_31 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U97 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_31 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U162 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_32 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U259 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_32 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U260 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_32 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U34 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_32 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U98 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_32 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U163 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_33 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U261 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_33 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U262 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_33 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U35 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_33 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U99 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_33 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U164 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_34 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U263 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_34 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U264 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_34 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U36 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_34 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U100 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_34 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U165 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_35 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U265 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_35 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U266 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_35 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U37 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_35 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U101 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_35 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U166 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_36 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U267 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_36 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U268 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_36 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U38 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_36 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U102 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_36 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U167 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_37 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U269 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_37 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U270 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_37 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U39 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_37 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U103 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_37 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U168 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_38 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U271 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_38 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U272 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_38 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U40 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_38 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U104 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_38 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U169 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_39 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U273 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_39 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U274 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_39 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U41 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_39 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U105 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_39 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U170 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_40 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U275 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_40 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U276 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_40 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U42 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_40 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U106 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_40 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U171 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_41 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U277 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_41 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U278 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_41 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U43 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_41 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U107 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_41 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U172 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_42 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U279 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_42 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U280 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_42 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U44 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_42 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U108 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_42 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U173 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_43 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U281 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_43 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U282 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_43 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U45 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_43 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U109 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_43 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U174 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_44 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U283 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_44 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U284 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_44 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U46 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_44 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U110 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_44 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U175 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_45 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U285 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_45 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U286 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_45 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U47 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_45 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U111 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_45 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U176 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_46 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U287 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_46 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U288 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_46 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U48 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_46 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U112 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_46 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U177 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_47 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U289 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_47 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U290 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_47 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U49 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_47 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U113 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_47 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U178 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_48 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U291 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_48 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U292 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_48 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U50 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_48 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U114 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_48 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U179 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_49 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U293 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_49 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U294 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_49 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U51 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_49 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U115 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_49 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U180 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_50 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U295 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_50 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U296 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_50 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U52 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_50 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U116 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_50 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U181 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_51 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U297 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_51 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U298 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_51 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U53 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_51 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U117 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_51 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U182 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_52 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U299 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_52 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U300 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_52 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U54 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_52 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U118 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_52 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U183 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_53 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U301 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_53 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U302 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_53 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U55 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_53 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U119 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_53 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U184 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_54 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U303 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_54 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U304 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_54 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U56 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_54 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U120 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_54 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U185 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_55 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U305 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_55 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U306 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_55 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U57 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_55 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U121 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_55 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U186 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_56 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U307 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_56 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U308 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_56 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U58 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_56 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U122 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_56 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U187 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_57 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U309 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_57 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U310 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_57 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U59 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_57 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U123 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_57 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U188 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_58 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U311 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_58 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U312 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_58 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U60 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_58 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U124 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_58 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U189 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_59 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U313 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_59 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U314 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_59 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U61 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_59 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U125 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_59 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U190 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_60 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U315 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_60 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U316 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_60 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U62 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_60 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U126 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_60 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U191 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_61 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U317 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_61 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U318 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_61 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U63 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_61 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U127 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_61 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U192 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul_62 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U319 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul3_62 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 1 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_2_max_dsp_1_U320 SOURCE ./source/kp_502_15.cpp:11 VARIABLE mul6_62 LOOP Loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U64 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add_62 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U128 SOURCE ./source/kp_502_15.cpp:11 VARIABLE add9_62 LOOP Loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln8_fu_6286_p2 SOURCE ./source/kp_502_15.cpp:8 VARIABLE add_ln8 LOOP Loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 832 BRAM 0 URAM 0}}}'
+INFO-FLOW: DBG:PUTS:       update_csynth_reports json2reportxml
+INFO-FLOW: Running: gen_csynth_pragma_report_xml
+INFO-FLOW: Done: gen_csynth_pragma_report_xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:       update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:       update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 15.542 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_15.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_15.
+Execute       syn_report -model kp_502_15 -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 86.44 MHz
+Command     autosyn done; 28.375 sec.
+Command   csynth_design done; 36.625 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 13 seconds. CPU system time: 1 seconds. Elapsed time: 36.625 seconds; current allocated memory: 256.406 MB.
+Command ap_source done; 37.394 sec.
+Execute cleanup_all 

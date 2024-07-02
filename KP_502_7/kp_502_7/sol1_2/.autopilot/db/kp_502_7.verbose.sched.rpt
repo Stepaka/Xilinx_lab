@@ -1,0 +1,954 @@
+
+
+================================================================
+== Vitis HLS Report for 'kp_502_7'
+================================================================
+* Date:           Mon Feb 19 20:26:00 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        kp_502_7
+* Solution:       sol1_2 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a200t-sbv484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +------+----------+-----------+------------+
+    | Clock|  Target  | Estimated | Uncertainty|
+    +------+----------+-----------+------------+
+    |clk   |  14.00 ns|  12.766 ns|     1.00 ns|
+    +------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      137|      489|  1.918 us|  6.846 us|  138|  490|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop    |      136|      488|   17 ~ 61|          -|          -|     8|        no|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 84
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 62 
+18 --> 19 
+19 --> 20 
+20 --> 21 63 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 2 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 62 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.32>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 85 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1"   --->   Operation 86 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %A, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 87 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %A"   --->   Operation 88 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %B, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 89 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %B"   --->   Operation 90 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %C, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 91 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %C"   --->   Operation 92 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %X1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 93 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %X1"   --->   Operation 94 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %X2, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 95 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %X2"   --->   Operation 96 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %D, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 97 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %D"   --->   Operation 98 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (1.32ns)   --->   "%store_ln8 = store i4 0, i4 %i" [./source/kp_502_7.cpp:8]   --->   Operation 99 'store' 'store_ln8' <Predicate = true> <Delay = 1.32>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln8 = br void" [./source/kp_502_7.cpp:8]   --->   Operation 100 'br' 'br_ln8' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.75>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%i_1 = load i4 %i" [./source/kp_502_7.cpp:8]   --->   Operation 101 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln8 = zext i4 %i_1" [./source/kp_502_7.cpp:8]   --->   Operation 102 'zext' 'zext_ln8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (1.21ns)   --->   "%icmp_ln8 = icmp_eq  i4 %i_1, i4 8" [./source/kp_502_7.cpp:8]   --->   Operation 103 'icmp' 'icmp_ln8' <Predicate = true> <Delay = 1.21> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 104 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (1.49ns)   --->   "%add_ln8 = add i4 %i_1, i4 1" [./source/kp_502_7.cpp:8]   --->   Operation 105 'add' 'add_ln8' <Predicate = true> <Delay = 1.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%br_ln8 = br i1 %icmp_ln8, void %.split, void" [./source/kp_502_7.cpp:8]   --->   Operation 106 'br' 'br_ln8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%A_addr = getelementptr i64 %A, i64 0, i64 %zext_ln8" [./source/kp_502_7.cpp:10]   --->   Operation 107 'getelementptr' 'A_addr' <Predicate = (!icmp_ln8)> <Delay = 0.00>
+ST_2 : Operation 108 [2/2] (1.75ns)   --->   "%A_load = load i3 %A_addr" [./source/kp_502_7.cpp:10]   --->   Operation 108 'load' 'A_load' <Predicate = (!icmp_ln8)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%ret_ln35 = ret" [./source/kp_502_7.cpp:35]   --->   Operation 109 'ret' 'ret_ln35' <Predicate = (icmp_ln8)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.75>
+ST_3 : Operation 110 [1/2] (1.75ns)   --->   "%A_load = load i3 %A_addr" [./source/kp_502_7.cpp:10]   --->   Operation 110 'load' 'A_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 4 <SV = 3> <Delay = 11.8>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%temp_A = bitcast i64 %A_load" [./source/kp_502_7.cpp:10]   --->   Operation 111 'bitcast' 'temp_A' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 112 [4/4] (11.8ns)   --->   "%mul3 = dmul i64 %temp_A, i64 4" [./source/kp_502_7.cpp:13]   --->   Operation 112 'dmul' 'mul3' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 11.8>
+ST_5 : Operation 113 [3/4] (11.8ns)   --->   "%mul3 = dmul i64 %temp_A, i64 4" [./source/kp_502_7.cpp:13]   --->   Operation 113 'dmul' 'mul3' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 11.8>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%B_addr = getelementptr i64 %B, i64 0, i64 %zext_ln8" [./source/kp_502_7.cpp:9]   --->   Operation 114 'getelementptr' 'B_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 115 [2/2] (1.75ns)   --->   "%B_load = load i3 %B_addr" [./source/kp_502_7.cpp:9]   --->   Operation 115 'load' 'B_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_6 : Operation 116 [2/4] (11.8ns)   --->   "%mul3 = dmul i64 %temp_A, i64 4" [./source/kp_502_7.cpp:13]   --->   Operation 116 'dmul' 'mul3' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 117 [1/1] (0.00ns)   --->   "%C_addr = getelementptr i64 %C, i64 0, i64 %zext_ln8" [./source/kp_502_7.cpp:13]   --->   Operation 117 'getelementptr' 'C_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 118 [2/2] (1.75ns)   --->   "%C_load = load i3 %C_addr" [./source/kp_502_7.cpp:13]   --->   Operation 118 'load' 'C_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 7 <SV = 6> <Delay = 11.8>
+ST_7 : Operation 119 [1/2] (1.75ns)   --->   "%B_load = load i3 %B_addr" [./source/kp_502_7.cpp:9]   --->   Operation 119 'load' 'B_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_7 : Operation 120 [1/4] (11.8ns)   --->   "%mul3 = dmul i64 %temp_A, i64 4" [./source/kp_502_7.cpp:13]   --->   Operation 120 'dmul' 'mul3' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 121 [1/2] (1.75ns)   --->   "%C_load = load i3 %C_addr" [./source/kp_502_7.cpp:13]   --->   Operation 121 'load' 'C_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+
+State 8 <SV = 7> <Delay = 11.8>
+ST_8 : Operation 122 [1/1] (0.00ns)   --->   "%temp_B = bitcast i64 %B_load" [./source/kp_502_7.cpp:9]   --->   Operation 122 'bitcast' 'temp_B' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 123 [4/4] (11.8ns)   --->   "%mul = dmul i64 %temp_B, i64 %temp_B" [./source/kp_502_7.cpp:13]   --->   Operation 123 'dmul' 'mul' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%bitcast_ln13 = bitcast i64 %C_load" [./source/kp_502_7.cpp:13]   --->   Operation 124 'bitcast' 'bitcast_ln13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 125 [4/4] (11.8ns)   --->   "%mul6 = dmul i64 %mul3, i64 %bitcast_ln13" [./source/kp_502_7.cpp:13]   --->   Operation 125 'dmul' 'mul6' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 11.8>
+ST_9 : Operation 126 [3/4] (11.8ns)   --->   "%mul = dmul i64 %temp_B, i64 %temp_B" [./source/kp_502_7.cpp:13]   --->   Operation 126 'dmul' 'mul' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 127 [3/4] (11.8ns)   --->   "%mul6 = dmul i64 %mul3, i64 %bitcast_ln13" [./source/kp_502_7.cpp:13]   --->   Operation 127 'dmul' 'mul6' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 11.8>
+ST_10 : Operation 128 [2/4] (11.8ns)   --->   "%mul = dmul i64 %temp_B, i64 %temp_B" [./source/kp_502_7.cpp:13]   --->   Operation 128 'dmul' 'mul' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 129 [2/4] (11.8ns)   --->   "%mul6 = dmul i64 %mul3, i64 %bitcast_ln13" [./source/kp_502_7.cpp:13]   --->   Operation 129 'dmul' 'mul6' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 11.8>
+ST_11 : Operation 130 [1/4] (11.8ns)   --->   "%mul = dmul i64 %temp_B, i64 %temp_B" [./source/kp_502_7.cpp:13]   --->   Operation 130 'dmul' 'mul' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 131 [1/4] (11.8ns)   --->   "%mul6 = dmul i64 %mul3, i64 %bitcast_ln13" [./source/kp_502_7.cpp:13]   --->   Operation 131 'dmul' 'mul6' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 11.7>
+ST_12 : Operation 132 [4/4] (11.7ns)   --->   "%x_assign = dsub i64 %mul, i64 %mul6" [./source/kp_502_7.cpp:13]   --->   Operation 132 'dsub' 'x_assign' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 11.7>
+ST_13 : Operation 133 [3/4] (11.7ns)   --->   "%x_assign = dsub i64 %mul, i64 %mul6" [./source/kp_502_7.cpp:13]   --->   Operation 133 'dsub' 'x_assign' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 11.7>
+ST_14 : Operation 134 [2/4] (11.7ns)   --->   "%x_assign = dsub i64 %mul, i64 %mul6" [./source/kp_502_7.cpp:13]   --->   Operation 134 'dsub' 'x_assign' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 11.7>
+ST_15 : Operation 135 [1/4] (11.7ns)   --->   "%x_assign = dsub i64 %mul, i64 %mul6" [./source/kp_502_7.cpp:13]   --->   Operation 135 'dsub' 'x_assign' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 4.48>
+ST_16 : Operation 136 [1/1] (0.00ns)   --->   "%bitcast_ln13_1 = bitcast i64 %x_assign" [./source/kp_502_7.cpp:13]   --->   Operation 136 'bitcast' 'bitcast_ln13_1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 137 [1/1] (0.00ns)   --->   "%D_addr = getelementptr i64 %D, i64 0, i64 %zext_ln8" [./source/kp_502_7.cpp:13]   --->   Operation 137 'getelementptr' 'D_addr' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 138 [1/1] (1.75ns)   --->   "%store_ln13 = store i64 %bitcast_ln13_1, i3 %D_addr" [./source/kp_502_7.cpp:13]   --->   Operation 138 'store' 'store_ln13' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_16 : Operation 139 [1/1] (0.00ns)   --->   "%tmp = partselect i11 @_ssdm_op_PartSelect.i11.i64.i32.i32, i64 %bitcast_ln13_1, i32 52, i32 62" [./source/kp_502_7.cpp:16]   --->   Operation 139 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 140 [1/1] (0.00ns)   --->   "%trunc_ln16 = trunc i64 %bitcast_ln13_1" [./source/kp_502_7.cpp:16]   --->   Operation 140 'trunc' 'trunc_ln16' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 141 [1/1] (1.52ns)   --->   "%icmp_ln16 = icmp_ne  i11 %tmp, i11 2047" [./source/kp_502_7.cpp:16]   --->   Operation 141 'icmp' 'icmp_ln16' <Predicate = true> <Delay = 1.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 142 [1/1] (2.34ns)   --->   "%icmp_ln16_1 = icmp_eq  i52 %trunc_ln16, i52 0" [./source/kp_502_7.cpp:16]   --->   Operation 142 'icmp' 'icmp_ln16_1' <Predicate = true> <Delay = 2.34> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 143 [1/1] (0.80ns)   --->   "%or_ln16 = or i1 %icmp_ln16_1, i1 %icmp_ln16" [./source/kp_502_7.cpp:16]   --->   Operation 143 'or' 'or_ln16' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 144 [2/2] (4.48ns)   --->   "%tmp_1 = fcmp_olt  i64 %x_assign, i64 0" [./source/kp_502_7.cpp:16]   --->   Operation 144 'dcmp' 'tmp_1' <Predicate = true> <Delay = 4.48> <CoreInst = "DCompare">   --->   Core 38 'DCompare' <Latency = 1> <II = 1> <Delay = 4.48> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 145 [1/1] (0.00ns)   --->   "%X1_addr = getelementptr i64 %X1, i64 0, i64 %zext_ln8" [./source/kp_502_7.cpp:32]   --->   Operation 145 'getelementptr' 'X1_addr' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 146 [1/1] (0.00ns)   --->   "%X2_addr = getelementptr i64 %X2, i64 0, i64 %zext_ln8" [./source/kp_502_7.cpp:33]   --->   Operation 146 'getelementptr' 'X2_addr' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 11.8>
+ST_17 : Operation 147 [1/1] (0.00ns)   --->   "%specloopname_ln8 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [./source/kp_502_7.cpp:8]   --->   Operation 147 'specloopname' 'specloopname_ln8' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 148 [1/2] (4.48ns)   --->   "%tmp_1 = fcmp_olt  i64 %x_assign, i64 0" [./source/kp_502_7.cpp:16]   --->   Operation 148 'dcmp' 'tmp_1' <Predicate = true> <Delay = 4.48> <CoreInst = "DCompare">   --->   Core 38 'DCompare' <Latency = 1> <II = 1> <Delay = 4.48> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 149 [1/1] (0.80ns)   --->   "%and_ln16 = and i1 %or_ln16, i1 %tmp_1" [./source/kp_502_7.cpp:16]   --->   Operation 149 'and' 'and_ln16' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 150 [1/1] (0.00ns)   --->   "%br_ln16 = br i1 %and_ln16, void, void" [./source/kp_502_7.cpp:16]   --->   Operation 150 'br' 'br_ln16' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 151 [4/4] (11.8ns)   --->   "%mul1 = dmul i64 %temp_A, i64 2" [./source/kp_502_7.cpp:23]   --->   Operation 151 'dmul' 'mul1' <Predicate = (!and_ln16)> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 152 [1/1] (1.75ns)   --->   "%store_ln18 = store i64 9221120237041090560, i3 %X1_addr" [./source/kp_502_7.cpp:18]   --->   Operation 152 'store' 'store_ln18' <Predicate = (and_ln16)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_17 : Operation 153 [1/1] (1.75ns)   --->   "%store_ln19 = store i64 9221120237041090560, i3 %X2_addr" [./source/kp_502_7.cpp:19]   --->   Operation 153 'store' 'store_ln19' <Predicate = (and_ln16)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_17 : Operation 154 [1/1] (0.00ns)   --->   "%br_ln20 = br void" [./source/kp_502_7.cpp:20]   --->   Operation 154 'br' 'br_ln20' <Predicate = (and_ln16)> <Delay = 0.00>
+
+State 18 <SV = 17> <Delay = 11.8>
+ST_18 : Operation 155 [3/4] (11.8ns)   --->   "%mul1 = dmul i64 %temp_A, i64 2" [./source/kp_502_7.cpp:23]   --->   Operation 155 'dmul' 'mul1' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 11.8>
+ST_19 : Operation 156 [2/2] (4.48ns)   --->   "%tmp_3 = fcmp_oeq  i64 %x_assign, i64 0" [./source/kp_502_7.cpp:21]   --->   Operation 156 'dcmp' 'tmp_3' <Predicate = true> <Delay = 4.48> <CoreInst = "DCompare">   --->   Core 38 'DCompare' <Latency = 1> <II = 1> <Delay = 4.48> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 157 [2/4] (11.8ns)   --->   "%mul1 = dmul i64 %temp_A, i64 2" [./source/kp_502_7.cpp:23]   --->   Operation 157 'dmul' 'mul1' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 12.5>
+ST_20 : Operation 158 [1/2] (4.48ns)   --->   "%tmp_3 = fcmp_oeq  i64 %x_assign, i64 0" [./source/kp_502_7.cpp:21]   --->   Operation 158 'dcmp' 'tmp_3' <Predicate = true> <Delay = 4.48> <CoreInst = "DCompare">   --->   Core 38 'DCompare' <Latency = 1> <II = 1> <Delay = 4.48> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 159 [1/1] (0.80ns)   --->   "%and_ln21 = and i1 %or_ln16, i1 %tmp_3" [./source/kp_502_7.cpp:21]   --->   Operation 159 'and' 'and_ln21' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 160 [1/1] (0.80ns)   --->   "%xor_ln23 = xor i64 %B_load, i64 9223372036854775808" [./source/kp_502_7.cpp:23]   --->   Operation 160 'xor' 'xor_ln23' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 161 [1/1] (0.00ns)   --->   "%bitcast_ln23_1 = bitcast i64 %xor_ln23" [./source/kp_502_7.cpp:23]   --->   Operation 161 'bitcast' 'bitcast_ln23_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 162 [1/4] (11.8ns)   --->   "%mul1 = dmul i64 %temp_A, i64 2" [./source/kp_502_7.cpp:23]   --->   Operation 162 'dmul' 'mul1' <Predicate = true> <Delay = 11.8> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 3> <II = 1> <Delay = 11.8> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 163 [1/1] (0.00ns)   --->   "%br_ln21 = br i1 %and_ln21, void, void" [./source/kp_502_7.cpp:21]   --->   Operation 163 'br' 'br_ln21' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 164 [17/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 164 'dsqrt' 'temp_D' <Predicate = (!and_ln21)> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 12.5>
+ST_21 : Operation 165 [16/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 165 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 12.5>
+ST_22 : Operation 166 [15/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 166 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 12.5>
+ST_23 : Operation 167 [14/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 167 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 12.5>
+ST_24 : Operation 168 [13/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 168 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 12.5>
+ST_25 : Operation 169 [12/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 169 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 12.5>
+ST_26 : Operation 170 [11/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 170 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 12.5>
+ST_27 : Operation 171 [10/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 171 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 12.5>
+ST_28 : Operation 172 [9/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 172 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 12.5>
+ST_29 : Operation 173 [8/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 173 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 12.5>
+ST_30 : Operation 174 [7/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 174 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 12.5>
+ST_31 : Operation 175 [6/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 175 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 12.5>
+ST_32 : Operation 176 [5/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 176 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 12.5>
+ST_33 : Operation 177 [4/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 177 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 12.5>
+ST_34 : Operation 178 [3/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 178 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 12.5>
+ST_35 : Operation 179 [2/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 179 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 12.5>
+ST_36 : Operation 180 [1/17] (12.5ns)   --->   "%temp_D = dsqrt i64 @llvm.sqrt.f64, i64 %x_assign" [r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8]   --->   Operation 180 'dsqrt' 'temp_D' <Predicate = true> <Delay = 12.5> <CoreInst = "DSqrt">   --->   Core 52 'DSqrt' <Latency = 16> <II = 1> <Delay = 12.5> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 11.7>
+ST_37 : Operation 181 [4/4] (11.7ns)   --->   "%sub = dsub i64 %bitcast_ln23_1, i64 %temp_D" [./source/kp_502_7.cpp:32]   --->   Operation 181 'dsub' 'sub' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 182 [4/4] (11.7ns)   --->   "%add = dsub i64 %temp_D, i64 %temp_B" [./source/kp_502_7.cpp:33]   --->   Operation 182 'dsub' 'add' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 11.7>
+ST_38 : Operation 183 [3/4] (11.7ns)   --->   "%sub = dsub i64 %bitcast_ln23_1, i64 %temp_D" [./source/kp_502_7.cpp:32]   --->   Operation 183 'dsub' 'sub' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 184 [3/4] (11.7ns)   --->   "%add = dsub i64 %temp_D, i64 %temp_B" [./source/kp_502_7.cpp:33]   --->   Operation 184 'dsub' 'add' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 11.7>
+ST_39 : Operation 185 [2/4] (11.7ns)   --->   "%sub = dsub i64 %bitcast_ln23_1, i64 %temp_D" [./source/kp_502_7.cpp:32]   --->   Operation 185 'dsub' 'sub' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 186 [2/4] (11.7ns)   --->   "%add = dsub i64 %temp_D, i64 %temp_B" [./source/kp_502_7.cpp:33]   --->   Operation 186 'dsub' 'add' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 11.7>
+ST_40 : Operation 187 [1/4] (11.7ns)   --->   "%sub = dsub i64 %bitcast_ln23_1, i64 %temp_D" [./source/kp_502_7.cpp:32]   --->   Operation 187 'dsub' 'sub' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 188 [1/4] (11.7ns)   --->   "%add = dsub i64 %temp_D, i64 %temp_B" [./source/kp_502_7.cpp:33]   --->   Operation 188 'dsub' 'add' <Predicate = true> <Delay = 11.7> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 11.7> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 12.7>
+ST_41 : Operation 189 [21/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 189 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 190 [21/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 190 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 12.7>
+ST_42 : Operation 191 [20/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 191 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 192 [20/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 192 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 12.7>
+ST_43 : Operation 193 [19/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 193 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 194 [19/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 194 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 12.7>
+ST_44 : Operation 195 [18/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 195 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 196 [18/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 196 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 12.7>
+ST_45 : Operation 197 [17/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 197 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 198 [17/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 198 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 12.7>
+ST_46 : Operation 199 [16/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 199 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 200 [16/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 200 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 12.7>
+ST_47 : Operation 201 [15/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 201 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 202 [15/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 202 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 12.7>
+ST_48 : Operation 203 [14/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 203 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 204 [14/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 204 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 12.7>
+ST_49 : Operation 205 [13/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 205 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 206 [13/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 206 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 12.7>
+ST_50 : Operation 207 [12/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 207 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 208 [12/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 208 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 12.7>
+ST_51 : Operation 209 [11/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 209 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 210 [11/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 210 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 12.7>
+ST_52 : Operation 211 [10/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 211 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 212 [10/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 212 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 12.7>
+ST_53 : Operation 213 [9/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 213 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 214 [9/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 214 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 12.7>
+ST_54 : Operation 215 [8/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 215 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 216 [8/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 216 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 12.7>
+ST_55 : Operation 217 [7/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 217 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 218 [7/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 218 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 12.7>
+ST_56 : Operation 219 [6/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 219 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 220 [6/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 220 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 12.7>
+ST_57 : Operation 221 [5/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 221 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 222 [5/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 222 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 12.7>
+ST_58 : Operation 223 [4/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 223 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 224 [4/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 224 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 12.7>
+ST_59 : Operation 225 [3/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 225 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 226 [3/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 226 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 12.7>
+ST_60 : Operation 227 [2/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 227 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_60 : Operation 228 [2/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 228 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 12.7>
+ST_61 : Operation 229 [1/21] (12.7ns)   --->   "%div1 = ddiv i64 %sub, i64 %mul1" [./source/kp_502_7.cpp:32]   --->   Operation 229 'ddiv' 'div1' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 230 [1/21] (12.7ns)   --->   "%div2 = ddiv i64 %add, i64 %mul1" [./source/kp_502_7.cpp:33]   --->   Operation 230 'ddiv' 'div2' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 61> <Delay = 1.75>
+ST_62 : Operation 231 [1/1] (0.00ns)   --->   "%bitcast_ln32 = bitcast i64 %div1" [./source/kp_502_7.cpp:32]   --->   Operation 231 'bitcast' 'bitcast_ln32' <Predicate = (!and_ln16 & !and_ln21)> <Delay = 0.00>
+ST_62 : Operation 232 [1/1] (1.75ns)   --->   "%store_ln32 = store i64 %bitcast_ln32, i3 %X1_addr" [./source/kp_502_7.cpp:32]   --->   Operation 232 'store' 'store_ln32' <Predicate = (!and_ln16 & !and_ln21)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_62 : Operation 233 [1/1] (0.00ns)   --->   "%bitcast_ln33 = bitcast i64 %div2" [./source/kp_502_7.cpp:33]   --->   Operation 233 'bitcast' 'bitcast_ln33' <Predicate = (!and_ln16 & !and_ln21)> <Delay = 0.00>
+ST_62 : Operation 234 [1/1] (1.75ns)   --->   "%store_ln33 = store i64 %bitcast_ln33, i3 %X2_addr" [./source/kp_502_7.cpp:33]   --->   Operation 234 'store' 'store_ln33' <Predicate = (!and_ln16 & !and_ln21)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_62 : Operation 235 [1/1] (0.00ns)   --->   "%br_ln34 = br void" [./source/kp_502_7.cpp:34]   --->   Operation 235 'br' 'br_ln34' <Predicate = (!and_ln16 & !and_ln21)> <Delay = 0.00>
+ST_62 : Operation 236 [1/1] (1.32ns)   --->   "%store_ln8 = store i4 %add_ln8, i4 %i" [./source/kp_502_7.cpp:8]   --->   Operation 236 'store' 'store_ln8' <Predicate = true> <Delay = 1.32>
+ST_62 : Operation 237 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 237 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 63 <SV = 20> <Delay = 12.7>
+ST_63 : Operation 238 [21/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 238 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 21> <Delay = 12.7>
+ST_64 : Operation 239 [20/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 239 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 22> <Delay = 12.7>
+ST_65 : Operation 240 [19/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 240 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 23> <Delay = 12.7>
+ST_66 : Operation 241 [18/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 241 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 24> <Delay = 12.7>
+ST_67 : Operation 242 [17/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 242 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 25> <Delay = 12.7>
+ST_68 : Operation 243 [16/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 243 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 26> <Delay = 12.7>
+ST_69 : Operation 244 [15/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 244 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 27> <Delay = 12.7>
+ST_70 : Operation 245 [14/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 245 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 28> <Delay = 12.7>
+ST_71 : Operation 246 [13/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 246 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 72 <SV = 29> <Delay = 12.7>
+ST_72 : Operation 247 [12/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 247 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 73 <SV = 30> <Delay = 12.7>
+ST_73 : Operation 248 [11/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 248 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 31> <Delay = 12.7>
+ST_74 : Operation 249 [10/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 249 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 32> <Delay = 12.7>
+ST_75 : Operation 250 [9/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 250 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 76 <SV = 33> <Delay = 12.7>
+ST_76 : Operation 251 [8/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 251 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 77 <SV = 34> <Delay = 12.7>
+ST_77 : Operation 252 [7/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 252 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 78 <SV = 35> <Delay = 12.7>
+ST_78 : Operation 253 [6/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 253 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 79 <SV = 36> <Delay = 12.7>
+ST_79 : Operation 254 [5/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 254 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 80 <SV = 37> <Delay = 12.7>
+ST_80 : Operation 255 [4/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 255 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 81 <SV = 38> <Delay = 12.7>
+ST_81 : Operation 256 [3/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 256 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 82 <SV = 39> <Delay = 12.7>
+ST_82 : Operation 257 [2/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 257 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 83 <SV = 40> <Delay = 12.7>
+ST_83 : Operation 258 [1/21] (12.7ns)   --->   "%div = ddiv i64 %bitcast_ln23_1, i64 %mul1" [./source/kp_502_7.cpp:23]   --->   Operation 258 'ddiv' 'div' <Predicate = true> <Delay = 12.7> <CoreInst = "DDiv">   --->   Core 39 'DDiv' <Latency = 20> <II = 1> <Delay = 12.7> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 41> <Delay = 1.75>
+ST_84 : Operation 259 [1/1] (0.00ns)   --->   "%bitcast_ln23 = bitcast i64 %div" [./source/kp_502_7.cpp:23]   --->   Operation 259 'bitcast' 'bitcast_ln23' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 260 [1/1] (1.75ns)   --->   "%store_ln23 = store i64 %bitcast_ln23, i3 %X1_addr" [./source/kp_502_7.cpp:23]   --->   Operation 260 'store' 'store_ln23' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_84 : Operation 261 [1/1] (1.75ns)   --->   "%store_ln24 = store i64 %bitcast_ln23, i3 %X2_addr" [./source/kp_502_7.cpp:24]   --->   Operation 261 'store' 'store_ln24' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 8> <RAM>
+ST_84 : Operation 262 [1/1] (0.00ns)   --->   "%br_ln25 = br void" [./source/kp_502_7.cpp:25]   --->   Operation 262 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 14ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.32ns
+The critical path consists of the following:
+	'alloca' operation ('i') [7]  (0 ns)
+	'store' operation ('store_ln8', ./source/kp_502_7.cpp:8) of constant 0 on local variable 'i' [21]  (1.32 ns)
+
+ <State 2>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('i', ./source/kp_502_7.cpp:8) on local variable 'i' [24]  (0 ns)
+	'getelementptr' operation ('A_addr', ./source/kp_502_7.cpp:10) [35]  (0 ns)
+	'load' operation ('A_load', ./source/kp_502_7.cpp:10) on array 'A' [36]  (1.75 ns)
+
+ <State 3>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('A_load', ./source/kp_502_7.cpp:10) on array 'A' [36]  (1.75 ns)
+
+ <State 4>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul3', ./source/kp_502_7.cpp:13) [39]  (11.8 ns)
+
+ <State 5>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul3', ./source/kp_502_7.cpp:13) [39]  (11.8 ns)
+
+ <State 6>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul3', ./source/kp_502_7.cpp:13) [39]  (11.8 ns)
+
+ <State 7>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul3', ./source/kp_502_7.cpp:13) [39]  (11.8 ns)
+
+ <State 8>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul', ./source/kp_502_7.cpp:13) [38]  (11.8 ns)
+
+ <State 9>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul', ./source/kp_502_7.cpp:13) [38]  (11.8 ns)
+
+ <State 10>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul', ./source/kp_502_7.cpp:13) [38]  (11.8 ns)
+
+ <State 11>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul', ./source/kp_502_7.cpp:13) [38]  (11.8 ns)
+
+ <State 12>: 11.8ns
+The critical path consists of the following:
+	'dsub' operation ('x', ./source/kp_502_7.cpp:13) [44]  (11.8 ns)
+
+ <State 13>: 11.8ns
+The critical path consists of the following:
+	'dsub' operation ('x', ./source/kp_502_7.cpp:13) [44]  (11.8 ns)
+
+ <State 14>: 11.8ns
+The critical path consists of the following:
+	'dsub' operation ('x', ./source/kp_502_7.cpp:13) [44]  (11.8 ns)
+
+ <State 15>: 11.8ns
+The critical path consists of the following:
+	'dsub' operation ('x', ./source/kp_502_7.cpp:13) [44]  (11.8 ns)
+
+ <State 16>: 4.48ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_1', ./source/kp_502_7.cpp:16) [53]  (4.48 ns)
+
+ <State 17>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul1', ./source/kp_502_7.cpp:23) [63]  (11.8 ns)
+
+ <State 18>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul1', ./source/kp_502_7.cpp:23) [63]  (11.8 ns)
+
+ <State 19>: 11.8ns
+The critical path consists of the following:
+	'dmul' operation ('mul1', ./source/kp_502_7.cpp:23) [63]  (11.8 ns)
+
+ <State 20>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 21>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 22>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 23>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 24>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 25>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 26>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 27>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 28>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 29>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 30>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 31>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 32>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 33>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 34>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 35>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 36>: 12.5ns
+The critical path consists of the following:
+	'dsqrt' operation ('temp_D', r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtdouble.cpp:8) [66]  (12.5 ns)
+
+ <State 37>: 11.8ns
+The critical path consists of the following:
+	'dsub' operation ('sub', ./source/kp_502_7.cpp:32) [67]  (11.8 ns)
+
+ <State 38>: 11.8ns
+The critical path consists of the following:
+	'dsub' operation ('sub', ./source/kp_502_7.cpp:32) [67]  (11.8 ns)
+
+ <State 39>: 11.8ns
+The critical path consists of the following:
+	'dsub' operation ('sub', ./source/kp_502_7.cpp:32) [67]  (11.8 ns)
+
+ <State 40>: 11.8ns
+The critical path consists of the following:
+	'dsub' operation ('sub', ./source/kp_502_7.cpp:32) [67]  (11.8 ns)
+
+ <State 41>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 42>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 43>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 44>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 45>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 46>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 47>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 48>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 49>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 50>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 51>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 52>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 53>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 54>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 55>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 56>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 57>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 58>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 59>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 60>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 61>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div1', ./source/kp_502_7.cpp:32) [68]  (12.8 ns)
+
+ <State 62>: 1.75ns
+The critical path consists of the following:
+	'store' operation ('store_ln32', ./source/kp_502_7.cpp:32) of variable 'bitcast_ln32', ./source/kp_502_7.cpp:32 on array 'X1' [70]  (1.75 ns)
+
+ <State 63>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 64>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 65>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 66>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 67>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 68>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 69>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 70>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 71>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 72>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 73>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 74>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 75>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 76>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 77>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 78>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 79>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 80>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 81>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 82>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 83>: 12.8ns
+The critical path consists of the following:
+	'ddiv' operation ('div', ./source/kp_502_7.cpp:23) [77]  (12.8 ns)
+
+ <State 84>: 1.75ns
+The critical path consists of the following:
+	'store' operation ('store_ln23', ./source/kp_502_7.cpp:23) of variable 'bitcast_ln23', ./source/kp_502_7.cpp:23 on array 'X1' [79]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

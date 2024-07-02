@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1697907532836">
+  <ports id="1" name="in_a" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="15">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="in_b" type="PortType" coreName="RAM" coreId="1702129263" bitwidth="32" iftype="IfTypeRegister" arraysize="15">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="3" name="res" type="PortType" coreName="RAM" coreId="16908545" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="15">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="109" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="110" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="111" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="113" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="114" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="115" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="116" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="117" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="120" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="121" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="124" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="125" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="126" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="127" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="129" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="131" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="132" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="133" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.6"/>
+  <edges id="135" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.6"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.6"/>
+  <edges id="137" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.6"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.7"/>
+  <edges id="139" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.7"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.7"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.7"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.8"/>
+  <edges id="143" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.8"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.8"/>
+  <edges id="145" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.8"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.9"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.9"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.9"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.9"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.10"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.10"/>
+  <edges id="152" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.10"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.10"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.11"/>
+  <edges id="155" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.11"/>
+  <edges id="156" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.11"/>
+  <edges id="157" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.11"/>
+  <edges id="158" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.12"/>
+  <edges id="159" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.12"/>
+  <edges id="160" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.12"/>
+  <edges id="161" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.12"/>
+  <edges id="162" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.13"/>
+  <edges id="163" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.13"/>
+  <edges id="164" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.13"/>
+  <edges id="165" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.13"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.14"/>
+  <edges id="167" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.14"/>
+  <edges id="168" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.14"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.14"/>
+  <edges id="170" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.15"/>
+  <edges id="171" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.16"/>
+  <edges id="174" source_obj="//@regions.0/@basic_blocks.2/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.16"/>
+  <edges id="175" source_obj="//@regions.0/@basic_blocks.2/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.17"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.2/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.18"/>
+  <edges id="177" source_obj="//@regions.0/@basic_blocks.2/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.18"/>
+  <edges id="178" source_obj="//@regions.0/@basic_blocks.2/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.19"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.2/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.19"/>
+  <edges id="180" source_obj="//@regions.0/@basic_blocks.2/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.20"/>
+  <edges id="181" source_obj="//@regions.0/@basic_blocks.2/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.20"/>
+  <edges id="182" source_obj="//@regions.0/@basic_blocks.2/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.21"/>
+  <edges id="183" source_obj="//@regions.0/@basic_blocks.2/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.21"/>
+  <edges id="184" source_obj="//@regions.0/@basic_blocks.2/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.22"/>
+  <edges id="185" source_obj="//@regions.0/@basic_blocks.2/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.22"/>
+  <edges id="186" source_obj="//@regions.0/@basic_blocks.2/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.23"/>
+  <edges id="187" source_obj="//@regions.0/@basic_blocks.2/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.23"/>
+  <edges id="188" source_obj="//@regions.0/@basic_blocks.2/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.24"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.2/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.24"/>
+  <edges id="190" source_obj="//@regions.0/@basic_blocks.2/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.25"/>
+  <edges id="191" source_obj="//@regions.0/@basic_blocks.2/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.25"/>
+  <edges id="192" source_obj="//@regions.0/@basic_blocks.2/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.26"/>
+  <edges id="193" source_obj="//@regions.0/@basic_blocks.2/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.26"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.2/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.27"/>
+  <edges id="195" source_obj="//@regions.0/@basic_blocks.2/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.27"/>
+  <edges id="196" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.28"/>
+  <edges id="197" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.28"/>
+  <edges id="198" source_obj="//@regions.0/@basic_blocks.2/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.29"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.2/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.29"/>
+  <edges id="200" source_obj="//@regions.0/@basic_blocks.2/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.30"/>
+  <edges id="201" source_obj="//@regions.0/@basic_blocks.2/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.30"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.2/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.31"/>
+  <edges id="203" source_obj="//@regions.0/@basic_blocks.2/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.31"/>
+  <edges id="204" source_obj="//@regions.0/@basic_blocks.2/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.32"/>
+  <edges id="205" source_obj="//@regions.0/@basic_blocks.2/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.32"/>
+  <edges id="206" source_obj="//@regions.0/@basic_blocks.2/@node_objs.33" sink_obj="//@ports.2"/>
+  <edges id="208" source_obj="//@regions.0/@basic_blocks.2/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.33"/>
+  <edges id="209" source_obj="//@regions.0/@basic_blocks.2/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.34"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.2/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.34"/>
+  <edges id="211" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.35"/>
+  <edges id="214" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.36"/>
+  <edges id="217" source_obj="//@regions.0/@basic_blocks.2/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.37"/>
+  <edges id="218" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.37"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.37"/>
+  <edges id="222" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="223" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="227" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="231" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="232" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="236" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="237" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="241" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="242" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="246" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="247" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="251" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="252" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="256" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="257" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="261" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="262" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="266" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="267" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="271" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="272" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="276" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="277" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="281" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="282" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="286" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="287" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="291" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="292" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="296" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="297" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="300" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="303" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="305" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="308" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="309" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="310" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="312" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="314" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="315" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2" is_back_edge="1"/>
+  <edges id="316" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2" is_back_edge="1"/>
+  <edges id="318" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2" is_back_edge="1"/>
+  <edges id="320" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="321" source_obj="//@regions.0/@basic_blocks.2/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3" is_back_edge="1"/>
+  <edges id="322" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3" is_back_edge="1"/>
+  <edges id="324" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3" is_back_edge="1"/>
+  <edges id="326" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="327" source_obj="//@regions.0/@basic_blocks.2/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4" is_back_edge="1"/>
+  <edges id="328" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4" is_back_edge="1"/>
+  <edges id="330" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4" is_back_edge="1"/>
+  <edges id="332" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="333" source_obj="//@regions.0/@basic_blocks.2/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5" is_back_edge="1"/>
+  <edges id="334" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5" is_back_edge="1"/>
+  <edges id="336" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5" is_back_edge="1"/>
+  <edges id="338" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="339" source_obj="//@regions.0/@basic_blocks.2/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6" is_back_edge="1"/>
+  <edges id="340" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6" is_back_edge="1"/>
+  <edges id="342" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6" is_back_edge="1"/>
+  <edges id="344" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="345" source_obj="//@regions.0/@basic_blocks.2/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7" is_back_edge="1"/>
+  <edges id="346" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7" is_back_edge="1"/>
+  <edges id="348" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7" is_back_edge="1"/>
+  <edges id="350" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="351" source_obj="//@regions.0/@basic_blocks.2/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8" is_back_edge="1"/>
+  <edges id="352" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8" is_back_edge="1"/>
+  <edges id="354" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8" is_back_edge="1"/>
+  <edges id="356" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="357" source_obj="//@regions.0/@basic_blocks.2/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9" is_back_edge="1"/>
+  <edges id="358" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9" is_back_edge="1"/>
+  <edges id="360" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9" is_back_edge="1"/>
+  <edges id="362" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="363" source_obj="//@regions.0/@basic_blocks.2/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10" is_back_edge="1"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10" is_back_edge="1"/>
+  <edges id="366" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10" is_back_edge="1"/>
+  <edges id="368" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="369" source_obj="//@regions.0/@basic_blocks.2/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11" is_back_edge="1"/>
+  <edges id="370" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11" is_back_edge="1"/>
+  <edges id="372" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11" is_back_edge="1"/>
+  <edges id="374" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="375" source_obj="//@regions.0/@basic_blocks.2/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12" is_back_edge="1"/>
+  <edges id="376" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12" is_back_edge="1"/>
+  <edges id="378" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12" is_back_edge="1"/>
+  <edges id="380" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="381" source_obj="//@regions.0/@basic_blocks.2/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13" is_back_edge="1"/>
+  <edges id="382" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13" is_back_edge="1"/>
+  <edges id="384" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13" is_back_edge="1"/>
+  <edges id="386" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="387" source_obj="//@regions.0/@basic_blocks.2/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14" is_back_edge="1"/>
+  <edges id="388" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14" is_back_edge="1"/>
+  <edges id="390" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14" is_back_edge="1"/>
+  <edges id="392" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="393" source_obj="//@regions.0/@basic_blocks.2/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15" is_back_edge="1"/>
+  <edges id="394" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15" is_back_edge="1"/>
+  <edges id="396" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15" is_back_edge="1"/>
+  <edges id="399" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="400" source_obj="//@regions.0/@basic_blocks.2/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16" is_back_edge="1"/>
+  <edges id="401" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16" is_back_edge="1"/>
+  <edges id="403" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16" is_back_edge="1"/>
+  <edges id="404" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="405" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="406" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="492" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="493" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="494" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="495" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="496" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="497" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="498" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <blocks id="8" name="block_8" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>rewind_header</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln6" lineNumber="6" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreId="1523929184" contextFuncName="lab4_z1" opcode="br" m_display="0" m_delay="1.61" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="./source/lab4_z1.cpp">
+      <validLinenumbers>6</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="8" typeName="Pipeline" iiViolation="Resource Limitation;mFailedII=7;mDependenceDistancedII=-1;mLimitedResource=2;nodes=35__core/RAM/in_b//load/store,39__core/RAM/in_b//load/store,43__core/RAM/in_b//load/store,47__core/RAM/in_b//load/store,51__core/RAM/in_b//load/store,55__core/RAM/in_b//load/store,61__core/RAM/in_b//load/store,33__core/RAM/in_b//load/store,37__core/RAM/in_b//load/store,41__core/RAM/in_b//load/store,45__core/RAM/in_b//load/store,49__core/RAM/in_b//load/store,53__core/RAM/in_b//load/store,57__core/RAM/in_b//load/store,59__;" id="553" pipe_depth="14" RegionName="L2">
+    <basic_blocks id="27" name="rewind_header" type="BlockType">
+      <controlInputObjs>block_8</controlInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlInputObjs>block_108</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>rewind_init</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="do_init" coreId="1667855973" bitwidth="1" opcode="phi" nodeLabel="9.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <dataOutputObjs>br</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="in_b_load_14_rewind" coreId="1630416691" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="in_b_load_13_rewind" coreId="6684719" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="in_b_load_12_rewind" coreId="819485384" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="in_b_load_11_rewind" coreId="1523928160" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="in_b_load_10_rewind" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="in_b_load_9_rewind" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="in_b_load_8_rewind" coreId="1630416691" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="in_b_load_7_rewind" coreId="1630416691" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="in_b_load_6_rewind" coreId="1667855973" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="in_b_load_5_rewind" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="in_b_load_4_rewind" coreId="15" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="in_b_load_3_rewind" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="in_b_load_2_rewind" coreId="2086796344" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="in_b_load_1_rewind" coreId="2086791504" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="in_b_load_rewind" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="j1" originalName="j" coreId="1717924352" bitwidth="4" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <controlInputObjs>block_8</controlInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="br_ln0" coreId="5113" opcode="br" nodeLabel="9.0" m_display="0" m_delay="1.61" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <dataInputObjs>phi</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+      </node_objs>
+    </basic_blocks>
+    <basic_blocks id="63" name="rewind_init" type="BlockType">
+      <controlInputObjs>rewind_header</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="in_b_addr" coreId="2086791864" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="in_b_load" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="in_b_addr_1" coreId="4294967295" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="in_b_load_1" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="in_b_addr_2" coreId="1493267456" bitwidth="4" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="in_b_load_2" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="in_b_addr_3" coreId="4294967295" bitwidth="4" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="in_b_load_3" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="in_b_addr_4" coreId="4294967295" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="in_b_load_4" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="in_b_addr_5" coreId="0" bitwidth="4" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="in_b_load_5" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="in_b_addr_6" coreId="1936942336" bitwidth="4" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="in_b_load_6" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="in_b_addr_7" coreId="1819113472" bitwidth="4" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="in_b_load_7" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="in_b_addr_8" coreId="2086794064" bitwidth="4" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="in_b_load_8" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="in_b_addr_9" coreId="0" bitwidth="4" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="in_b_load_9" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="in_b_addr_10" coreId="2085752000" bitwidth="4" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="in_b_load_10" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="in_b_addr_11" coreId="2085750944" bitwidth="4" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="in_b_load_11" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="in_b_addr_12" coreId="4294967295" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="in_b_load_12" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="in_b_addr_13" coreId="2086825472" bitwidth="4" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="in_b_load_13" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="7.0" nodeLatency="1" m_display="1" m_delay="2.15" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="in_b_addr_14" coreId="4294967295" bitwidth="4" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <dataInputObjs>in_b</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="in_b_load_14" coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" bitwidth="32" opcode="load" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln6" lineNumber="6" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="lab4_z1" opcode="br" nodeLabel="9.0" m_display="0" m_delay="1.61" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <controlInputObjs>.split</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z1.cpp">
+        <validLinenumbers>6</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="105" name=".split" type="BlockType">
+      <controlInputObjs>rewind_header</controlInputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_108</controlOutputObjs>
+      <controlOutputObjs>rewind_header</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="in_b_load_14_phi" coreId="2086781824" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="in_b_load_13_phi" coreId="2086780144" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="in_b_load_12_phi" coreId="4294967295" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="in_b_load_11_phi" coreId="4294967295" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="in_b_load_10_phi" coreId="4294967295" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="in_b_load_9_phi" coreId="2086825472" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="in_b_load_8_phi" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="in_b_load_7_phi" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="in_b_load_6_phi" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="in_b_load_5_phi" coreId="668" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="in_b_load_4_phi" coreId="290" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="in_b_load_3_phi" coreId="566" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="in_b_load_2_phi" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="in_b_load_1_phi" coreId="0" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="in_b_load_phi" coreId="876" bitwidth="32" opcode="phi" nodeLabel="10.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <controlInputObjs>rewind_init</controlInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="zext_ln6" lineNumber="6" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="zext_ln6_fu_682_p1" coreId="0" contextFuncName="lab4_z1" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="in_a_addr" lineNumber="7" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreId="389" contextFuncName="lab4_z1" bitwidth="4" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="7" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>in_a</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="temp_a" lineNumber="7" originalName="temp_a" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="lab4_z1" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="7" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="add_ln10" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_fu_699_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="add_ln10_1" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_1_fu_705_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="4.5" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="add_ln10_2" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_2_fu_711_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="add_ln10_3" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_3_fu_717_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="2.7" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="add_ln10_4" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_4_fu_723_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="4.5" m_topoIndex="77" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="add_ln10_5" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_5_fu_768_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="12.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="add_ln10_6" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_6_fu_729_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="2.7" m_topoIndex="78" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="add_ln10_7" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_7_fu_735_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="2.7" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="add_ln10_8" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_8_fu_759_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="11.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="add_ln10_9" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_9_fu_741_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="add_ln10_10" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_10_fu_747_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="2.7" m_topoIndex="81" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="add_ln10_11" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_11_fu_753_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="10.0" m_display="0" m_delay="4.5" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="add_ln10_12" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_12_fu_763_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="11.0" m_display="0" m_delay="4.5" m_topoIndex="84" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="add_ln10_13" lineNumber="10" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="add_ln10_13_fu_772_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="add" coreId="10" contextFuncName="lab4_z1" bitwidth="32" opcode="add" nodeLabel="12.0" m_display="0" m_delay="4.5" m_topoIndex="86" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="product" lineNumber="10" originalName="product" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="mul_32s_32s_32_1_1_U1" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="lab4_z1" bitwidth="32" opcode="mul" nodeLabel="13.0" m_display="0" m_delay="8.47" m_topoIndex="87" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="10" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="res_addr" lineNumber="12" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreId="1539" contextFuncName="lab4_z1" bitwidth="4" opcode="getelementptr" nodeLabel="14.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="12" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>res</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="res_addr_write_ln12" lineNumber="12" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="lab4_z1" opcode="store" nodeLabel="14.0" m_display="0" m_delay="2.15" m_topoIndex="89" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="12" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="j" lineNumber="6" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="j_fu_693_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="lab4_z1" bitwidth="4" opcode="add" nodeLabel="8.0" m_display="0" m_delay="1.77" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="icmp_ln6" lineNumber="6" fileName="./source/lab4_z1.cpp" fileDirectory=".." rtlName="icmp_ln6_fu_687_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="lab4_z1" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.44" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="br_ln6" lineNumber="6" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreId="0" contextFuncName="lab4_z1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="6" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>rewind_header</controlInputObjs>
+        <controlInputObjs>block_108</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z1.cpp">
+        <validLinenumbers>6</validLinenumbers>
+        <validLinenumbers>7</validLinenumbers>
+        <validLinenumbers>10</validLinenumbers>
+        <validLinenumbers>12</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="108" name="block_108" type="BlockType">
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>rewind_header</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="_ln14" lineNumber="14" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreId="0" contextFuncName="lab4_z1" opcode="return" nodeLabel="14.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="14" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="br_ln14" lineNumber="14" fileName="./source/lab4_z1.cpp" fileDirectory=".." coreId="0" contextFuncName="lab4_z1" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="./source/lab4_z1.cpp" linenumber="14" fileDirectory="C:\Xilinx_trn\HLS2023\lab4_z1" functionName="lab4_z1"/>
+        <controlInputObjs>rewind_header</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="./source/lab4_z1.cpp">
+        <validLinenumbers>14</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <regnodes realName="in_b_addr_6_reg_862">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_9_rewind_reg_352">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_12_reg_922">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_11_phi_reg_538">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_7_reg_877">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_10_rewind_reg_337">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="do_init_reg_246">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln10_4_reg_962">
+    <nodeIds>89</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_5_reg_847">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_2_phi_reg_646">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_4_reg_852">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="in_a_addr_reg_798">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="temp_a_reg_827">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_14_reg_952">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_5_phi_reg_610">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_5_rewind_reg_412">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_2_reg_817">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_9_reg_887">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_8_phi_reg_574">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_13_rewind_reg_292">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_11_reg_917">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_phi_reg_670">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_12_reg_932">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_1_rewind_reg_472">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_3_phi_reg_634">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_3_reg_837">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_4_phi_reg_622">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln10_12_reg_982">
+    <nodeIds>97</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_1_reg_788">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_14_phi_reg_502">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_3_reg_822">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_7_phi_reg_586">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_8_reg_892">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="product_reg_992">
+    <nodeIds>99</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_10_reg_902">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_10_phi_reg_550">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_7_reg_867">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="j1_reg_262">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_12_rewind_reg_307">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_13_reg_927">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_6_reg_872">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_4_reg_842">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_13_phi_reg_514">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_9_reg_897">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln10_1_reg_957">
+    <nodeIds>86</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_14_reg_942">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_7_rewind_reg_382">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_3_rewind_reg_442">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_11_rewind_reg_322">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln6_reg_793">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_6_phi_reg_598">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_2_reg_832">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln10_11_reg_977">
+    <nodeIds>96</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_8_reg_882">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_1_reg_812">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln6_reg_803">
+    <nodeIds>103</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_947">
+    <nodeIds>102</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_10_reg_912">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln10_7_reg_972">
+    <nodeIds>92</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_4_rewind_reg_427">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_1_phi_reg_658">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_13_reg_937">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln10_13_reg_987">
+    <nodeIds>98</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_12_phi_reg_526">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_reg_807">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_11_reg_907">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_addr_reg_783">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_5_reg_857">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_8_rewind_reg_367">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_2_rewind_reg_457">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_rewind_reg_487">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln10_6_reg_967">
+    <nodeIds>91</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_14_rewind_reg_277">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_6_rewind_reg_397">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="in_b_load_9_phi_reg_562">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <expressionNodes realName="j_fu_693">
+    <nodeIds>102</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_12_phi_phi_fu_530">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_1_fu_705">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_2_phi_phi_fu_650">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_9_gep_fu_179">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_7_gep_fu_161">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_5_phi_phi_fu_614">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_7_rewind_phi_fu_386">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_9_phi_phi_fu_566">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_5_gep_fu_143">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_12_gep_fu_206">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln6_fu_687">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln6_fu_682">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_8_fu_759">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_3_rewind_phi_fu_446">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_8_rewind_phi_fu_371">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="return_ln14_fu_781">
+    <nodeIds>106</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_10_fu_747">
+    <nodeIds>95</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_2_gep_fu_116">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_10_rewind_phi_fu_341">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_12_rewind_phi_fu_311">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_3_fu_717">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_14_gep_fu_224">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_14_rewind_phi_fu_281">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_1_rewind_phi_fu_476">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_9_fu_741">
+    <nodeIds>94</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_11_fu_753">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_6_fu_729">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_gep_fu_76">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_phi_phi_fu_674">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_4_gep_fu_134">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_7_phi_phi_fu_590">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_14_phi_phi_fu_506">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_13_fu_772">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_rewind_phi_fu_491">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_11_gep_fu_197">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_4_fu_723">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j1_phi_fu_266">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_1_gep_fu_94">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_11_phi_phi_fu_542">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_6_rewind_phi_fu_401">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_7_fu_735">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="do_init_phi_fu_250">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_13_gep_fu_215">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_12_fu_763">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_6_gep_fu_152">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_5_rewind_phi_fu_416">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_4_phi_phi_fu_626">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="product_fu_777">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_10_phi_phi_fu_554">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_11_rewind_phi_fu_326">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_2_fu_711">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_3_phi_phi_fu_638">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_addr_gep_fu_233">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_3_gep_fu_125">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_4_rewind_phi_fu_431">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_fu_699">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_2_rewind_phi_fu_461">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_13_phi_phi_fu_518">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_9_rewind_phi_fu_356">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln10_5_fu_768">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_a_addr_gep_fu_103">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_8_gep_fu_170">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_1_phi_phi_fu_662">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_addr_10_gep_fu_188">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_6_phi_phi_fu_602">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_8_phi_phi_fu_578">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_b_load_13_rewind_phi_fu_296">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <memoryPorts dataString="in_a">
+    <nodeIds>84</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="in_b">
+    <nodeIds>35</nodeIds>
+    <nodeIds>39</nodeIds>
+    <nodeIds>43</nodeIds>
+    <nodeIds>47</nodeIds>
+    <nodeIds>51</nodeIds>
+    <nodeIds>55</nodeIds>
+    <nodeIds>59</nodeIds>
+    <nodeIds>61</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="in_b" portID="1">
+    <nodeIds>33</nodeIds>
+    <nodeIds>37</nodeIds>
+    <nodeIds>41</nodeIds>
+    <nodeIds>45</nodeIds>
+    <nodeIds>49</nodeIds>
+    <nodeIds>53</nodeIds>
+    <nodeIds>57</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="res">
+    <nodeIds>101</nodeIds>
+  </memoryPorts>
+  <ioPorts name="in_a(p0)">
+    <contents name="load">
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_b(p0)">
+    <contents name="load">
+      <nodeIds>35</nodeIds>
+      <nodeIds>39</nodeIds>
+      <nodeIds>43</nodeIds>
+      <nodeIds>47</nodeIds>
+      <nodeIds>51</nodeIds>
+      <nodeIds>55</nodeIds>
+      <nodeIds>59</nodeIds>
+      <nodeIds>61</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="in_b(p1)">
+    <contents name="load">
+      <nodeIds>33</nodeIds>
+      <nodeIds>37</nodeIds>
+      <nodeIds>41</nodeIds>
+      <nodeIds>45</nodeIds>
+      <nodeIds>49</nodeIds>
+      <nodeIds>53</nodeIds>
+      <nodeIds>57</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="res(p0)">
+    <contents name="store">
+      <nodeIds>101</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="2" latency="2"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="2" latency="2"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="2" latency="2"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="33" stage="1" latency="2"/>
+      <operations id="35" stage="1" latency="2"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="2" latency="2"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="2" latency="2"/>
+      <operations id="84" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="37" stage="1" latency="2"/>
+      <operations id="39" stage="1" latency="2"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="2" latency="2"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="41" stage="1" latency="2"/>
+      <operations id="43" stage="1" latency="2"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="2" latency="2"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="45" stage="1" latency="2"/>
+      <operations id="47" stage="1" latency="2"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="2" latency="2"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="49" stage="1" latency="2"/>
+      <operations id="51" stage="1" latency="2"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="2" latency="2"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="53" stage="1" latency="2"/>
+      <operations id="55" stage="1" latency="2"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="2" latency="2"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="57" stage="1" latency="2"/>
+      <operations id="59" stage="1" latency="2"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="2" latency="2"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="2"/>
+      <operations id="62" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+    </states>
+    <states id="14">
+      <operations id="99" stage="1" latency="1"/>
+    </states>
+    <states id="15">
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="lab4_z1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="125" mMaxLatency="126">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>8</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="L2" mII="8" mDepth="14" mMinTripCount="15" mMaxTripCount="15" mMinLatency="125" mMaxLatency="125" mType="1">
+      <basicBlocks>27</basicBlocks>
+      <basicBlocks>63</basicBlocks>
+      <basicBlocks>105</basicBlocks>
+      <basicBlocks>108</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

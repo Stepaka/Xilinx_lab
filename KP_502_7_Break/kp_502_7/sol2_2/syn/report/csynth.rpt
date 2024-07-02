@@ -1,0 +1,206 @@
+
+
+================================================================
+== Synthesis Summary Report of 'kp_502_7'
+================================================================
++ General Information: 
+    * Date:           Mon Dec 18 07:57:12 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        kp_502_7
+    * Solution:       sol2_2 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a200t-sbv484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+------------+-----------+-----+
+    |   Modules  | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |         |            |           |     |
+    |   & Loops  | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |    LUT    | URAM|
+    +------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+------------+-----------+-----+
+    |+ kp_502_7  |     -|  0.22|      597|  5.970e+03|         -|      598|     -|        no|     -|  18 (2%)|  1932 (~0%)|  6873 (5%)|    -|
+    | o Loop     |     -|  9.00|      596|  5.960e+03|       149|        -|     4|        no|     -|        -|           -|          -|    -|
+    +------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++---------------+----------+
+| Interface     | Bitwidth |
++---------------+----------+
+| A_0_address0  | 2        |
+| A_0_q0        | 32       |
+| A_1_address0  | 2        |
+| A_1_q0        | 32       |
+| B_0_address0  | 2        |
+| B_0_q0        | 32       |
+| B_1_address0  | 2        |
+| B_1_q0        | 32       |
+| C_0_address0  | 2        |
+| C_0_q0        | 32       |
+| C_1_address0  | 2        |
+| C_1_q0        | 32       |
+| D_0_address0  | 2        |
+| D_0_d0        | 32       |
+| D_1_address0  | 2        |
+| D_1_d0        | 32       |
+| X1_0_address0 | 2        |
+| X1_0_d0       | 32       |
+| X1_1_address0 | 2        |
+| X1_1_d0       | 32       |
+| X2_0_address0 | 2        |
+| X2_0_d0       | 32       |
+| X2_1_address0 | 2        |
+| X2_1_d0       | 32       |
++---------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | int*     |
+| B        | in        | int*     |
+| C        | in        | int*     |
+| X1       | out       | int*     |
+| X2       | out       | int*     |
+| D        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+---------+----------+
+| Argument | HW Interface  | HW Type | HW Usage |
++----------+---------------+---------+----------+
+| A        | A_0_address0  | port    | offset   |
+| A        | A_0_ce0       | port    |          |
+| A        | A_0_q0        | port    |          |
+| A        | A_1_address0  | port    | offset   |
+| A        | A_1_ce0       | port    |          |
+| A        | A_1_q0        | port    |          |
+| B        | B_0_address0  | port    | offset   |
+| B        | B_0_ce0       | port    |          |
+| B        | B_0_q0        | port    |          |
+| B        | B_1_address0  | port    | offset   |
+| B        | B_1_ce0       | port    |          |
+| B        | B_1_q0        | port    |          |
+| C        | C_0_address0  | port    | offset   |
+| C        | C_0_ce0       | port    |          |
+| C        | C_0_q0        | port    |          |
+| C        | C_1_address0  | port    | offset   |
+| C        | C_1_ce0       | port    |          |
+| C        | C_1_q0        | port    |          |
+| X1       | X1_0_address0 | port    | offset   |
+| X1       | X1_0_ce0      | port    |          |
+| X1       | X1_0_we0      | port    |          |
+| X1       | X1_0_d0       | port    |          |
+| X1       | X1_1_address0 | port    | offset   |
+| X1       | X1_1_ce0      | port    |          |
+| X1       | X1_1_we0      | port    |          |
+| X1       | X1_1_d0       | port    |          |
+| X2       | X2_0_address0 | port    | offset   |
+| X2       | X2_0_ce0      | port    |          |
+| X2       | X2_0_we0      | port    |          |
+| X2       | X2_0_d0       | port    |          |
+| X2       | X2_1_address0 | port    | offset   |
+| X2       | X2_1_ce0      | port    |          |
+| X2       | X2_1_we0      | port    |          |
+| X2       | X2_1_d0       | port    |          |
+| D        | D_0_address0  | port    | offset   |
+| D        | D_0_ce0       | port    |          |
+| D        | D_0_we0       | port    |          |
+| D        | D_0_d0        | port    |          |
+| D        | D_1_address0  | port    | offset   |
+| D        | D_1_ce0       | port    |          |
+| D        | D_1_we0       | port    |          |
+| D        | D_1_d0        | port    |          |
++----------+---------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------+-----+--------+--------------+-------+---------+---------+
+| Name                                | DSP | Pragma | Variable     | Op    | Impl    | Latency |
++-------------------------------------+-----+--------+--------------+-------+---------+---------+
+| + kp_502_7                          | 18  |        |              |       |         |         |
+|   mul_32s_32s_32_1_1_U7             | 3   |        | mul_ln11     | mul   | auto    | 0       |
+|   mul_32s_32s_32_1_1_U8             | 3   |        | mul_ln11_1   | mul   | auto    | 0       |
+|   temp_D_fu_369_p2                  | -   |        | temp_D       | sub   | fabric  | 0       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U6 | -   |        | tmp_1        | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U1 | 3   |        | sub          | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U3  | -   |        | dc           | ddiv  | fabric  | 30      |
+|   add_ln513_fu_419_p2               | -   |        | add_ln513    | add   | fabric  | 0       |
+|   sub_ln1364_fu_433_p2              | -   |        | sub_ln1364   | sub   | fabric  | 0       |
+|   result_V_2_fu_560_p2              | -   |        | result_V_2   | sub   | fabric  | 0       |
+|   dadd_64ns_64ns_64_5_full_dsp_1_U2 | 3   |        | add          | dadd  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U4  | -   |        | dc_1         | ddiv  | fabric  | 30      |
+|   add_ln513_1_fu_469_p2             | -   |        | add_ln513_1  | add   | fabric  | 0       |
+|   sub_ln1364_1_fu_483_p2            | -   |        | sub_ln1364_1 | sub   | fabric  | 0       |
+|   result_V_5_fu_645_p2              | -   |        | result_V_5   | sub   | fabric  | 0       |
+|   mul_32s_32s_32_1_1_U9             | 3   |        | mul_ln11_2   | mul   | auto    | 0       |
+|   mul_32s_32s_32_1_1_U10            | 3   |        | mul_ln11_3   | mul   | auto    | 0       |
+|   temp_D_1_fu_676_p2                | -   |        | temp_D_1     | sub   | fabric  | 0       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U6 | -   |        | tmp_7        | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U1 | 3   |        | sub12_1      | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U3  | -   |        | dc_2         | ddiv  | fabric  | 30      |
+|   add_ln513_2_fu_726_p2             | -   |        | add_ln513_2  | add   | fabric  | 0       |
+|   sub_ln1364_2_fu_740_p2            | -   |        | sub_ln1364_2 | sub   | fabric  | 0       |
+|   result_V_9_fu_867_p2              | -   |        | result_V_9   | sub   | fabric  | 0       |
+|   dadd_64ns_64ns_64_5_full_dsp_1_U2 | 3   |        | add_1        | dadd  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U4  | -   |        | dc_3         | ddiv  | fabric  | 30      |
+|   add_ln513_3_fu_776_p2             | -   |        | add_ln513_3  | add   | fabric  | 0       |
+|   sub_ln1364_3_fu_790_p2            | -   |        | sub_ln1364_3 | sub   | fabric  | 0       |
+|   result_V_10_fu_952_p2             | -   |        | result_V_10  | sub   | fabric  | 0       |
+|   add_ln6_fu_966_p2                 | -   |        | add_ln6      | add   | fabric  | 0       |
++-------------------------------------+-----+--------+--------------+-------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------------+---------------------------+
+| Type            | Options                              | Location                  |
++-----------------+--------------------------------------+---------------------------+
+| array_partition | variable=A cyclic factor=2 dim=1     | DIRECTIVE in kp_502_7, A  |
+| array_partition | variable=B cyclic factor=2 dim=1     | DIRECTIVE in kp_502_7, B  |
+| array_partition | variable=C cyclic factor=2 dim=1     | DIRECTIVE in kp_502_7, C  |
+| array_partition | variable=D cyclic factor=2 dim=1     | DIRECTIVE in kp_502_7, D  |
+| array_partition | variable=X1 cyclic factor=2 dim=1    | DIRECTIVE in kp_502_7, X1 |
+| array_partition | variable=X2 cyclic factor=2 dim=1    | DIRECTIVE in kp_502_7, X2 |
+| interface       | ap_memory storage_type=ram_1p port=A | DIRECTIVE in kp_502_7, A  |
+| interface       | ap_memory storage_type=ram_1p port=B | DIRECTIVE in kp_502_7, B  |
+| interface       | ap_memory storage_type=ram_1p port=C | DIRECTIVE in kp_502_7, C  |
+| interface       | ap_memory storage_type=ram_1p port=D | DIRECTIVE in kp_502_7, D  |
+| pipeline        | off                                  | DIRECTIVE in kp_502_7     |
+| unroll          | factor=2                             | DIRECTIVE in kp_502_7     |
++-----------------+--------------------------------------+---------------------------+
+
+

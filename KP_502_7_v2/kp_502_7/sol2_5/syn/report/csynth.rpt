@@ -1,0 +1,299 @@
+
+
+================================================================
+== Synthesis Summary Report of 'kp_502_7'
+================================================================
++ General Information: 
+    * Date:           Sun Feb 18 18:11:47 2024
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        kp_502_7
+    * Solution:       sol2_5 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a200t-sbv484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------+------+------+---------+---------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+    |   Modules  | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |           |            |             |     |
+    |   & Loops  | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |    DSP    |     FF     |     LUT     | URAM|
+    +------------+------+------+---------+---------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+    |+ kp_502_7  |     -|  0.43|       80|  800.000|         -|       81|     -|        no|     -|  224 (30%)|  15569 (5%)|  17262 (12%)|    -|
+    +------------+------+------+---------+---------+----------+---------+------+----------+------+-----------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| A_0       | ap_none | 64       |
+| A_1       | ap_none | 64       |
+| A_2       | ap_none | 64       |
+| A_3       | ap_none | 64       |
+| A_4       | ap_none | 64       |
+| A_5       | ap_none | 64       |
+| A_6       | ap_none | 64       |
+| A_7       | ap_none | 64       |
+| B_0       | ap_none | 64       |
+| B_1       | ap_none | 64       |
+| B_2       | ap_none | 64       |
+| B_3       | ap_none | 64       |
+| B_4       | ap_none | 64       |
+| B_5       | ap_none | 64       |
+| B_6       | ap_none | 64       |
+| B_7       | ap_none | 64       |
+| C_0       | ap_none | 64       |
+| C_1       | ap_none | 64       |
+| C_2       | ap_none | 64       |
+| C_3       | ap_none | 64       |
+| C_4       | ap_none | 64       |
+| C_5       | ap_none | 64       |
+| C_6       | ap_none | 64       |
+| C_7       | ap_none | 64       |
+| D_0       | ap_none | 64       |
+| D_1       | ap_none | 64       |
+| D_2       | ap_none | 64       |
+| D_3       | ap_none | 64       |
+| D_4       | ap_none | 64       |
+| D_5       | ap_none | 64       |
+| D_6       | ap_none | 64       |
+| D_7       | ap_none | 64       |
+| X1_0      | ap_none | 64       |
+| X1_1      | ap_none | 64       |
+| X1_2      | ap_none | 64       |
+| X1_3      | ap_none | 64       |
+| X1_4      | ap_none | 64       |
+| X1_5      | ap_none | 64       |
+| X1_6      | ap_none | 64       |
+| X1_7      | ap_none | 64       |
+| X2_0      | ap_none | 64       |
+| X2_1      | ap_none | 64       |
+| X2_2      | ap_none | 64       |
+| X2_3      | ap_none | 64       |
+| X2_4      | ap_none | 64       |
+| X2_5      | ap_none | 64       |
+| X2_6      | ap_none | 64       |
+| X2_7      | ap_none | 64       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | double*  |
+| B        | in        | double*  |
+| C        | in        | double*  |
+| X1       | out       | double*  |
+| X2       | out       | double*  |
+| D        | out       | double*  |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| A        | A_0          | port    |
+| A        | A_1          | port    |
+| A        | A_2          | port    |
+| A        | A_3          | port    |
+| A        | A_4          | port    |
+| A        | A_5          | port    |
+| A        | A_6          | port    |
+| A        | A_7          | port    |
+| B        | B_0          | port    |
+| B        | B_1          | port    |
+| B        | B_2          | port    |
+| B        | B_3          | port    |
+| B        | B_4          | port    |
+| B        | B_5          | port    |
+| B        | B_6          | port    |
+| B        | B_7          | port    |
+| C        | C_0          | port    |
+| C        | C_1          | port    |
+| C        | C_2          | port    |
+| C        | C_3          | port    |
+| C        | C_4          | port    |
+| C        | C_5          | port    |
+| C        | C_6          | port    |
+| C        | C_7          | port    |
+| X1       | X1_0         | port    |
+| X1       | X1_0_ap_vld  | port    |
+| X1       | X1_1         | port    |
+| X1       | X1_1_ap_vld  | port    |
+| X1       | X1_2         | port    |
+| X1       | X1_2_ap_vld  | port    |
+| X1       | X1_3         | port    |
+| X1       | X1_3_ap_vld  | port    |
+| X1       | X1_4         | port    |
+| X1       | X1_4_ap_vld  | port    |
+| X1       | X1_5         | port    |
+| X1       | X1_5_ap_vld  | port    |
+| X1       | X1_6         | port    |
+| X1       | X1_6_ap_vld  | port    |
+| X1       | X1_7         | port    |
+| X1       | X1_7_ap_vld  | port    |
+| X2       | X2_0         | port    |
+| X2       | X2_0_ap_vld  | port    |
+| X2       | X2_1         | port    |
+| X2       | X2_1_ap_vld  | port    |
+| X2       | X2_2         | port    |
+| X2       | X2_2_ap_vld  | port    |
+| X2       | X2_3         | port    |
+| X2       | X2_3_ap_vld  | port    |
+| X2       | X2_4         | port    |
+| X2       | X2_4_ap_vld  | port    |
+| X2       | X2_5         | port    |
+| X2       | X2_5_ap_vld  | port    |
+| X2       | X2_6         | port    |
+| X2       | X2_6_ap_vld  | port    |
+| X2       | X2_7         | port    |
+| X2       | X2_7_ap_vld  | port    |
+| D        | D_0          | port    |
+| D        | D_0_ap_vld   | port    |
+| D        | D_1          | port    |
+| D        | D_1_ap_vld   | port    |
+| D        | D_2          | port    |
+| D        | D_2_ap_vld   | port    |
+| D        | D_3          | port    |
+| D        | D_3_ap_vld   | port    |
+| D        | D_4          | port    |
+| D        | D_4_ap_vld   | port    |
+| D        | D_5          | port    |
+| D        | D_5_ap_vld   | port    |
+| D        | D_6          | port    |
+| D        | D_6_ap_vld   | port    |
+| D        | D_7          | port    |
+| D        | D_7_ap_vld   | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+------------+-------+---------+---------+
+| Name                                 | DSP | Pragma | Variable   | Op    | Impl    | Latency |
++--------------------------------------+-----+--------+------------+-------+---------+---------+
+| + kp_502_7                           | 224 |        |            |       |         |         |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U17  | 11  |        | mul        | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U17  | 11  |        | mul3       | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U18  | 11  |        | mul6       | dmul  | maxdsp  | 4       |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U1  | 3   |        | x_assign   | dsub  | fulldsp | 4       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U49 | -   |        | temp_D     | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U1  | 3   |        | sub1       | dsub  | fulldsp | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U17  | 11  |        | mul1       | dmul  | maxdsp  | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U33  | -   |        | div        | ddiv  | fabric  | 30      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U2  | 3   |        | add        | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U34  | -   |        | div1       | ddiv  | fabric  | 30      |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U19  | 11  |        | mul_1      | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U18  | 11  |        | mul3_1     | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U20  | 11  |        | mul6_1     | dmul  | maxdsp  | 4       |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U2  | 3   |        | x_assign_1 | dsub  | fulldsp | 4       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U50 | -   |        | temp_D_1   | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U3  | 3   |        | sub12_1    | dsub  | fulldsp | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U18  | 11  |        | mul13_1    | dmul  | maxdsp  | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U35  | -   |        | div_1      | ddiv  | fabric  | 30      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U4  | 3   |        | add_1      | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U36  | -   |        | div18_1    | ddiv  | fabric  | 30      |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U21  | 11  |        | mul_2      | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U19  | 11  |        | mul3_2     | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U22  | 11  |        | mul6_2     | dmul  | maxdsp  | 4       |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U3  | 3   |        | x_assign_2 | dsub  | fulldsp | 4       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U51 | -   |        | temp_D_2   | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U5  | 3   |        | sub12_2    | dsub  | fulldsp | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U19  | 11  |        | mul13_2    | dmul  | maxdsp  | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U37  | -   |        | div_2      | ddiv  | fabric  | 30      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U6  | 3   |        | add_2      | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U38  | -   |        | div18_2    | ddiv  | fabric  | 30      |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U23  | 11  |        | mul_3      | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U20  | 11  |        | mul3_3     | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U24  | 11  |        | mul6_3     | dmul  | maxdsp  | 4       |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U4  | 3   |        | x_assign_3 | dsub  | fulldsp | 4       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U52 | -   |        | temp_D_3   | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U7  | 3   |        | sub12_3    | dsub  | fulldsp | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U20  | 11  |        | mul13_3    | dmul  | maxdsp  | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U39  | -   |        | div_3      | ddiv  | fabric  | 30      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U8  | 3   |        | add_3      | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U40  | -   |        | div18_3    | ddiv  | fabric  | 30      |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U25  | 11  |        | mul_4      | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U21  | 11  |        | mul3_4     | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U26  | 11  |        | mul6_4     | dmul  | maxdsp  | 4       |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U5  | 3   |        | x_assign_4 | dsub  | fulldsp | 4       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U53 | -   |        | temp_D_4   | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U9  | 3   |        | sub12_4    | dsub  | fulldsp | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U21  | 11  |        | mul13_4    | dmul  | maxdsp  | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U41  | -   |        | div_4      | ddiv  | fabric  | 30      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U10 | 3   |        | add_4      | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U42  | -   |        | div18_4    | ddiv  | fabric  | 30      |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U27  | 11  |        | mul_5      | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U22  | 11  |        | mul3_5     | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U28  | 11  |        | mul6_5     | dmul  | maxdsp  | 4       |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U6  | 3   |        | x_assign_5 | dsub  | fulldsp | 4       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U54 | -   |        | temp_D_5   | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U11 | 3   |        | sub12_5    | dsub  | fulldsp | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U22  | 11  |        | mul13_5    | dmul  | maxdsp  | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U43  | -   |        | div_5      | ddiv  | fabric  | 30      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U12 | 3   |        | add_5      | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U44  | -   |        | div18_5    | ddiv  | fabric  | 30      |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U29  | 11  |        | mul_6      | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U23  | 11  |        | mul3_6     | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U30  | 11  |        | mul6_6     | dmul  | maxdsp  | 4       |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U7  | 3   |        | x_assign_6 | dsub  | fulldsp | 4       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U55 | -   |        | temp_D_6   | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U13 | 3   |        | sub12_6    | dsub  | fulldsp | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U23  | 11  |        | mul13_6    | dmul  | maxdsp  | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U45  | -   |        | div_6      | ddiv  | fabric  | 30      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U14 | 3   |        | add_6      | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U46  | -   |        | div18_6    | ddiv  | fabric  | 30      |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U31  | 11  |        | mul_7      | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U24  | 11  |        | mul3_7     | dmul  | maxdsp  | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U32  | 11  |        | mul6_7     | dmul  | maxdsp  | 4       |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U8  | 3   |        | x_assign_7 | dsub  | fulldsp | 4       |
+|   dsqrt_64ns_64ns_64_30_no_dsp_1_U56 | -   |        | temp_D_7   | dsqrt | fabric  | 29      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U15 | 3   |        | sub12_7    | dsub  | fulldsp | 4       |
+|   dmul_64ns_64ns_64_5_max_dsp_1_U24  | 11  |        | mul13_7    | dmul  | maxdsp  | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U47  | -   |        | div_7      | ddiv  | fabric  | 30      |
+|   dsub_64ns_64ns_64_5_full_dsp_1_U16 | 3   |        | add_7      | dsub  | fulldsp | 4       |
+|   ddiv_64ns_64ns_64_31_no_dsp_1_U48  | -   |        | div18_7    | ddiv  | fabric  | 30      |
++--------------------------------------+-----+--------+------------+-------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-----------------------------------+---------------------------+
+| Type            | Options                           | Location                  |
++-----------------+-----------------------------------+---------------------------+
+| array_partition | variable=A cyclic factor=8 dim=1  | DIRECTIVE in kp_502_7, A  |
+| array_partition | variable=B cyclic factor=8 dim=1  | DIRECTIVE in kp_502_7, B  |
+| array_partition | variable=C cyclic factor=8 dim=1  | DIRECTIVE in kp_502_7, C  |
+| array_partition | variable=D cyclic factor=8 dim=1  | DIRECTIVE in kp_502_7, D  |
+| array_partition | variable=X1 cyclic factor=8 dim=1 | DIRECTIVE in kp_502_7, X1 |
+| array_partition | variable=X2 cyclic factor=8 dim=1 | DIRECTIVE in kp_502_7, X2 |
+| pipeline        | off                               | DIRECTIVE in kp_502_7     |
+| unroll          | factor=8                          | DIRECTIVE in kp_502_7     |
++-----------------+-----------------------------------+---------------------------+
+
+

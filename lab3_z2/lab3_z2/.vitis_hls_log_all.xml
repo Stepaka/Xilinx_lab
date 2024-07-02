@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Synthesizability check failed." projectName="lab3_z2" solutionName="sol3" date="2023-10-14T00:53:56.267+0300"/>
+        <logs message="ERROR: [SYNCHK 200-91] as it has both write (./source/lab3_z2.cpp:11:16) and read (./source/lab3_z2.cpp:11:18) operations." projectName="lab3_z2" solutionName="sol3" date="2023-10-14T00:53:56.267+0300"/>
+        <logs message="ERROR: [SYNCHK 200-91] Port 'out_ar' (./source/lab3_z2.cpp:3) of function 'lab3_z2' cannot be set to a FIFO " projectName="lab3_z2" solutionName="sol3" date="2023-10-14T00:53:56.267+0300"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.507+0300"/>
+        <logs message="ERROR: expted_ar[7]=4 actual_ar[7]=2&#xD;&#xA;&#xD;&#xA;----------Fail!------------&#xD;&#xA;&#xD;&#xA;@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.507+0300"/>
+        <logs message="ERROR: expted_ar[6]=2 actual_ar[6]=1&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.491+0300"/>
+        <logs message="ERROR: expted_ar[5]=6 actual_ar[5]=3&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.491+0300"/>
+        <logs message="ERROR: expted_ar[3]=10 actual_ar[3]=5&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.482+0300"/>
+        <logs message="ERROR: expted_ar[2]=4 actual_ar[2]=2&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.482+0300"/>
+        <logs message="ERROR: expted_ar[1]=2 actual_ar[1]=1&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.476+0300"/>
+        <logs message="ERROR: expted_ar[0]=4 actual_ar[0]=2&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.459+0300"/>
+        <logs message="ERROR: expted_ar[7]=6 actual_ar[7]=3&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.459+0300"/>
+        <logs message="ERROR: expted_ar[6]=10 actual_ar[6]=5&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.459+0300"/>
+        <logs message="ERROR: expted_ar[5]=2 actual_ar[5]=1&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.443+0300"/>
+        <logs message="ERROR: expted_ar[4]=8 actual_ar[4]=4&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.443+0300"/>
+        <logs message="ERROR: expted_ar[3]=4 actual_ar[3]=2&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.432+0300"/>
+        <logs message="ERROR: expted_ar[1]=2 actual_ar[1]=1&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.432+0300"/>
+        <logs message="ERROR: expted_ar[6]=6 actual_ar[6]=3&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.428+0300"/>
+        <logs message="ERROR: expted_ar[4]=4 actual_ar[4]=2&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.412+0300"/>
+        <logs message="ERROR: expted_ar[3]=6 actual_ar[3]=3&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.407+0300"/>
+        <logs message="ERROR: expted_ar[2]=2 actual_ar[2]=1&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.399+0300"/>
+        <logs message="ERROR: expted_ar[1]=12 actual_ar[1]=6&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.396+0300"/>
+        <logs message="ERROR: expted_ar[0]=2 actual_ar[0]=1&#xD;&#xA;" projectName="lab3_z2" solutionName="sol1" date="2023-10-13T16:56:29.387+0300"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'inA_ar' (./source/lab3_z2.cpp:4:0)&#xD;&#xA;Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=214-142.html" projectName="lab3_z2" solutionName="sol2" date="2023-10-14T16:10:18.584+0300" type="Warning"/>
+        <logs message="WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'out_ar' (./source/lab3_z2.cpp:4:0)&#xD;&#xA;Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=214-142.html" projectName="lab3_z2" solutionName="sol3" date="2023-10-14T00:53:56.236+0300" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

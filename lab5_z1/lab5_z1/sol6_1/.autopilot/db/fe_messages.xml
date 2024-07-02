@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab5_z1.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab5_z1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=d_in block factor=2 dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab5_z1.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab5_z1" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_memory storage_type=ram_2p port=d_in" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab5_z1.cpp:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab5_z1" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=lab5_z1" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./source/lab5_z1.cpp:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lab5_z1" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./source/lab5_z1.cpp:3:0" msg_body="Applying array_reshape to 'd_in': Block reshaping with factor 2 on dimension 1.">
+        <args Dim="1" Factor="2" Mode="Block" UOName="d_in"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-237" msg_severity="WARNING" msg_loc="./source/lab5_z1.cpp:3:0" msg_body="The INTERFACE pragma actions in object field. If on struct field, disaggregate pragma is required; If on array element, array_partition pragma is required. If no, this interface pragma will be viewed as invalid and ignored. In function 'lab5_z1(short*, short*)'">
+        <args Function="lab5_z1(short*, short*)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

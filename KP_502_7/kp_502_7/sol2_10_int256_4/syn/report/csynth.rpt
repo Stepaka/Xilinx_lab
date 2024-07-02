@@ -1,0 +1,134 @@
+
+
+================================================================
+== Synthesis Summary Report of 'kp_502_7'
+================================================================
++ General Information: 
+    * Date:           Mon Feb 19 20:12:38 2024
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        kp_502_7
+    * Solution:       sol2_10_int256 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a200t-sbv484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------+------+------+---------+-----------+----------+---------+------+----------+------+-----------+------------+-----------+-----+
+    |   Modules  | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |           |            |           |     |
+    |   & Loops  | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |    DSP    |     FF     |    LUT    | URAM|
+    +------------+------+------+---------+-----------+----------+---------+------+----------+------+-----------+------------+-----------+-----+
+    |+ kp_502_7  |     -|  1.08|     1052|  1.473e+04|         -|     1053|     -|        no|     -|  440 (59%)|  23950 (8%)|  8323 (6%)|    -|
+    +------------+------+------+---------+-----------+----------+---------+------+----------+------+-----------+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| A         | ap_none | 1024     |
+| B         | ap_none | 1024     |
+| C         | ap_none | 1024     |
+| D         | ap_none | 1024     |
+| X1_i      | ap_none | 1024     |
+| X1_o      | ap_none | 1024     |
+| X2_i      | ap_none | 1024     |
+| X2_o      | ap_none | 1024     |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------+
+| Argument | Direction | Datatype     |
++----------+-----------+--------------+
+| A        | in        | ap_int<256>* |
+| B        | in        | ap_int<256>* |
+| C        | in        | ap_int<256>* |
+| X1       | inout     | ap_int<256>* |
+| X2       | inout     | ap_int<256>* |
+| D        | inout     | ap_int<256>* |
++----------+-----------+--------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| A        | A            | port    |
+| B        | B            | port    |
+| C        | C            | port    |
+| X1       | X1_i         | port    |
+| X1       | X1_o         | port    |
+| X1       | X1_o_ap_vld  | port    |
+| X2       | X2_i         | port    |
+| X2       | X2_o         | port    |
+| X2       | X2_o_ap_vld  | port    |
+| D        | D            | port    |
+| D        | D_ap_vld     | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------+-----+--------+------------+-----+--------+---------+
+| Name                        | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++-----------------------------+-----+--------+------------+-----+--------+---------+
+| + kp_502_7                  | 440 |        |            |     |        |         |
+|   mul_256s_256s_256_2_1_U1  | 55  |        | mul_ln70   | mul | auto   | 1       |
+|   mul_254s_254s_254_2_1_U2  | 55  |        | mul_ln70_1 | mul | auto   | 1       |
+|   sub_ln70_fu_234_p2        | -   |        | sub_ln70   | sub | fabric | 0       |
+|   sub_ln70_1_fu_270_p2      | -   |        | sub_ln70_1 | sub | fabric | 0       |
+|   mul_256s_256s_256_2_1_U4  | 55  |        | mul_ln70_2 | mul | auto   | 1       |
+|   mul_254s_254s_254_2_1_U5  | 55  |        | mul_ln70_3 | mul | auto   | 1       |
+|   sub_ln70_2_fu_366_p2      | -   |        | sub_ln70_2 | sub | fabric | 0       |
+|   sub_ln70_3_fu_408_p2      | -   |        | sub_ln70_3 | sub | fabric | 0       |
+|   mul_256s_256s_256_2_1_U7  | 55  |        | mul_ln70_4 | mul | auto   | 1       |
+|   mul_254s_254s_254_2_1_U8  | 55  |        | mul_ln70_5 | mul | auto   | 1       |
+|   sub_ln70_4_fu_508_p2      | -   |        | sub_ln70_4 | sub | fabric | 0       |
+|   sub_ln70_5_fu_550_p2      | -   |        | sub_ln70_5 | sub | fabric | 0       |
+|   mul_256s_256s_256_2_1_U10 | 55  |        | mul_ln70_6 | mul | auto   | 1       |
+|   mul_254s_254s_254_2_1_U11 | 55  |        | mul_ln70_7 | mul | auto   | 1       |
+|   sub_ln70_6_fu_650_p2      | -   |        | sub_ln70_6 | sub | fabric | 0       |
+|   sub_ln70_7_fu_703_p2      | -   |        | sub_ln70_7 | sub | fabric | 0       |
++-----------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++---------------+-----------------------------------+---------------------------+
+| Type          | Options                           | Location                  |
++---------------+-----------------------------------+---------------------------+
+| array_reshape | variable=A cyclic factor=4 dim=1  | DIRECTIVE in kp_502_7, A  |
+| array_reshape | variable=B cyclic factor=4 dim=1  | DIRECTIVE in kp_502_7, B  |
+| array_reshape | variable=C cyclic factor=4 dim=1  | DIRECTIVE in kp_502_7, C  |
+| array_reshape | variable=D cyclic factor=4 dim=1  | DIRECTIVE in kp_502_7, D  |
+| array_reshape | variable=X1 cyclic factor=4 dim=1 | DIRECTIVE in kp_502_7, X1 |
+| array_reshape | variable=X2 cyclic factor=4 dim=1 | DIRECTIVE in kp_502_7, X2 |
+| pipeline      | off                               | DIRECTIVE in kp_502_7     |
+| unroll        | factor=4                          | DIRECTIVE in kp_502_7     |
++---------------+-----------------------------------+---------------------------+
+
+

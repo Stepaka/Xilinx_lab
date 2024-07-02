@@ -1,0 +1,285 @@
+----------Pass!------------
+
+
+C:\Xilinx_trn\HLS2023\lab7_z3\lab7_z3\sol1_1\sim\verilog>set PATH= 
+
+C:\Xilinx_trn\HLS2023\lab7_z3\lab7_z3\sol1_1\sim\verilog>call C:/Xilinx/Vivado/2021.2/bin/xelab xil_defaultlib.apatb_lab7_z3_top glbl -Oenable_linking_all_libraries  -prj lab7_z3.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_19 -L floating_point_v7_1_13 --lib "ieee_proposed=./ieee_proposed" -s lab7_z3 -debug wave 
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_lab7_z3_top glbl -Oenable_linking_all_libraries -prj lab7_z3.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_13 --lib ieee_proposed=./ieee_proposed -s lab7_z3 -debug wave 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/ip/xil_defaultlib/lab7_z3_dmul_64ns_64ns_64_5_no_dsp_1_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab7_z3_dmul_64ns_64ns_64_5_no_dsp_1_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/AESL_automem_a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_a
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/AESL_automem_b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_b
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/AESL_automem_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/lab7_z3.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_lab7_z3_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/lab7_z3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab7_z3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/lab7_z3_dmul_64ns_64ns_64_5_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab7_z3_dmul_64ns_64ns_64_5_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_viv_comp
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_exp_table...
+Compiling package mult_gen_v12_0_17.mult_gen_v12_0_17_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_13.floating_point_v7_1_13_pkg
+Compiling package floating_point_v7_1_13.flt_utils
+Compiling package unisim.vcomponents
+Compiling package floating_point_v7_1_13.vt2mutils
+Compiling package floating_point_v7_1_13.vt2mcomps
+Compiling package floating_point_v7_1_13.vm2utils
+Compiling package floating_point_v7_1_13.vm2comps
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000011111100000")(1...]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgS [\fdgS(fdgsrval='0',fdinitval='0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutS [\lutS(n=4,lutval="00000111111000...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0001100110011000")(1...]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutS [\lutS(n=4,lutval="00011001100110...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="1000000000000001")(1...]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutS [\lutS(n=4,lutval="10000000000000...]
+Compiling architecture virtex of entity floating_point_v7_1_13.cntrlgen [\cntrlgen(needce=true,registered...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0100010001111000")(0...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=55,fdgsrval=(others=>'0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.ppGenR8 [\ppGenR8(w=53,pw=55,twos=false,r...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0110")(3,0)\]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutS [\lutS(n=2,lutval="00000000000001...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="00000001")(7,0)\]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutV [\lutV(w=3,lutval="00000000000000...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgS [\fdgS(fdgsrval='0',fdinitval='0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.andW [\andW(w=3,mask=(others=>'1'),cir...]
+Compiling architecture lut3_v of entity unisim.LUT3 [\LUT3(init="10010110")(0,7)\]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=56,fdgsrval=(others=>'0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubW [\addSubW(w=56,gateoptions=0,roun...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShGW [\addSubShGW(aw=56,bw=56,sw=56,re...]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=3,fdgsrval=(others=>'0')...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShGW [\addSubShGW(aw=56,bw=56,sw=59,re...]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=59,fdgsrval=(others=>'0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubW [\addSubW(w=59,gateoptions=0,roun...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShFW [\addSubShFW(aw=56,bw=56,sw=59,ze...]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutS [\lutS(n=2,lutval="00000000000001...]
+Compiling architecture virtex of entity floating_point_v7_1_13.andW [\andW(w=3,mask=(others=>'1'),cir...]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=59,fdgsrval=(others=>'0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubW [\addSubW(w=59,gateoptions=0,roun...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShGW [\addSubShGW(aw=56,bw=59,sw=59,re...]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=6,fdgsrval=(others=>'0')...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShGW [\addSubShGW(aw=59,bw=59,sw=65,sh...]
+Compiling architecture lut4_v of entity unisim.LUT4 [\LUT4(init="0000000000000001")(1...]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutV [\lutV(w=4,lutval="00000000000000...]
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="0001")(3,0)\]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutV [\lutV(w=2,lutval="00000000000000...]
+Compiling architecture virtex of entity floating_point_v7_1_13.andW [\andW(w=6,mask=(others=>'1'),cir...]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=65,fdgsrval=(others=>'0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubW [\addSubW(w=65,gateoptions=0,roun...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShGW [\addSubShGW(aw=59,bw=65,sw=65,sh...]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=12,fdgsrval=(others=>'0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShGW [\addSubShGW(aw=65,bw=65,sw=77,sh...]
+Compiling architecture virtex of entity floating_point_v7_1_13.andW [\andW(w=12,mask=(others=>'1'),ci...]
+Compiling architecture virtex of entity floating_point_v7_1_13.fdgW [\fdgW(w=77,fdgsrval=(others=>'0'...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubW [\addSubW(w=77,gateoptions=0,roun...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShGW [\addSubShGW(aw=65,bw=77,sw=77,sh...]
+Compiling architecture virtex of entity floating_point_v7_1_13.delayW [\delayW(w=59,delaylength=1,regis...]
+Compiling architecture virtex of entity floating_point_v7_1_13.delayS [\delayS(delaylength=1,registered...]
+Compiling architecture virtex of entity floating_point_v7_1_13.andW [\andW(w=24,mask=(others=>'1'),ci...]
+Compiling architecture lut1_v of entity unisim.LUT1 [\LUT1(init="10")(1,0)\]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutN [\lutN(n=1,lutval="00000000000000...]
+Compiling architecture virtex of entity floating_point_v7_1_13.lutNMuxS [\lutNMuxS(n=1,lutval="0000000000...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubW [\addSubW(w=59,gateoptions=0,roun...]
+Compiling architecture virtex of entity floating_point_v7_1_13.addSubShFW [\addSubShFW(aw=77,bw=59,sw=56,sh...]
+Compiling architecture virtex of entity floating_point_v7_1_13.delayW [\delayW(w=53,delaylength=0,regis...]
+Compiling architecture netlist of entity floating_point_v7_1_13.vmsMultCore [\vmsMultCore(aw=53,bw=53,pw=55,r...]
+Compiling architecture netlist of entity floating_point_v7_1_13.xMult [\xMult(aw=53,bw=53,pw=55,roundin...]
+Compiling architecture rtl of entity floating_point_v7_1_13.fix_mult_qq [\fix_mult_qq(c_xdevicefamily="ar...]
+Compiling architecture rtl of entity floating_point_v7_1_13.fix_mult [\fix_mult(c_xdevicefamily="artix...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=11,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=64,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=9,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_13.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=2)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=2,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=2,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,length=2,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=11,length=2)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=14,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="a...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=11,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=26,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=27,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=28,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=29,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=54,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ar...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_13.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.flt_mult [\flt_mult(c_xdevicefamily="artix...]
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.lab7_z3_dmul_64ns_64ns_64_5_no_d...
+Compiling module xil_defaultlib.lab7_z3_dmul_64ns_64ns_64_5_no_d...
+Compiling module xil_defaultlib.lab7_z3
+Compiling module xil_defaultlib.AESL_automem_a
+Compiling module xil_defaultlib.AESL_automem_b
+Compiling module xil_defaultlib.AESL_automem_c
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=9)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_lab7_z3_top
+Compiling module work.glbl
+Built simulation snapshot lab7_z3
+
+****** xsim v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/lab7_z3/xsim_script.tcl
+# xsim {lab7_z3} -view {{lab7_z3_dataflow_ana.wcfg}} -tclbatch {lab7_z3.tcl} -protoinst {lab7_z3.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file lab7_z3.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_lab7_z3_top/AESL_inst_lab7_z3//AESL_inst_lab7_z3_activity
+Time resolution is 1 ps
+open_wave_config lab7_z3_dataflow_ana.wcfg
+source lab7_z3.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axi_slave) -into $coutputgroup]
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/a_d0 -into $return_group -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/a_we0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/a_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/a_address0 -into $return_group -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/ap_local_deadlock -into $return_group -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/ap_local_block -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(memory) -into $cinputgroup]
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/c_q0 -into $return_group -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/c_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/c_address0 -into $return_group -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/b_q0 -into $return_group -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/b_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/b_address0 -into $return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/ap_start -into $blocksiggroup
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/ap_done -into $blocksiggroup
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/ap_idle -into $blocksiggroup
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_lab7_z3_top/AESL_inst_lab7_z3/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_lab7_z3_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_lab7_z3_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_lab7_z3_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_lab7_z3_top/LENGTH_a -into $tb_portdepth_group -radix hex
+## add_wave /apatb_lab7_z3_top/LENGTH_b -into $tb_portdepth_group -radix hex
+## add_wave /apatb_lab7_z3_top/LENGTH_c -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(axi_slave) -into $tbcoutputgroup]
+## add_wave /apatb_lab7_z3_top/a_d0 -into $tb_return_group -radix hex
+## add_wave /apatb_lab7_z3_top/a_we0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_lab7_z3_top/a_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_lab7_z3_top/a_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_lab7_z3_top/ap_local_deadlock -into $tb_return_group -radix hex
+## add_wave /apatb_lab7_z3_top/ap_local_block -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(memory) -into $tbcinputgroup]
+## add_wave /apatb_lab7_z3_top/c_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_lab7_z3_top/c_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_lab7_z3_top/c_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_lab7_z3_top/b_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_lab7_z3_top/b_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_lab7_z3_top/b_address0 -into $tb_return_group -radix hex
+## save_wave_config lab7_z3.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 3 [0.00%] @ "125000"
+// RTL Simulation : 1 / 3 [100.00%] @ "10395000"
+// RTL Simulation : 2 / 3 [100.00%] @ "20655000"
+// RTL Simulation : 3 / 3 [100.00%] @ "30915000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 30975 ns : File "C:/Xilinx_trn/HLS2023/lab7_z3/lab7_z3/sol1_1/sim/verilog/lab7_z3.autotb.v" Line 326
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Dec  1 02:16:53 2023...
+----------Pass!------------
+

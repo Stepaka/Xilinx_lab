@@ -1,0 +1,234 @@
+
+
+================================================================
+== Synthesis Summary Report of 'kp_502_7'
+================================================================
++ General Information: 
+    * Date:           Thu Mar 21 20:56:18 2024
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        kp_502_7
+    * Solution:       sol2_4 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a200t-sbv484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |         Modules        | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |           |           |     |
+    |         & Loops        | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ kp_502_7              |     -|  0.00|      113|  678.000|         -|      114|     -|        no|     -|  24 (3%)|  9222 (3%)|  8731 (6%)|    -|
+    | o Loop                 |     -|  5.00|      112|  672.000|        56|        -|     2|        no|     -|        -|          -|          -|    -|
+    |  + sqrt_fixed_32_32_s  |    II|  0.06|       10|   60.000|         -|        1|     -|       yes|     -|        -|  803 (~0%)|  1385 (1%)|    -|
+    |  + sqrt_fixed_32_32_s  |    II|  0.06|       10|   60.000|         -|        1|     -|       yes|     -|        -|  803 (~0%)|  1385 (1%)|    -|
+    |  + sqrt_fixed_32_32_s  |    II|  0.06|       10|   60.000|         -|        1|     -|       yes|     -|        -|  803 (~0%)|  1385 (1%)|    -|
+    |  + sqrt_fixed_32_32_s  |    II|  0.06|       10|   60.000|         -|        1|     -|       yes|     -|        -|  803 (~0%)|  1385 (1%)|    -|
+    +------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++-------------+----------+
+| Interface   | Bitwidth |
++-------------+----------+
+| A_address0  | 1        |
+| A_q0        | 128      |
+| B_address0  | 1        |
+| B_q0        | 128      |
+| C_address0  | 1        |
+| C_q0        | 128      |
+| D_address0  | 1        |
+| D_d0        | 128      |
+| X1_address0 | 1        |
+| X1_d0       | 128      |
+| X2_address0 | 1        |
+| X2_d0       | 128      |
++-------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| A        | in        | int*     |
+| B        | in        | int*     |
+| C        | in        | int*     |
+| X1       | out       | int*     |
+| X2       | out       | int*     |
+| D        | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| A        | A_address0   | port    | offset   |
+| A        | A_ce0        | port    |          |
+| A        | A_q0         | port    |          |
+| B        | B_address0   | port    | offset   |
+| B        | B_ce0        | port    |          |
+| B        | B_q0         | port    |          |
+| C        | C_address0   | port    | offset   |
+| C        | C_ce0        | port    |          |
+| C        | C_q0         | port    |          |
+| X1       | X1_address0  | port    | offset   |
+| X1       | X1_ce0       | port    |          |
+| X1       | X1_we0       | port    |          |
+| X1       | X1_d0        | port    |          |
+| X2       | X2_address0  | port    | offset   |
+| X2       | X2_ce0       | port    |          |
+| X2       | X2_we0       | port    |          |
+| X2       | X2_d0        | port    |          |
+| D        | D_address0   | port    | offset   |
+| D        | D_ce0        | port    |          |
+| D        | D_we0        | port    |          |
+| D        | D_d0         | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                       | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++----------------------------+-----+--------+--------------+-----+--------+---------+
+| + kp_502_7                 | 24  |        |              |     |        |         |
+|   mul_32s_32s_32_3_1_U2    | 3   |        | mul_ln13     | mul | auto   | 2       |
+|   mul_32s_32s_32_3_1_U3    | 3   |        | mul_ln13_1   | mul | auto   | 2       |
+|   xf_V_fu_397_p2           | -   |        | xf_V         | sub | fabric | 0       |
+|   add_ln19_fu_448_p2       | -   |        | add_ln19     | add | fabric | 0       |
+|   sub_ln19_fu_565_p2       | -   |        | sub_ln19     | sub | fabric | 0       |
+|   sub_ln20_fu_453_p2       | -   |        | sub_ln20     | sub | fabric | 0       |
+|   mul_32s_32s_32_3_1_U4    | 3   |        | mul_ln13_2   | mul | auto   | 2       |
+|   mul_32s_32s_32_3_1_U5    | 3   |        | mul_ln13_3   | mul | auto   | 2       |
+|   xf_V_1_fu_407_p2         | -   |        | xf_V_1       | sub | fabric | 0       |
+|   add_ln19_1_fu_461_p2     | -   |        | add_ln19_1   | add | fabric | 0       |
+|   sub_ln19_1_fu_570_p2     | -   |        | sub_ln19_1   | sub | fabric | 0       |
+|   sub_ln20_1_fu_466_p2     | -   |        | sub_ln20_1   | sub | fabric | 0       |
+|   mul_32s_32s_32_3_1_U6    | 3   |        | mul_ln13_4   | mul | auto   | 2       |
+|   mul_32s_32s_32_3_1_U7    | 3   |        | mul_ln13_5   | mul | auto   | 2       |
+|   xf_V_2_fu_417_p2         | -   |        | xf_V_2       | sub | fabric | 0       |
+|   add_ln19_2_fu_474_p2     | -   |        | add_ln19_2   | add | fabric | 0       |
+|   sub_ln19_2_fu_575_p2     | -   |        | sub_ln19_2   | sub | fabric | 0       |
+|   sub_ln20_2_fu_479_p2     | -   |        | sub_ln20_2   | sub | fabric | 0       |
+|   mul_32s_32s_32_3_1_U8    | 3   |        | mul_ln13_6   | mul | auto   | 2       |
+|   mul_32s_32s_32_3_1_U9    | 3   |        | mul_ln13_7   | mul | auto   | 2       |
+|   xf_V_3_fu_427_p2         | -   |        | xf_V_3       | sub | fabric | 0       |
+|   add_ln19_3_fu_487_p2     | -   |        | add_ln19_3   | add | fabric | 0       |
+|   sub_ln19_3_fu_580_p2     | -   |        | sub_ln19_3   | sub | fabric | 0       |
+|   sub_ln20_3_fu_492_p2     | -   |        | sub_ln20_3   | sub | fabric | 0       |
+|   add_ln8_fu_213_p2        | -   |        | add_ln8      | add | fabric | 0       |
+|  + sqrt_fixed_32_32_s      | 0   |        |              |     |        |         |
+|    add_ln219_fu_246_p2     | -   |        | add_ln219    | add | fabric | 0       |
+|    sub_ln219_fu_318_p2     | -   |        | sub_ln219    | sub | fabric | 0       |
+|    sub_ln219_1_fu_398_p2   | -   |        | sub_ln219_1  | sub | fabric | 0       |
+|    sub_ln219_2_fu_475_p2   | -   |        | sub_ln219_2  | sub | fabric | 0       |
+|    sub_ln219_3_fu_555_p2   | -   |        | sub_ln219_3  | sub | fabric | 0       |
+|    sub_ln219_4_fu_632_p2   | -   |        | sub_ln219_4  | sub | fabric | 0       |
+|    sub_ln219_5_fu_712_p2   | -   |        | sub_ln219_5  | sub | fabric | 0       |
+|    sub_ln219_6_fu_789_p2   | -   |        | sub_ln219_6  | sub | fabric | 0       |
+|    sub_ln219_7_fu_864_p2   | -   |        | sub_ln219_7  | sub | fabric | 0       |
+|    sub_ln219_8_fu_944_p2   | -   |        | sub_ln219_8  | sub | fabric | 0       |
+|    sub_ln219_9_fu_1021_p2  | -   |        | sub_ln219_9  | sub | fabric | 0       |
+|    sub_ln219_10_fu_1096_p2 | -   |        | sub_ln219_10 | sub | fabric | 0       |
+|    sub_ln219_11_fu_1176_p2 | -   |        | sub_ln219_11 | sub | fabric | 0       |
+|    sub_ln219_12_fu_1253_p2 | -   |        | sub_ln219_12 | sub | fabric | 0       |
+|    sub_ln219_13_fu_1328_p2 | -   |        | sub_ln219_13 | sub | fabric | 0       |
+|    sub_ln219_14_fu_1387_p2 | -   |        | sub_ln219_14 | sub | fabric | 0       |
+|    res_I_V_30_fu_1449_p2   | -   |        | res_I_V_30   | add | fabric | 0       |
+|  + sqrt_fixed_32_32_s      | 0   |        |              |     |        |         |
+|    add_ln219_fu_246_p2     | -   |        | add_ln219    | add | fabric | 0       |
+|    sub_ln219_fu_318_p2     | -   |        | sub_ln219    | sub | fabric | 0       |
+|    sub_ln219_1_fu_398_p2   | -   |        | sub_ln219_1  | sub | fabric | 0       |
+|    sub_ln219_2_fu_475_p2   | -   |        | sub_ln219_2  | sub | fabric | 0       |
+|    sub_ln219_3_fu_555_p2   | -   |        | sub_ln219_3  | sub | fabric | 0       |
+|    sub_ln219_4_fu_632_p2   | -   |        | sub_ln219_4  | sub | fabric | 0       |
+|    sub_ln219_5_fu_712_p2   | -   |        | sub_ln219_5  | sub | fabric | 0       |
+|    sub_ln219_6_fu_789_p2   | -   |        | sub_ln219_6  | sub | fabric | 0       |
+|    sub_ln219_7_fu_864_p2   | -   |        | sub_ln219_7  | sub | fabric | 0       |
+|    sub_ln219_8_fu_944_p2   | -   |        | sub_ln219_8  | sub | fabric | 0       |
+|    sub_ln219_9_fu_1021_p2  | -   |        | sub_ln219_9  | sub | fabric | 0       |
+|    sub_ln219_10_fu_1096_p2 | -   |        | sub_ln219_10 | sub | fabric | 0       |
+|    sub_ln219_11_fu_1176_p2 | -   |        | sub_ln219_11 | sub | fabric | 0       |
+|    sub_ln219_12_fu_1253_p2 | -   |        | sub_ln219_12 | sub | fabric | 0       |
+|    sub_ln219_13_fu_1328_p2 | -   |        | sub_ln219_13 | sub | fabric | 0       |
+|    sub_ln219_14_fu_1387_p2 | -   |        | sub_ln219_14 | sub | fabric | 0       |
+|    res_I_V_30_fu_1449_p2   | -   |        | res_I_V_30   | add | fabric | 0       |
+|  + sqrt_fixed_32_32_s      | 0   |        |              |     |        |         |
+|    add_ln219_fu_246_p2     | -   |        | add_ln219    | add | fabric | 0       |
+|    sub_ln219_fu_318_p2     | -   |        | sub_ln219    | sub | fabric | 0       |
+|    sub_ln219_1_fu_398_p2   | -   |        | sub_ln219_1  | sub | fabric | 0       |
+|    sub_ln219_2_fu_475_p2   | -   |        | sub_ln219_2  | sub | fabric | 0       |
+|    sub_ln219_3_fu_555_p2   | -   |        | sub_ln219_3  | sub | fabric | 0       |
+|    sub_ln219_4_fu_632_p2   | -   |        | sub_ln219_4  | sub | fabric | 0       |
+|    sub_ln219_5_fu_712_p2   | -   |        | sub_ln219_5  | sub | fabric | 0       |
+|    sub_ln219_6_fu_789_p2   | -   |        | sub_ln219_6  | sub | fabric | 0       |
+|    sub_ln219_7_fu_864_p2   | -   |        | sub_ln219_7  | sub | fabric | 0       |
+|    sub_ln219_8_fu_944_p2   | -   |        | sub_ln219_8  | sub | fabric | 0       |
+|    sub_ln219_9_fu_1021_p2  | -   |        | sub_ln219_9  | sub | fabric | 0       |
+|    sub_ln219_10_fu_1096_p2 | -   |        | sub_ln219_10 | sub | fabric | 0       |
+|    sub_ln219_11_fu_1176_p2 | -   |        | sub_ln219_11 | sub | fabric | 0       |
+|    sub_ln219_12_fu_1253_p2 | -   |        | sub_ln219_12 | sub | fabric | 0       |
+|    sub_ln219_13_fu_1328_p2 | -   |        | sub_ln219_13 | sub | fabric | 0       |
+|    sub_ln219_14_fu_1387_p2 | -   |        | sub_ln219_14 | sub | fabric | 0       |
+|    res_I_V_30_fu_1449_p2   | -   |        | res_I_V_30   | add | fabric | 0       |
+|  + sqrt_fixed_32_32_s      | 0   |        |              |     |        |         |
+|    add_ln219_fu_246_p2     | -   |        | add_ln219    | add | fabric | 0       |
+|    sub_ln219_fu_318_p2     | -   |        | sub_ln219    | sub | fabric | 0       |
+|    sub_ln219_1_fu_398_p2   | -   |        | sub_ln219_1  | sub | fabric | 0       |
+|    sub_ln219_2_fu_475_p2   | -   |        | sub_ln219_2  | sub | fabric | 0       |
+|    sub_ln219_3_fu_555_p2   | -   |        | sub_ln219_3  | sub | fabric | 0       |
+|    sub_ln219_4_fu_632_p2   | -   |        | sub_ln219_4  | sub | fabric | 0       |
+|    sub_ln219_5_fu_712_p2   | -   |        | sub_ln219_5  | sub | fabric | 0       |
+|    sub_ln219_6_fu_789_p2   | -   |        | sub_ln219_6  | sub | fabric | 0       |
+|    sub_ln219_7_fu_864_p2   | -   |        | sub_ln219_7  | sub | fabric | 0       |
+|    sub_ln219_8_fu_944_p2   | -   |        | sub_ln219_8  | sub | fabric | 0       |
+|    sub_ln219_9_fu_1021_p2  | -   |        | sub_ln219_9  | sub | fabric | 0       |
+|    sub_ln219_10_fu_1096_p2 | -   |        | sub_ln219_10 | sub | fabric | 0       |
+|    sub_ln219_11_fu_1176_p2 | -   |        | sub_ln219_11 | sub | fabric | 0       |
+|    sub_ln219_12_fu_1253_p2 | -   |        | sub_ln219_12 | sub | fabric | 0       |
+|    sub_ln219_13_fu_1328_p2 | -   |        | sub_ln219_13 | sub | fabric | 0       |
+|    sub_ln219_14_fu_1387_p2 | -   |        | sub_ln219_14 | sub | fabric | 0       |
+|    res_I_V_30_fu_1449_p2   | -   |        | res_I_V_30   | add | fabric | 0       |
++----------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++---------------+-----------------------------------+---------------------------+
+| Type          | Options                           | Location                  |
++---------------+-----------------------------------+---------------------------+
+| array_reshape | variable=A cyclic factor=4 dim=1  | DIRECTIVE in kp_502_7, A  |
+| array_reshape | variable=B cyclic factor=4 dim=1  | DIRECTIVE in kp_502_7, B  |
+| array_reshape | variable=C cyclic factor=4 dim=1  | DIRECTIVE in kp_502_7, C  |
+| array_reshape | variable=D cyclic factor=4 dim=1  | DIRECTIVE in kp_502_7, D  |
+| array_reshape | variable=X1 cyclic factor=4 dim=1 | DIRECTIVE in kp_502_7, X1 |
+| array_reshape | variable=X2 cyclic factor=4 dim=1 | DIRECTIVE in kp_502_7, X2 |
+| pipeline      | off                               | DIRECTIVE in kp_502_7     |
+| unroll        | factor=4                          | DIRECTIVE in kp_502_7     |
++---------------+-----------------------------------+---------------------------+
+
+

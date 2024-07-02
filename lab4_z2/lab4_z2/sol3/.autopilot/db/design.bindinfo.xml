@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage ram_1p" ID="" IMPL="auto" LATENCY="1" OPTYPE="ram_1p" PRAGMA="" RTLNAME="tempA1_U" SOURCE="./source/lab4_z2.cpp:4" VARIABLE="tempA1" MODULE="lab4_z2" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage ram_1p" ID="" IMPL="auto" LATENCY="1" OPTYPE="ram_1p" PRAGMA="" RTLNAME="tempA2_U" SOURCE="./source/lab4_z2.cpp:4" VARIABLE="tempA2" MODULE="lab4_z2" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln5_fu_172_p2" SOURCE="./source/lab4_z2.cpp:5" VARIABLE="icmp_ln5" MODULE="lab4_z2" LOOP="Loop1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln5_fu_178_p2" SOURCE="./source/lab4_z2.cpp:5" VARIABLE="add_ln5" MODULE="lab4_z2" LOOP="Loop1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op mul" ID="" IMPL="auto" LATENCY="0" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U1" SOURCE="./source/lab4_z2.cpp:7" VARIABLE="res" MODULE="lab4_z2" LOOP="Loop1" BUNDLEDNAME="" DSP="3" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln11_fu_209_p2" SOURCE="./source/lab4_z2.cpp:11" VARIABLE="icmp_ln11" MODULE="lab4_z2" LOOP="Loop2" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln11_fu_215_p2" SOURCE="./source/lab4_z2.cpp:11" VARIABLE="add_ln11" MODULE="lab4_z2" LOOP="Loop2" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op mul" ID="" IMPL="auto" LATENCY="0" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_6ns_32_1_1_U2" SOURCE="./source/lab4_z2.cpp:13" VARIABLE="mul_ln13" MODULE="lab4_z2" LOOP="Loop2" BUNDLEDNAME="" DSP="1" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln15_fu_246_p2" SOURCE="./source/lab4_z2.cpp:15" VARIABLE="icmp_ln15" MODULE="lab4_z2" LOOP="Loop3" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln15_fu_252_p2" SOURCE="./source/lab4_z2.cpp:15" VARIABLE="add_ln15" MODULE="lab4_z2" LOOP="Loop3" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="data_out2_d0" SOURCE="./source/lab4_z2.cpp:17" VARIABLE="add_ln17" MODULE="lab4_z2" LOOP="Loop3" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

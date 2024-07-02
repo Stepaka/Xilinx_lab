@@ -1,0 +1,1841 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100tcsg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 64 -type cyclic lab7_z1 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 64 -type cyclic lab7_z1 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 64 -type cyclic lab7_z1 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op mul -impl dsp -latency 1 lab7_z1 temp_mult 
+INFO: [HLS 200-1510] Running: csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.805 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.038 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z1.cpp:6:7) in function 'lab7_z1' partially with a factor of 64 (./source/lab7_z1.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.623 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.008 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.753 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.392 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.89 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.38 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.575 seconds; current allocated memory: 1.079 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.306 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting int==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op mul -impl dsp -latency 1 lab7_z1 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z1 lab7_z1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 896.984 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.879 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z1.cpp:8:7) in function 'lab7_z1' partially with a factor of 64 (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.246 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.571 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.265 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.389 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z1' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z1' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.704 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.079 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 5.797 seconds; current allocated memory: 1.076 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z1.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.48 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 13.427 seconds; current allocated memory: 214.168 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 1 seconds. Total elapsed time: 14.542 seconds; peak allocated memory: 1.076 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op mul -impl dsp -latency 1 lab7_z1 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z1 lab7_z1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 846.973 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.781 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z1.cpp:8:7) in function 'lab7_z1' partially with a factor of 64 (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.237 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.576 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.258 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.441 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z1' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z1' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.698 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.063 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 5.768 seconds; current allocated memory: 1.076 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z1.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.48 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 13.319 seconds; current allocated memory: 266.551 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 1 seconds. Total elapsed time: 14.27 seconds; peak allocated memory: 1.076 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op mul -impl dsp -latency 1 lab7_z1 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z1 lab7_z1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 853.008 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.682 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z1.cpp:8:7) in function 'lab7_z1' partially with a factor of 64 (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.204 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.575 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.263 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.379 seconds; current allocated memory: 1.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z1' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z1' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.719 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.077 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 5.753 seconds; current allocated memory: 1.077 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z1.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.48 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 13.155 seconds; current allocated memory: 260.848 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 1 seconds. Total elapsed time: 14.081 seconds; peak allocated memory: 1.077 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op mul -impl dsp -latency 1 lab7_z1 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z1 lab7_z1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 849.910 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.744 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z1.cpp:8:7) in function 'lab7_z1' partially with a factor of 64 (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.243 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.566 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.387 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z1' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z1' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.702 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.066 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 5.767 seconds; current allocated memory: 1.076 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z1.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.48 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 13.251 seconds; current allocated memory: 260.242 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 1 seconds. Total elapsed time: 14.167 seconds; peak allocated memory: 1.076 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op mul -impl dsp -latency 1 lab7_z1 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z1 lab7_z1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 921.309 MB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.83 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z1.cpp:8:7) in function 'lab7_z1' partially with a factor of 64 (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.423 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.574 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.433 seconds; current allocated memory: 1.076 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.231 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z1' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z1' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.751 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.085 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.904 seconds; current allocated memory: 1.076 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z1.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 138.60 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 16.781 seconds; current allocated memory: 189.945 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 0 seconds. Total elapsed time: 17.784 seconds; peak allocated memory: 1.076 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op mul -impl dsp -latency 1 lab7_z1 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z1 lab7_z1 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+WARNING: [HLS 200-626] This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 24 seconds. CPU system time: 1 seconds. Elapsed time: 124.677 seconds; current allocated memory: 266.574 MB.
+INFO: [HLS 200-112] Total CPU user time: 25 seconds. Total CPU system time: 1 seconds. Total elapsed time: 125.59 seconds; peak allocated memory: 1.081 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a100t-csg324-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 64 lab7_z1/Mult 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 b 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 64 -dim 1 lab7_z1 c 
+INFO: [HLS 200-1510] Running: set_directive_bind_op -op mul -impl dsp -latency 1 lab7_z1 temp_mult 
+INFO: [HLS 200-1510] Running: set_directive_top -name lab7_z1 lab7_z1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Analyzing design file './source/lab7_z1.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.839 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-188] Unrolling loop 'Mult' (./source/lab7_z1.cpp:8:7) in function 'lab7_z1' partially with a factor of 64 (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Cyclic partitioning with factor 64 on dimension 1. (./source/lab7_z1.cpp:5:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.638 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.823 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.367 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lab7_z1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Mult'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Mult'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.509 seconds; current allocated memory: 1.255 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lab7_z1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/a_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/b_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lab7_z1/c_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lab7_z1' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lab7_z1' pipeline 'Mult' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lab7_z1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.002 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.789 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 9 seconds. CPU system time: 0 seconds. Elapsed time: 8.49 seconds; current allocated memory: 1.255 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lab7_z1.
+INFO: [VLOG 209-307] Generating Verilog RTL for lab7_z1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 138.60 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 13 seconds. CPU system time: 1 seconds. Elapsed time: 20.274 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 2 seconds. Total elapsed time: 22.646 seconds; peak allocated memory: 1.255 GB.

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+  <sourceFile>
+    <directive functionName="kp_502_7" label="Loop" functionLabel="">
+      <pragma name="PIPELINE">
+        <option name="off" value="" positionalBoolean="1"/>
+      </pragma>
+    </directive>
+    <directive functionName="kp_502_7" label="Loop" functionLabel="">
+      <pragma name="UNROLL">
+        <option name="factor" value="2"/>
+      </pragma>
+    </directive>
+    <directive functionName="kp_502_7" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="ap_memory" value="" positionalBoolean="mode"/>
+        <option name="ram_2p" value="" positionalBoolean="storage_type"/>
+        <option name="port" value="A" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="kp_502_7" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="ap_memory" value="" positionalBoolean="mode"/>
+        <option name="ram_2p" value="" positionalBoolean="storage_type"/>
+        <option name="port" value="B" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="kp_502_7" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="ap_memory" value="" positionalBoolean="mode"/>
+        <option name="ram_2p" value="" positionalBoolean="storage_type"/>
+        <option name="port" value="C" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="kp_502_7" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="ap_memory" value=" " positionalBoolean="mode"/>
+        <option name="port" value="D" positionalBoolean="4"/>
+        <option name="ram_2p" value=" " positionalBoolean="storage_type"/>
+      </pragma>
+    </directive>
+    <directive functionName="kp_502_7" label="" functionLabel="">
+      <pragma name="TOP">
+        <option name="name" value="kp_502_7"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+  <sourceFile name="source/kp_502_7.cpp">
+    <directive functionName="kp_502_7" label=" " functionLabel=" ">
+      <pragma name="INTERFACE">
+        <option name="ap_memory" value=" " positionalBoolean="mode"/>
+        <option name="port" value="X1" positionalBoolean="4"/>
+        <option name="ram_2p" value=" " positionalBoolean="storage_type"/>
+      </pragma>
+      <pragma name="INTERFACE">
+        <option name="ap_memory" value=" " positionalBoolean="mode"/>
+        <option name="port" value="X2" positionalBoolean="4"/>
+        <option name="ram_2p" value=" " positionalBoolean="storage_type"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+</AutoPilot:ProjectResources>

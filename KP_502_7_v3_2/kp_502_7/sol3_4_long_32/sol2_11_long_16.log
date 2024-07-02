@@ -1,0 +1,1504 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 25.592 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::sqrt(double)' into 'kp_502_7(double*, double*, double*, double*, double*, double*)' (./source/kp_502_7.cpp:29:18)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' partially with a factor of 16 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X1': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X2': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 4.542 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.282 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.208 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 59, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.718 seconds; current allocated memory: 1.256 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.449 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_7' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 117655 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_21_no_dsp_1': 48 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_4_max_dsp_1': 64 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_17_no_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_4_full_dsp_1': 48 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.444 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 7.735 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.8 seconds; current allocated memory: 1.256 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 78.33 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 23 seconds. CPU system time: 2 seconds. Elapsed time: 52.922 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 26 seconds. Total CPU system time: 3 seconds. Total elapsed time: 55.362 seconds; peak allocated memory: 1.256 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 34.891 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<128>::ap_int<128, true>(ap_int_base<128, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<96>::ap_int<96, true>(ap_int_base<96, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:216)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:254)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<160, true>::ap_int_base<96, true>(ap_int_base<96, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<160>::ap_int<160, true>(ap_int_base<160, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<160, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<161, true>::ap_int_base<128, true>(ap_int_base<128, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<161>::ap_int<161, true>(ap_int_base<161, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<161, true>::ap_int_base<160, true>(ap_int_base<160, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:713)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, true>::operator<<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:711)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:1853)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, true>::operator==<32, true>(ap_int_base<32, true> const&) const' into 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:1850)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<65>::ap_int<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<64, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:37)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<96, true>::div operator/<65, true, 96, true>(ap_int_base<65, true> const&, ap_int_base<96, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<64, true>(ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:456:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<64, true>(ap_int_base<64, true> const&)' into 'ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<64, true>(ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:113:91)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:550:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:183:59)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_int_base<64, true>::ap_int_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:399:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<64>::ap_int<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h:114:9)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<64> sqrt_fixed<64>(ap_int<64>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_sqrt_apfixed.h:381:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int<67>::ap_int<67, true>(ap_int_base<67, true> const&)' into 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:23)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<67>(ap_int<67> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<67>(ap_int<67> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:36)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<66>(ap_int<66> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<96, true>::div operator/<65, true, 96, true>(ap_int_base<65, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:34)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:21:25)
+INFO: [HLS 214-131] Inlining function 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:16:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<161>(ap_int<161> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:45)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' partially with a factor of 16 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<64> sqrt_fixed<64>(ap_int<64>)' into 'ap_int<64> hls::sqrt<64>(ap_int<64>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\hls_math.h:1287:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X1': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X2': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'D_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 6.608 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt<64>' into 'kp_502_7' (./source/kp_502_7.cpp:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.565 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 72, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.598 seconds; current allocated memory: 1.256 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.027 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_7' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 9636 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_62s_62s_62_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_65s_65ns_64_69_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.685 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.799 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 4.778 seconds; current allocated memory: 1.256 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14 seconds. CPU system time: 1 seconds. Elapsed time: 53.69 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 17 seconds. Total CPU system time: 2 seconds. Total elapsed time: 56.048 seconds; peak allocated memory: 1.256 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 34.124 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<128>::ap_int<128, true>(ap_int_base<128, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<96>::ap_int<96, true>(ap_int_base<96, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:216)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:254)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<160, true>::ap_int_base<96, true>(ap_int_base<96, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<160>::ap_int<160, true>(ap_int_base<160, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<160, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<161, true>::ap_int_base<128, true>(ap_int_base<128, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<161>::ap_int<161, true>(ap_int_base<161, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<161, true>::ap_int_base<160, true>(ap_int_base<160, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:713)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, true>::operator<<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:711)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:1853)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, true>::operator==<32, true>(ap_int_base<32, true> const&) const' into 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:1850)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<65>::ap_int<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<64, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:37)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<96, true>::div operator/<65, true, 96, true>(ap_int_base<65, true> const&, ap_int_base<96, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<64, true>(ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:456:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<64, true>(ap_int_base<64, true> const&)' into 'ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<64, true>(ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:113:91)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:550:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:183:59)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_int_base<64, true>::ap_int_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:399:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<64>::ap_int<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h:114:9)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<64> sqrt_fixed<64>(ap_int<64>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_sqrt_apfixed.h:381:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int<67>::ap_int<67, true>(ap_int_base<67, true> const&)' into 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:23)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<67>(ap_int<67> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<67>(ap_int<67> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:36)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<66>(ap_int<66> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<96, true>::div operator/<65, true, 96, true>(ap_int_base<65, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:34)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:21:25)
+INFO: [HLS 214-131] Inlining function 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:16:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<161>(ap_int<161> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:45)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' partially with a factor of 16 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<64> sqrt_fixed<64>(ap_int<64>)' into 'ap_int<64> hls::sqrt<64>(ap_int<64>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\hls_math.h:1287:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X1': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X2': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'D_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 6.701 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt<64>' into 'kp_502_7' (./source/kp_502_7.cpp:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.569 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.246 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 72, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.608 seconds; current allocated memory: 1.255 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.004 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_7' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 9636 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_62s_62s_62_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_65s_65ns_64_69_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.558 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.483 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 4.781 seconds; current allocated memory: 1.255 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14 seconds. CPU system time: 1 seconds. Elapsed time: 52.581 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 17 seconds. Total CPU system time: 2 seconds. Total elapsed time: 55.097 seconds; peak allocated memory: 1.255 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 33.768 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<128>::ap_int<128, true>(ap_int_base<128, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<96>::ap_int<96, true>(ap_int_base<96, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:216)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:254)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<160, true>::ap_int_base<96, true>(ap_int_base<96, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<160>::ap_int<160, true>(ap_int_base<160, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<160, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<161, true>::ap_int_base<128, true>(ap_int_base<128, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<161>::ap_int<161, true>(ap_int_base<161, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<161, true>::ap_int_base<160, true>(ap_int_base<160, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:713)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, true>::operator<<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:711)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:1853)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, true>::operator==<32, true>(ap_int_base<32, true> const&) const' into 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:1850)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<65>::ap_int<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<64, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:37)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<96, true>::div operator/<65, true, 96, true>(ap_int_base<65, true> const&, ap_int_base<96, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<64, true>(ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:456:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<64, true>(ap_int_base<64, true> const&)' into 'ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<64, true>(ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:113:91)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:550:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:183:59)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_int_base<64, true>::ap_int_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:399:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<64>::ap_int<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h:114:9)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<64> sqrt_fixed<64>(ap_int<64>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_sqrt_apfixed.h:381:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int<67>::ap_int<67, true>(ap_int_base<67, true> const&)' into 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:23)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<67>(ap_int<67> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<67>(ap_int<67> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:36)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<66>(ap_int<66> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<96, true>::div operator/<65, true, 96, true>(ap_int_base<65, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:34)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:21:25)
+INFO: [HLS 214-131] Inlining function 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:16:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<161>(ap_int<161> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:45)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' partially with a factor of 16 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<64> sqrt_fixed<64>(ap_int<64>)' into 'ap_int<64> hls::sqrt<64>(ap_int<64>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\hls_math.h:1287:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X1': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X2': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'D_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 6.632 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt<64>' into 'kp_502_7' (./source/kp_502_7.cpp:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.268 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.571 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 72, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.589 seconds; current allocated memory: 1.256 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_7' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 9636 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_62s_62s_62_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_65s_65ns_64_69_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.519 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.376 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.626 seconds; current allocated memory: 1.256 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 13 seconds. CPU system time: 1 seconds. Elapsed time: 51.83 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 2 seconds. Total elapsed time: 54.255 seconds; peak allocated memory: 1.256 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'clk' with a period of 14ns.
+INFO: [SYN 201-201] Setting up clock 'clk' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a200t-sbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7a200t-sbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 14 -name clk 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_pipeline kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_top -name kp_502_7 kp_502_7 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 16 kp_502_7/Loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 C 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 B 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 D 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 A 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X2 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type cyclic kp_502_7 X1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Analyzing design file './source/kp_502_7.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 33.961 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<128>::ap_int<128, true>(ap_int_base<128, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<96>::ap_int<96, true>(ap_int_base<96, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:216)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<64, true>::mult operator*<32, true, 64, true>(ap_int_base<32, true> const&, ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1655:254)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<160, true>::ap_int_base<96, true>(ap_int_base<96, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<160>::ap_int<160, true>(ap_int_base<160, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<160, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1539:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<161, true>::ap_int_base<128, true>(ap_int_base<128, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<161>::ap_int<161, true>(ap_int_base<161, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<161, true>::ap_int_base<160, true>(ap_int_base<160, true> const&)' into 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:713)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, true>::operator<<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:711)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:1853)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, true>::operator==<32, true>(ap_int_base<32, true> const&) const' into 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1810:1850)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<65>::ap_int<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<64, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<64, true>::minus operator-<1, false, 64, true>(ap_int_base<1, false> const&, ap_int_base<64, true> const&)' into 'ap_int_base<64, true>::operator-() const' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:940:37)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<96, true>::div operator/<65, true, 96, true>(ap_int_base<65, true> const&, ap_int_base<96, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<64, true>(ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:456:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<64, true>(ap_int_base<64, true> const&)' into 'ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<64, true>(ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:113:91)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:707:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_fixed_base.h:550:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_fixed.h:183:59)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_ap_int_base(bool) const' into 'ap_int_base<64, true>::ap_int_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:399:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<64, 64, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<64>::ap_int<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int.h:114:9)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed<64, 64, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_int<64> sqrt_fixed<64>(ap_int<64>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_sqrt_apfixed.h:381:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:341)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:555)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1541:430)
+INFO: [HLS 214-131] Inlining function 'ap_int<67>::ap_int<67, true>(ap_int_base<67, true> const&)' into 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1558:371)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<66>::ap_int<66, true>(ap_int_base<66, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:551)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)' into 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:23)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<67>(ap_int<67> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<64, true>::plus operator+<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:33:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<67>(ap_int<67> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::RType<96, true>::div operator/<66, true, 96, true>(ap_int_base<66, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<64, true>::minus operator-<65, true, 64, true>(ap_int_base<65, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:32:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:36)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<66>(ap_int<66> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<65, true>::RType<96, true>::div operator/<65, true, 96, true>(ap_int_base<65, true> const&, ap_int_base<96, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::RType<($_0)32, true>::mult operator*<64, true>(int, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:34)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::operator-() const' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'bool operator==<64, true>(ap_int_base<64, true> const&, int)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:21:25)
+INFO: [HLS 214-131] Inlining function 'bool operator<<64, true>(ap_int_base<64, true> const&, int)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:16:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<64>::ap_int<161>(ap_int<161> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, true>::RType<160, true>::minus operator-<128, true, 160, true>(ap_int_base<128, true> const&, ap_int_base<160, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<96, true>::RType<64, true>::mult operator*<96, true, 64, true>(ap_int_base<96, true> const&, ap_int_base<64, true> const&)' into 'kp_502_7(ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*, ap_int<64>*)' (./source/kp_502_7.cpp:13:45)
+INFO: [HLS 214-188] Unrolling loop 'Loop' (./source/kp_502_7.cpp:8:10) in function 'kp_502_7' partially with a factor of 16 (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'ap_int<64> sqrt_fixed<64>(ap_int<64>)' into 'ap_int<64> hls::sqrt<64>(ap_int<64>)' (G:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\hls_math.h:1287:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'B': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'C': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X1': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'X2': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'D': Cyclic partitioning with factor 16 on dimension 1. (./source/kp_502_7.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'D_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'D_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X2_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'X1_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'C_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'B_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_15' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_14' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_13' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_12' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_11' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_10' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_9' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_8' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_7' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_6' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_5' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_4' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_3' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_2' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_1' with compact=bit mode in 64-bits
+INFO: [HLS 214-241] Aggregating bram variable 'A_0' with compact=bit mode in 64-bits
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 6.608 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt<64>' into 'kp_502_7' (./source/kp_502_7.cpp:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.269 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.567 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.248 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kp_502_7' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 72, loop 'Loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.615 seconds; current allocated memory: 1.256 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.01 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kp_502_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/A_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/B_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/C_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X1_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/X2_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kp_502_7/D_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kp_502_7' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kp_502_7' pipeline 'Loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'kp_502_7' is 9636 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mul_62s_62s_62_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_64s_64_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_65s_65ns_64_69_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kp_502_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.568 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.479 seconds; current allocated memory: 1.256 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 4.815 seconds; current allocated memory: 1.256 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for kp_502_7.
+INFO: [VLOG 209-307] Generating Verilog RTL for kp_502_7.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 95.69 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14 seconds. CPU system time: 1 seconds. Elapsed time: 52.39 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 17 seconds. Total CPU system time: 2 seconds. Total elapsed time: 54.794 seconds; peak allocated memory: 1.256 GB.
